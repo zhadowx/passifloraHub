@@ -14,46 +14,176 @@
   <header>
     <nav>
       <ul>
-        <li><a href="#html">HTML</a></li>
-        <li><a href="#css">CSS</a></li>
-        <li><a href="#js">JavaScript</a></li>
+        <li><a href="#html"><img src="images/html_logo.svg" alt="html logo" width="30" height="30">HTML</a></li>
+        <!-- color info: #e36e34 rgb(227, 110, 52) -->
+        <li><a href="#css"><img src="images/css_logo.svg" alt="css logo" width="30" height="30">CSS</a></li>
+        <!-- color info: #3454e3 rgb(52, 84, 227) -->
+        <li><a href="#js"><img src="images/js_logo.svg" alt="javascript logo" width="30" height="30"> JavaScript</a>
+        </li>
+        <!-- color info: #f0d90e rgb(240, 217, 14) -->
       </ul>
     </nav>
     <h1>Web Development Synthesis</h1>
   </header>
-  <aside>
-    <h3>Description of Languages</h3>
-    <ul>
-      <li>HTML (Hypertext Markup Language)</li>
-      <p>Structure or Skeleton</p>
-      <li>CSS (Cascading Style Sheets)</li>
-      <p>Styles or Clothes, also used to add some interactivity</p>
-      <li>JavaScript</li>
-      <p>Interactivity or Brain</p>
-    </ul>
-  </aside>
   <main>
     <section id="html">
       <h2>HTML</h2>
-      <p>HTML is the most basic building block of the Web. It defines the meaning and structure of web content.</p>
-      <p>"Hypertext" refers to links that connect web pages to one another, either within a single website or between
-        websites. Links are a fundamental aspect of the Web. By uploading content to the Internet and linking it to
-        pages created by other people, you become an active participant in the World Wide Web.</p>
-      <p>HTML uses "markup" to annotate text, images, and other content for display in a Web browser. HTML markup
-        includes special "elements" such as "head", "title", "body", "header", "footer", "article", "section", "p",
-        "div", "span", "img", "aside", "audio", "canvas", "datalist", "details", "embed", "nav", "output", "progress",
-        "video", "ul", "ol", "li" and many others.</p>
+      <article>
+        <p>The HyperText Markup Language is the most basic building block of the Web. It defines the meaning and
+          structure of web content.</p>
+        <p>Web browsers receive HTML documents from a web server or from local storage and render the documents into
+          multimedia web pages.</p>
+        <p>HTML elements are the building blocks of HTML pages. With HTML constructs, images and other objects such as
+          interactive forms may be embedded into the rendered page. HTML provides a means to create structured documents
+          by denoting structural semantics for text such as headings, paragraphs, lists, links, quotes and other items.
+          HTML elements are delineated by tags, written using angle brackets. Tags such as &lt;img /&gt; and &lt;input
+          /&gt; directly introduce content into the page. Other tags such as &lt;p&gt; surround and provide information
+          about document text and may include other tags as sub-elements. Browsers do not display the HTML tags, but use
+          them to interpret the content of the page.</p>
+        <h4>Element Display Roles</h4>
+        <ul>
+          <li><b>Block-Level:</b> element box fills its parent element's content area width and cannot have other
+            elements to its sides. Example: &lt;p&gt; and &lt;div&gt;.</li>
+          <li><b>Inline-Level:</b> element box is generated within a line of text and does not brek up the flow of
+            that line. Example: &lt;a&gt; and &lt;span&gt;.</li>
+        </ul>
+      </article>
 
       <div id="htmlTimeline">
         <h3>History of HTML</h3>
         <img src="/images/html_timeline.svg" alt="html timeline">
       </div>
-
     </section>
+
     <section id="css">
       <h2>CSS</h2>
-
+      <article>
+        <p>CSS is a style sheet language used for describing the presentation of a document written in a markup language
+          such as HTML. CSS is a cornerstone technology of the World Wide Web, alongside HTML and JavaScript.</p>
+        <p>CSS is designed to enable the separation of presentation and content, including layout, colors, and fonts.
+          This separation can improve content accessibility, provide more flexibility and control in the specification
+          of presentation characteristics, enable multiple web pages to share formatting by specifying the relecant CSS
+          in a separate .css file which reduces complexity and repetition in the structural content as well as enabling
+          the .css file to be cached to improve the page load speed between the pages that share the file.</p>
+        <p>The name cascading comes from the specified priority scheme to determine which style rule applies if more
+          than one rule matches a particular element. This cascading priority scheme is predictable.</p>
+        <p>The CSS specifications are maintained by the World Wide Web Consortium (W3C).</p>
+      </article>
+      <h3>Selectors</h3>
+      <details>
+        <summary>Basic selectors</summary>
+        <ul>
+          <li>Universal selector: *</li>
+          <li>Type selector: <i>elementname</i></li>
+          <li>Class selector: <i>.classname</i></li>
+          <li>ID selector: <i>#idname</i></li>
+          <li>Attribute selector: [<i>attr=value</i>]</li>
+        </ul>
+      </details>
+      <h5>Grouping selectors</h5>
+      <details>
+        <summary>Selector list <b>A, B</b></summary>
+        Specifies that both <i>A</i> and <i>B</i> elements are selected.
+      </details>
+      <details>
+        <summary>Adjacent sibling combinator <b>A + B</b></summary>
+        Specifies that the elements selected by both <i>A</i> and <i>B</i> have the same parent and that the element
+        selected by <i>B</i> immediately follows the element selected by <i>A</i> horizontally.
+      </details>
+      <details>
+        <summary>General sibling combinator <b>A ~ B</b></summary>
+        Specifies that the elements selected by both <i>A</i> and <i>B</i> share the same parent and that the element
+        selected by <i>A</i> comes before⎼but not necessarily immediately before⎼the element selected by <i>B</i>.
+      </details>
+      <details>
+        <summary>Child combinator <b>A > B</b></summary>
+        Specifies that the element selected by <i>B</i> is the direct child of the element selected by <i>A</i>.
+      </details>
+      <details>
+        <summary>Descendant combinator <b>A B</b></summary>
+        Specifies that the element selected by <i>B</i> is a descendant of the element selected by <i>A</i>, but is not
+        necessarily a direct child.
+      </details>
+      <details>
+        <summary>Pseudo classes <b>:</b></summary>
+        Specifies a special state of the selected element(s).
+      </details>
+      <details>
+        <summary>Pseudo elements <b>::</b></summary>
+        Represents entities that are not included in HTML.
+      </details>
+      <h3>Style Precedence</h3>
+      <p>Cascading Style Sheets uses a mechanism called the <i>cascade</i> to resolve any conflicts between styles
+        and arrive at a final set of styles to be applied to the document. Two key components of the cascade are
+        specificity and inheritance.</p>
+      <h4>Specificity</h4>
+      <p><i>Specificity</i> describes the weight of a selector and any declarations associated with it.</p>
+      <table>
+        <caption>Selector type specificity</caption>
+        <thead>
+          <tr>
+            <th>Selector type</th>
+            <th>Example</th>
+            <th>Specificity</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Universal selector</td>
+            <td>*</td>
+            <td rowspan="2">0,0,0,0</td>
+          </tr>
+          <tr>
+            <td>Combinator</td>
+            <td>+</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>Element identifier</td>
+            <td>div</td>
+            <td rowspan="2">0,0,0,1</td>
+          </tr>
+          <tr>
+            <td>Pseudo-element identifier</td>
+            <td>::first-line</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>Class identifier</td>
+            <td>.warning</td>
+            <td rowspan="3">0,0,1,0</td>
+          </tr>
+          <tr>
+            <td>Pseudo-class identifier</td>
+            <td>:hover</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>Attribute identifier</td>
+            <td>[type="checkbox"]</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>ID identifier</td>
+            <td>#content</td>
+            <td>0,1,0,0</td>
+          </tr>
+        </tbody>
+        <tfoot>
+          <tr>
+            <td>Inline <em>style</em> attribute</td>
+            <td>style="color: red;"</td>
+            <td>1,0,0,0</td>
+          </tr>
+        </tfoot>
+      </table>
+      <h4>Inheritance</h4>
+      <p>CSS uses the document tree for the mechanism of <i>inheritance</i>, in which a style applied to an element is
+        inherited by its descendants. Inheritance is interrupted only by a conflicting style rule that applies directly
+        to an element. Inherited values have no specificity at all (which is <i>not</i> the same as having zero
+        specificity).</p>
     </section>
+
     <section id="js">
       <h2>JavaScript</h2>
     </section>
