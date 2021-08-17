@@ -49,7 +49,7 @@
         <ul>
           <li><b>Block-Level:</b> element box fills its parent element's content area width and cannot have other
             elements to its sides. Example: &lt;p&gt; and &lt;div&gt;.</li>
-          <li><b>Inline-Level:</b> element box is generated within a line of text and does not brek up the flow of
+          <li><b>Inline-Level:</b> element box is generated within a line of text and does not break up the flow of
             that line. Example: &lt;a&gt; and &lt;span&gt;.</li>
         </ul>
       </article>
@@ -188,8 +188,24 @@
         to an element. Inherited values have no specificity at all (which is <i>not</i> the same as having zero
         specificity).</p>
       <h3 id="boxModel">The Box Model</h3>
-      <p>In CSS there are broadly two types of boxes— <b>block boxes</b> and <b>inline boxes</b>.</p>
-
+      <p>In CSS there are broadly two types of boxes— <b>block boxes</b> and <b>inline boxes</b>. The CSS box model as a
+        whole applies to block boxes. Inline boxes use just some of the behavior defined in the box model. The model
+        defines how the different parts of a box—margin, border, padding, and content— work together to create a box
+        that you can see on a page.</p>
+      <h4>Standard CSS box model</h4>
+      <p>In the standard box model, if you give a box a <i>width</i> and a <i>height</i> attribute, this defines the
+        width and height of the <i>content box</i>. Any padding and border is then added to that width and height to get
+        the total size taken up by the box. <b>Example:</b></p>
+      <p id="standardBox">Standard CSS Box Model</p>
+      <p>The <i>actual space</i> taken up by the box will be 350px wide (300px + 20px + 20px + 5px + 5px) and 80px high
+        (30px + 20px + 20px + 5px + 5px).</p>
+      <h4>Alternativve CSS box model</h4>
+      <p>In this model, any width is the width of the visible box on the page, therefore the content area width is that
+        width minus the width for the padding and border. <b>Example using same width and height than previous case:</b>
+      </p>
+      <p id="alternateBox">Alternative CSS Box Model</p>
+      <p>By default, browsers use the standard box model. If you want to turn on the alternative model for an element,
+        you do so by setting <i>box-sizing: border-box;</i> on it.</p>
     </section>
 
     <section id="js">
