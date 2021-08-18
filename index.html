@@ -212,6 +212,49 @@
         Example:</p>
       <div id="backgroundImageBox">
       </div>
+      <h3>Rounded Corners</h3>
+      <p>Rounding corners on a box is achieved by using the <i>border-radius</i> property. You can set a single radius
+        to make circular corners, or two radii to make elliptical corners. The radius applies to the whole background,
+        even if the element has no border. Examples:</p>
+      <div class="radiusBoxes">
+        <div class="boxRadius1">
+          <p>
+            Radius is set for all 4 sides
+          </p>
+          <p>border-radius: 30px;</p>
+        </div>
+        <div class="boxRadius2">
+          <p>
+            top-left-and-bottom-right | top-right-and-bottom-left
+          </p>
+          <p>border-radius: 25% 15px;</p>
+        </div>
+        <div class="boxRadius3">
+          <p>
+            top-left | top-right | bottom-right | bottom_left
+          </p>
+          <p>border-radius: 10% 20% 45% 70%;</p>
+        </div>
+        <div class="boxRadius4">
+          <p>
+            Horizontal all 4 corners / Vertical all 4 corners
+          </p>
+          <p>border-radius: 10% / 50%;</p>
+        </div>
+        <div class="boxRadius5">
+          <p>
+            top-left-and-bottom-right | top-right-and-bottom-left / all 4 corners
+          </p>
+          <p>border-radius: 15px 95px / 100px;</p>
+        </div>
+        <div class="boxRadius6">
+          <p>
+            top-left-and-bottom-right | top-right-and-bottom-left / top-left-and-bottom-right |
+            top-right-and-bottom-left
+          </p>
+          <p>border-radius: 50% 20% / 10% 40%;</p>
+        </div>
+      </div>
     </article>
 
     <article id="js">

@@ -108,7 +108,7 @@ nav > ul > li > a {
 }
 /* Background Colors */
 #backgroundColorBox {
-  background-color: #0929a8;
+  background-color: rgb(38, 77, 228);
   width: 300px;
   height: 80px;
   margin: 10px;
@@ -117,7 +117,7 @@ nav > ul > li > a {
 }
 #backgroundColorBox > h4 {
   padding: 3px;
-  background-color: #7da2f6;
+  background-color: rgb(1, 101, 241);
   color: white;
 }
 /* Background Images */
@@ -132,9 +132,51 @@ nav > ul > li > a {
         rgba(51, 56, 57, 1) 98%
       )
       center center / 200px 200px no-repeat,
-    url(images/mandala.svg) center no-repeat, rgb(58, 202, 82);
+    url(images/mandala.svg) center no-repeat, rgb(1, 101, 241);
 }
-
+/* Border Radius */
+.radiusBoxes {
+  display: grid;
+  gap: 0.7em;
+  grid-template-columns: repeat(2, auto);
+  justify-content: space-evenly;
+}
+.boxRadius1,
+.boxRadius2,
+.boxRadius3,
+.boxRadius4,
+.boxRadius5,
+.boxRadius6 {
+  width: 300px;
+  height: 300px;
+  display: grid;
+  align-content: center;
+  background-color: rgb(1, 101, 241);
+  font-weight: bold;
+  color: #fff;
+  border: 3px solid #000;
+}
+.boxRadius1 {
+  border-radius: 30px;
+}
+.boxRadius2 {
+  border-radius: 25% 15px;
+}
+.boxRadius3 {
+  border-radius: 10% 20% 45% 70%;
+}
+.boxRadius4 {
+  border-radius: 10% / 50%;
+}
+.boxRadius5 {
+  border-radius: 15px 95px / 100px;
+}
+.boxRadius6 {
+  border-radius: 50% 20% / 10% 40%;
+}
+.radiusBoxes p {
+  text-align: center;
+}
 /* JavaScript rules */
 #js {
   grid-area: js;
