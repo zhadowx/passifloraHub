@@ -13,39 +13,22 @@ html {
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
 }
-/* Ubuntu Font */
+/* Body rules */
 body {
   font-family: "Ubuntu", sans-serif;
   font-size: 16px;
   font-weight: 300;
   display: grid;
-  grid-template-rows: auto auto 50px;
+  grid-template-rows: 50px auto 50px;
+  grid-gap: 0.7em;
   grid-template-areas:
     "header "
     "main"
     "footer ";
 }
+/* Header rules */
 header {
-  display: grid;
-  grid-template-rows: 1fr 1fr;
-  grid-template-areas:
-    "navbar"
-    "title";
   grid-area: header;
-}
-/* Nav rules */
-nav {
-  grid-area: navbar;
-}
-nav > ul {
-  list-style-type: none;
-  float: right;
-}
-nav > ul > li {
-  display: inline;
-}
-nav > ul > li > a {
-  text-decoration: none;
 }
 
 /* Main rules */
@@ -57,21 +40,54 @@ main {
     "css"
     "js";
 }
+/* Footer rules */
+footer {
+  grid-area: footer;
+  justify-self: center;
+}
+
+/* Nav rules */
+nav > ul {
+  list-style-type: none;
+  float: right;
+}
+nav > ul > li {
+  display: inline;
+}
+nav > ul > li > a {
+  text-decoration: none;
+}
+
 /* HTML rules */
 #hmtl {
-  background-color: rgba(241, 101, 41, 0.4);
   grid-area: html;
 }
-#htmlTimeline {
+#html > h2 {
+  background: linear-gradient(
+    0deg,
+    rgba(241, 101, 41, 1) 30%,
+    rgba(228, 77, 38, 1) 70%
+  );
+  color: #fff;
+}
+/* #htmlTimeline {
   width: 200vw;
   height: 30vh;
   background-image: url(/images/html_timeline.svg);
   background-repeat: no-repeat;
   border-bottom: 3px solid #000;
-}
+} */
 /* CSS rules */
 #css {
   grid-area: css;
+}
+#css > h2 {
+  background: linear-gradient(
+    180deg,
+    rgba(38, 77, 228, 1) 30%,
+    rgba(41, 101, 241, 1) 70%
+  );
+  color: #fff;
 }
 /* Standard Box Model */
 #standardBox {
@@ -123,8 +139,6 @@ main {
 #js {
   grid-area: js;
 }
-/* Footer rules */
-footer {
-  grid-area: footer;
-  justify-self: center;
+#js > h2 {
+  background: rgb(247, 223, 30);
 }
