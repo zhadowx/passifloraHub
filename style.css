@@ -2,15 +2,6 @@ body,
 html {
   height: 100%;
 }
-h1 {
-  display: inline;
-}
-h2 {
-  border-top-right-radius: 10px;
-}
-h3 {
-  border-bottom: 2px solid #000;
-}
 /* Text Adjust */
 html {
   -webkit-text-size-adjust: 100%;
@@ -34,6 +25,15 @@ body {
     "main"
     "footer ";
 }
+h1 {
+  display: inline;
+}
+h2 {
+  border-top-right-radius: 10px;
+}
+h3 {
+  border-bottom: 2px solid #000;
+}
 /* Header rules */
 .header {
   grid-area: header;
@@ -55,9 +55,8 @@ body {
   grid-area: footer;
   justify-items: center;
   background-color: rgba(83, 80, 80, 0.35);
-}
-.footer p {
-  justify-self: center;
+  display: flex;
+  justify-content: center;
 }
 
 /* Nav rules */
@@ -99,6 +98,8 @@ nav > ul > li:nth-child(3) {
 /* HTML rules */
 #hmtl {
   grid-area: html;
+  display: grid;
+  grid-template-rows: repeat(7, auto);
 }
 #html > h2 {
   background: linear-gradient(
@@ -107,17 +108,26 @@ nav > ul > li:nth-child(3) {
     rgba(228, 77, 38, 1) 70%
   );
   color: #fff;
+  box-shadow: 0 20px 19px 2px rgba(83, 80, 80, 0.33);
 }
+/* #html p,
+#html h3,
+#html ul {
+  background-color: rgba(241, 101, 41, 0.6);
+  box-shadow: 0 20px 19px 2px rgba(83, 80, 80, 0.25);
+} */
 #htmlTimeline {
   width: 100%;
-  height: 300px;
+  height: 25vh;
   background-image: url(/images/html_timeline.svg);
   background-repeat: no-repeat;
-  border-bottom: 3px solid #000;
+  /* border-bottom: 2px solid #000; */
+  box-shadow: 0 15px 15px 2px rgba(83, 80, 80, 0.33);
 }
 /* CSS rules */
 #css {
   grid-area: css;
+  /* background-color: rgba(41, 101, 241, 0.6); */
 }
 #css > h2 {
   background: linear-gradient(
@@ -127,24 +137,42 @@ nav > ul > li:nth-child(3) {
   );
   color: #fff;
 }
+/* #css p,
+#css h3,
+#css ul {
+  background-color: rgba(41, 101, 241, 0.6);
+  box-shadow: 0 20px 19px 2px rgba(83, 80, 80, 0.25);
+} */
 /* Standard Box Model */
-#standardBox {
+.standardBox {
+  display: flex;
+  justify-content: center;
+}
+.standardBox > p {
   box-sizing: content-box;
   width: 300px;
   height: 30px;
-  margin: 10px;
   padding: 20px;
   border: 5px solid #000;
+  text-align: center;
 }
 /* Alternative Box Model */
-#alternateBox {
+.alternateBox {
+  display: flex;
+  justify-content: center;
+}
+.alternateBox > p {
   width: 300px;
   height: 30px;
-  margin: 10px;
   padding: 20px;
   border: 5px solid #000;
+  text-align: center;
 }
 /* Background Colors */
+.containerBackgroundColor {
+  display: flex;
+  justify-content: center;
+}
 #backgroundColorBox {
   background-color: rgb(38, 77, 228);
   width: 300px;
@@ -155,10 +183,15 @@ nav > ul > li:nth-child(3) {
 }
 #backgroundColorBox > h4 {
   padding: 3px;
-  background-color: rgb(1, 101, 241);
-  color: white;
+  background-color: #000;
+  color: #fff;
+  text-align: center;
 }
 /* Background Images */
+.containerBackgroundImage {
+  display: flex;
+  justify-content: center;
+}
 #backgroundImageBox {
   width: 300px;
   height: 200px;
@@ -186,8 +219,8 @@ nav > ul > li:nth-child(3) {
 .boxRadius4,
 .boxRadius5,
 .boxRadius6 {
-  width: 280px;
-  height: 220px;
+  width: 300px;
+  height: 150px;
   display: grid;
   align-content: center;
   background-color: rgba(4, 43, 98, 0.9);
@@ -228,34 +261,34 @@ nav > ul > li:nth-child(3) {
 .boxShadow3,
 .boxShadow4,
 .boxShadow6 {
-  width: 280px;
-  height: 220px;
+  width: 200px;
+  height: 100px;
   display: grid;
   align-content: center;
-  background-color: rgba(94, 48, 138, 0.7);
+  background-color: rgba(48, 75, 138, 0.7);
   color: #fff;
   font-weight: bold;
 }
 .boxShadow1 {
-  box-shadow: 5em -1.5em rgba(94, 48, 138, 1);
+  box-shadow: 3em -1.5em rgb(54, 48, 138);
 }
 .boxShadow2 {
-  box-shadow: 1.5em 1em 0.7em rgba(94, 48, 138, 0.9);
+  box-shadow: 1.5em 1em 0.7em rgba(54, 48, 138, 0.9);
 }
 .boxShadow3 {
-  box-shadow: 1.5em 0.7em 0.3em 0.6em rgba(94, 48, 138, 0.9);
+  box-shadow: 1.5em 0.7em 0.3em 0.6em rgba(54, 48, 138, 0.9);
 }
 .boxShadow4 {
-  box-shadow: inset 5em 1em rgba(94, 48, 138, 1);
+  box-shadow: inset 5em 1em rgba(54, 48, 138, 1);
 }
 .boxShadow5 {
-  width: 280px;
-  height: 220px;
+  width: 200px;
+  height: 130px;
   display: grid;
   align-content: center;
   box-shadow: 0 0.75em 0 -0.375em #fff, 0 -0.75em 0 -0.375em #fff,
     0.75em 0 0 -0.375em #fff, -0.75em 0 0 -0.375em #fff,
-    0 0 0 0.375em rgba(94, 48, 138, 1);
+    0 0 0 0.375em rgba(54, 48, 138, 1);
 }
 .boxShadow6 {
   box-shadow: inset 0 0 0 1em #350561, inset 0 0 0 1.5em #4024dd,
@@ -267,4 +300,10 @@ nav > ul > li:nth-child(3) {
 }
 #js > h2 {
   background: rgb(247, 223, 30);
+}
+
+@media screen and (max-width: 635px) {
+  h1 {
+    display: none;
+  }
 }

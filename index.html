@@ -47,7 +47,7 @@
           /&gt; directly introduce content into the page. Other tags such as &lt;p&gt; surround and provide information
           about document text and may include other tags as sub-elements. Browsers do not display the HTML tags, but use
           them to interpret the content of the page.</p>
-        <h4>Element Display Roles</h4>
+        <h3>Element Display Roles</h3>
         <ul>
           <li><b>Block-Level:</b> element box fills its parent element's content area width and cannot have other
             elements to its sides. Example: &lt;p&gt; and &lt;div&gt;.</li>
@@ -55,7 +55,9 @@
             that line. Example: &lt;a&gt; and &lt;span&gt;.</li>
         </ul>
         <h3>History of HTML</h3>
-        <div id="htmlTimeline">
+        <div class="containerTimeline">
+          <div id="htmlTimeline">
+          </div>
         </div>
       </article>
 
@@ -197,7 +199,9 @@
           width and height of the <i>content box</i>. Any padding and border is then added to that width and height to
           get
           the total size taken up by the box. <b>Example:</b></p>
-        <p id="standardBox">Standard CSS Box Model</p>
+        <div class="standardBox">
+          <p>Standard CSS Box Model</p>
+        </div>
         <p>The <i>actual space</i> taken up by the box will be 350px wide (300px + 20px + 20px + 5px + 5px) and 80px
           high
           (30px + 20px + 20px + 5px + 5px).</p>
@@ -207,21 +211,27 @@
           width minus the width for the padding and border. <b>Example using same width and height than previous
             case:</b>
         </p>
-        <p id="alternateBox">Alternative CSS Box Model</p>
+        <div class="alternateBox">
+          <p>Alternative CSS Box Model</p>
+        </div>
         <p>By default, browsers use the standard box model. If you want to turn on the alternative model for an element,
           you do so by setting <i>box-sizing: border-box;</i> on it.</p>
         <h3>Backgrounds</h3>
         <p>The <i>background-color</i> property defines the background color of any element in CSS. The property accepts
           any valid &lt;color&gt;. A <i>background-color</i> extends underneath the content and padding box of the
           element. <b>Example:</b></p>
-        <div id="backgroundColorBox">
-          <h4>Background Colors</h4>
+        <div class="containerBackgroundColor">
+          <div id="backgroundColorBox">
+            <h4>Background Colors</h4>
+          </div>
         </div>
         <p>The <i>background-image</i> property enables the display of an image in the background of an element. Also,
           if
           you specify a background color in addition to a background image then the image displays on top of the color.
           Example:</p>
-        <div id="backgroundImageBox">
+        <div class="containerBackgroundImage">
+          <div id="backgroundImageBox">
+          </div>
         </div>
         <h3>Rounded Corners</h3>
         <p>Rounding corners on a box is achieved by using the <i>border-radius</i> property. You can set a single radius
@@ -308,7 +318,7 @@
         <p>Examples:</p>
         <div class="shadowBoxes">
           <div class="boxShadow1">
-            <p>box-shadow: 5em -1.5em rgba(94, 48, 138, 1);</p>
+            <p>box-shadow: 3em -1.5em rgba(94, 48, 138, 1);</p>
           </div>
           <div class="boxShadow2">
             <p>box-shadow: 1.5em 1em 0.7em rgba(94, 48, 138, 0.9);</p>
