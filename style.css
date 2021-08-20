@@ -72,7 +72,7 @@ nav > ul > li:nth-child(1) {
 }
 nav > ul > li:nth-child(2) {
   color: #000;
-  background: linear-gradient(90deg, rgba(1, 101, 241, 1) 30, #ddd 90%);
+  background: linear-gradient(90deg, rgba(1, 101, 241, 1) 30%, #ddd 90%);
 }
 nav > ul > li:nth-child(3) {
   color: #000;
