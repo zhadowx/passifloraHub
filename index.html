@@ -339,37 +339,76 @@
       </div>
       <h3>Transforming Elements</h3>
       <p>The <i>transform</i> property lets you rotate, scale, skew, or translate an element. It modifies coordinate
-        space of the CSS viasual formatting model.</p>
+        space of the CSS visual formatting model.</p>
+      <ul>
+        <li>matrix(<i>n,n,n,n,n,n</i>): Defines a 2D transformation, using a matrix of six values.</li>
+        <li>matrix3d(<i>n,n,n,n,n,n,n,n,n,n,n,n,n,n,n,n</i>): Defines a 3D transformation, using a 4x4 matrix of 16
+          values.</li>
+        <li>translate(<i>x,y</i>): Defines a 2D translation.</li>
+        <li>translate(<i>x,y,z</i>): Defines a 3D translation.</li>
+        <li>scale(<i>x,y</i>): Defines a 2D scale transformation.</li>
+        <li>scale3d(<i>x,y,z</i>): Defines a 3D scale transformation.</li>
+        <li>rotate(<i>angle</i>): Defines a 2D rotation, the angle is specified in the parameter.</li>
+        <li>rotate3d(<i>x,y,z,angle</i>): Defines a 3D rotation.</li>
+        <li>skew(<i>x-angle,y-angle</i>): Defines a 2D skew transformation along the X- and the Y-axis.</li>
+        <li>perspective(<i>n</i>): Defines a perspective view for a 3D transformed element.</li>
+      </ul>
+      <p>Examples:</p>
       <div class="containerTransformations">
         <div class="boxTransformed1">
-          <p></p>
+          <p>matrix()</p>
         </div>
         <div class="boxTransformed2">
-          <p></p>
+          <div class="face front">matrix3d()</div>
+          <div class="face back">2</div>
+          <div class="face right">3</div>
+          <div class="face left">4</div>
+          <div class="face top">5</div>
+          <div class="face bottom">6</div>
         </div>
         <div class="boxTransformed3">
-          <p></p>
+          <p>translate()</p>
         </div>
         <div class="boxTransformed4">
-          <p></p>
+          <div class="face front">translate3d()</div>
+          <div class="face back">2</div>
+          <div class="face right">3</div>
+          <div class="face left">4</div>
+          <div class="face top">5</div>
+          <div class="face bottom">6</div>
         </div>
         <div class="boxTransformed5">
-          <p></p>
+          <p>scale()</p>
         </div>
         <div class="boxTransformed6">
-          <p></p>
+          <div class="face front">scale3d()</div>
+          <div class="face back">2</div>
+          <div class="face right">3</div>
+          <div class="face left">4</div>
+          <div class="face top">5</div>
+          <div class="face bottom">6</div>
         </div>
         <div class="boxTransformed7">
-          <p></p>
+          <p>rotate()</p>
         </div>
         <div class="boxTransformed8">
-          <p></p>
+          <div class="face front">rotate3d()</div>
+          <div class="face back">2</div>
+          <div class="face right">3</div>
+          <div class="face left">4</div>
+          <div class="face top">5</div>
+          <div class="face bottom">6</div>
         </div>
         <div class="boxTransformed9">
-          <p></p>
+          <p>skew()</p>
         </div>
         <div class="boxTransformed10">
-          <p></p>
+          <div class="face front">perspective()</div>
+          <div class="face back">2</div>
+          <div class="face right">3</div>
+          <div class="face left">4</div>
+          <div class="face top">5</div>
+          <div class="face bottom">6</div>
         </div>
       </div>
     </article>

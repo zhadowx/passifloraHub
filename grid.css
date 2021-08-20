@@ -23,6 +23,7 @@ main {
     "html"
     "css"
     "js";
+  gap: 0.5em;
 }
 footer {
   display: flex;
