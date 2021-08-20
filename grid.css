@@ -4,6 +4,7 @@ body {
   grid-template-areas:
     "header"
     "nav"
+    "hero"
     "main"
     "footer";
 }
@@ -12,6 +13,8 @@ header {
 }
 nav {
   grid-area: nav;
+  display: grid;
+  justify-content: center;
 }
 main {
   display: grid;
@@ -26,6 +29,9 @@ footer {
   justify-content: center;
   grid-area: footer;
   justify-items: center;
+}
+.hero {
+  grid-area: hero;
 }
 #hmtl {
   grid-area: html;
