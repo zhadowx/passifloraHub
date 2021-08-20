@@ -1,0 +1,29 @@
+body {
+  display: grid;
+  grid: autoflow min-content / 1fr;
+  grid-template-areas:
+    "header"
+    "nav"
+    "main"
+    "footer";
+}
+header {
+  grid-area: header;
+}
+nav {
+  grid-area: nav;
+}
+main {
+  display: grid;
+  grid-area: main;
+  grid-template-areas:
+    "html"
+    "css"
+    "js";
+}
+footer {
+  display: flex;
+  justify-content: center;
+  grid-area: footer;
+  justify-items: center;
+}

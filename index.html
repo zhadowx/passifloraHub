@@ -10,6 +10,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,700;1,300&display=swap"
     rel="stylesheet">
   <link rel="stylesheet" href="normalize.css">
+  <link rel="stylesheet" href="grid.css">
   <link rel="stylesheet" href="style.css">
   <script defer src="script.js"></script>
   <title>Web Development Synthesis</title>
@@ -17,337 +18,331 @@
 
 <body>
   <header>
-    <div class="header">
-      <nav>
-        <ul>
-          <li><a href="#html"><img src="images/html_logo.svg" alt="html logo" width="30" height="30">HTML</a></li>
-          <!-- color info: #e44d26 rgb(228, 77, 38) and #f16529 (241, 101, 41) -->
-          <li><a href="#css"><img src="images/css_logo.svg" alt="css logo" width="30" height="30">CSS</a></li>
-          <!-- color info: #264de4 rgb(38, 77, 228) and #2965f1 (41, 101, 241)-->
-          <li><a href="#js"><img src="images/js_logo.svg" alt="javascript logo" width="30" height="30"> JavaScript</a>
-          </li>
-          <!-- color info: #f7df1e rgb(247, 223, 30) -->
-        </ul>
-      </nav>
-      <h1>Web Development Synthesis</h1>
-    </div>
+    <h1>Web Development Synthesis</h1>
   </header>
+  <nav>
+    <ul>
+      <li><a href="#html"><img src="images/html_logo.svg" alt="html logo" width="30" height="30">HTML</a></li>
+      <!-- color info: #e44d26 rgb(228, 77, 38) and #f16529 (241, 101, 41) -->
+      <li><a href="#css"><img src="images/css_logo.svg" alt="css logo" width="30" height="30">CSS</a></li>
+      <!-- color info: #264de4 rgb(38, 77, 228) and #2965f1 (41, 101, 241)-->
+      <li><a href="#js"><img src="images/js_logo.svg" alt="javascript logo" width="30" height="30"> JavaScript</a>
+      </li>
+      <!-- color info: #f7df1e rgb(247, 223, 30) -->
+    </ul>
+  </nav>
   <main>
-    <div class="main">
-      <article id="html">
-        <h2>HTML</h2>
-        <p>The HyperText Markup Language is the most basic building block of the Web. It defines the meaning and
-          structure of web content.</p>
-        <p>Web browsers receive HTML documents from a web server or from local storage and render the documents into
-          multimedia web pages.</p>
-        <p>HTML elements are the building blocks of HTML pages. With HTML constructs, images and other objects such as
-          interactive forms may be embedded into the rendered page. HTML provides a means to create structured documents
-          by denoting structural semantics for text such as headings, paragraphs, lists, links, quotes and other items.
-          HTML elements are delineated by tags, written using angle brackets. Tags such as &lt;img /&gt; and &lt;input
-          /&gt; directly introduce content into the page. Other tags such as &lt;p&gt; surround and provide information
-          about document text and may include other tags as sub-elements. Browsers do not display the HTML tags, but use
-          them to interpret the content of the page.</p>
-        <h3>Element Display Roles</h3>
+    <article id="html">
+      <h2>HTML</h2>
+      <p>The HyperText Markup Language is the most basic building block of the Web. It defines the meaning and
+        structure of web content.</p>
+      <p>Web browsers receive HTML documents from a web server or from local storage and render the documents into
+        multimedia web pages.</p>
+      <p>HTML elements are the building blocks of HTML pages. With HTML constructs, images and other objects such as
+        interactive forms may be embedded into the rendered page. HTML provides a means to create structured documents
+        by denoting structural semantics for text such as headings, paragraphs, lists, links, quotes and other items.
+        HTML elements are delineated by tags, written using angle brackets. Tags such as &lt;img /&gt; and &lt;input
+        /&gt; directly introduce content into the page. Other tags such as &lt;p&gt; surround and provide information
+        about document text and may include other tags as sub-elements. Browsers do not display the HTML tags, but use
+        them to interpret the content of the page.</p>
+      <h3>Element Display Roles</h3>
+      <ul>
+        <li><b>Block-Level:</b> element box fills its parent element's content area width and cannot have other
+          elements to its sides. Example: &lt;p&gt; and &lt;div&gt;.</li>
+        <li><b>Inline-Level:</b> element box is generated within a line of text and does not break up the flow of
+          that line. Example: &lt;a&gt; and &lt;span&gt;.</li>
+      </ul>
+      <h3>History of HTML</h3>
+      <div class="containerTimeline">
+        <div id="htmlTimeline">
+        </div>
+      </div>
+    </article>
+
+    <article id="css">
+      <h2>CSS</h2>
+      <p>CSS is a style sheet language used for describing the presentation of a document written in a markup language
+        such as HTML. CSS is a cornerstone technology of the World Wide Web, alongside HTML and JavaScript.</p>
+      <p>CSS is designed to enable the separation of presentation and content, including layout, colors, and fonts.
+        This separation can improve content accessibility, provide more flexibility and control in the specification
+        of presentation characteristics, enable multiple web pages to share formatting by specifying the relecant CSS
+        in a separate .css file which reduces complexity and repetition in the structural content as well as enabling
+        the .css file to be cached to improve the page load speed between the pages that share the file.</p>
+      <p>The name cascading comes from the specified priority scheme to determine which style rule applies if more
+        than one rule matches a particular element. This cascading priority scheme is predictable.</p>
+      <p>The CSS specifications are maintained by the World Wide Web Consortium (W3C).</p>
+      <h3>Selectors</h3>
+      <details>
+        <summary>Basic selectors</summary>
         <ul>
-          <li><b>Block-Level:</b> element box fills its parent element's content area width and cannot have other
-            elements to its sides. Example: &lt;p&gt; and &lt;div&gt;.</li>
-          <li><b>Inline-Level:</b> element box is generated within a line of text and does not break up the flow of
-            that line. Example: &lt;a&gt; and &lt;span&gt;.</li>
+          <li>Universal selector: *</li>
+          <li>Type selector: <i>elementname</i></li>
+          <li>Class selector: <i>.classname</i></li>
+          <li>ID selector: <i>#idname</i></li>
+          <li>Attribute selector: [<i>attr=value</i>]</li>
         </ul>
-        <h3>History of HTML</h3>
-        <div class="containerTimeline">
-          <div id="htmlTimeline">
-          </div>
+      </details>
+      <h4>Grouping selectors</h4>
+      <details>
+        <summary>Selector list <b>A, B</b></summary>
+        Specifies that both <i>A</i> and <i>B</i> elements are selected.
+      </details>
+      <details>
+        <summary>Adjacent sibling combinator <b>A + B</b></summary>
+        Specifies that the elements selected by both <i>A</i> and <i>B</i> have the same parent and that the element
+        selected by <i>B</i> immediately follows the element selected by <i>A</i> horizontally.
+      </details>
+      <details>
+        <summary>General sibling combinator <b>A ~ B</b></summary>
+        Specifies that the elements selected by both <i>A</i> and <i>B</i> share the same parent and that the element
+        selected by <i>A</i> comes before⎼but not necessarily immediately before⎼the element selected by <i>B</i>.
+      </details>
+      <details>
+        <summary>Child combinator <b>A > B</b></summary>
+        Specifies that the element selected by <i>B</i> is the direct child of the element selected by <i>A</i>.
+      </details>
+      <details>
+        <summary>Descendant combinator <b>A B</b></summary>
+        Specifies that the element selected by <i>B</i> is a descendant of the element selected by <i>A</i>, but is
+        not
+        necessarily a direct child.
+      </details>
+      <details>
+        <summary>Pseudo classes <b>:</b></summary>
+        Specifies a special state of the selected element(s).
+      </details>
+      <details>
+        <summary>Pseudo elements <b>::</b></summary>
+        Represents entities that are not included in HTML.
+      </details>
+      <h3 id="precedence">Style Precedence</h3>
+      <p>Cascading Style Sheets uses a mechanism called the <i>cascade</i> to resolve any conflicts between styles
+        and arrive at a final set of styles to be applied to the document. Two key components of the cascade are
+        specificity and inheritance.</p>
+      <h4>Specificity</h4>
+      <p><i>Specificity</i> describes the weight of a selector and any declarations associated with it.</p>
+      <table>
+        <caption>Selector type specificity</caption>
+        <thead>
+          <tr>
+            <th>Selector type</th>
+            <th>Example</th>
+            <th>Specificity</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Universal selector</td>
+            <td>*</td>
+            <td rowspan="2">0,0,0,0</td>
+          </tr>
+          <tr>
+            <td>Combinator</td>
+            <td>+</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>Element identifier</td>
+            <td>div</td>
+            <td rowspan="2">0,0,0,1</td>
+          </tr>
+          <tr>
+            <td>Pseudo-element identifier</td>
+            <td>::first-line</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>Class identifier</td>
+            <td>.warning</td>
+            <td rowspan="3">0,0,1,0</td>
+          </tr>
+          <tr>
+            <td>Pseudo-class identifier</td>
+            <td>:hover</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>Attribute identifier</td>
+            <td>[type="checkbox"]</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>ID identifier</td>
+            <td>#content</td>
+            <td>0,1,0,0</td>
+          </tr>
+        </tbody>
+        <tfoot>
+          <tr>
+            <td>Inline <em>style</em> attribute</td>
+            <td>style="color: red;"</td>
+            <td>1,0,0,0</td>
+          </tr>
+        </tfoot>
+      </table>
+      <h4>Inheritance</h4>
+      <p>CSS uses the document tree for the mechanism of <i>inheritance</i>, in which a style applied to an element is
+        inherited by its descendants. Inheritance is interrupted only by a conflicting style rule that applies
+        directly
+        to an element. Inherited values have no specificity at all (which is <i>not</i> the same as having zero
+        specificity).</p>
+      <h3 id="boxModel">The Box Model</h3>
+      <p>In CSS there are broadly two types of boxes— <b>block boxes</b> and <b>inline boxes</b>. The CSS box model as
+        a
+        whole applies to block boxes. Inline boxes use just some of the behavior defined in the box model. The model
+        defines how the different parts of a box—margin, border, padding, and content— work together to create a box
+        that you can see on a page.</p>
+      <h4>Standard CSS box model</h4>
+      <p>In the standard box model, if you give a box a <i>width</i> and a <i>height</i> attribute, this defines the
+        width and height of the <i>content box</i>. Any padding and border is then added to that width and height to
+        get
+        the total size taken up by the box. <b>Example:</b></p>
+      <div class="standardBox">
+        <p>Standard CSS Box Model</p>
+      </div>
+      <p>The <i>actual space</i> taken up by the box will be 350px wide (300px + 20px + 20px + 5px + 5px) and 80px
+        high
+        (30px + 20px + 20px + 5px + 5px).</p>
+      <h4>Alternativve CSS box model</h4>
+      <p>In this model, any width is the width of the visible box on the page, therefore the content area width is
+        that
+        width minus the width for the padding and border. <b>Example using same width and height than previous
+          case:</b>
+      </p>
+      <div class="alternateBox">
+        <p>Alternative CSS Box Model</p>
+      </div>
+      <p>By default, browsers use the standard box model. If you want to turn on the alternative model for an element,
+        you do so by setting <i>box-sizing: border-box;</i> on it.</p>
+      <h3>Backgrounds</h3>
+      <p>The <i>background-color</i> property defines the background color of any element in CSS. The property accepts
+        any valid &lt;color&gt;. A <i>background-color</i> extends underneath the content and padding box of the
+        element. <b>Example:</b></p>
+      <div class="containerBackgroundColor">
+        <div id="backgroundColorBox">
+          <h4>Background Colors</h4>
         </div>
-      </article>
+      </div>
+      <p>The <i>background-image</i> property enables the display of an image in the background of an element. Also,
+        if
+        you specify a background color in addition to a background image then the image displays on top of the color.
+        Example:</p>
+      <div class="containerBackgroundImage">
+        <div id="backgroundImageBox">
+        </div>
+      </div>
+      <h3>Rounded Corners</h3>
+      <p>Rounding corners on a box is achieved by using the <i>border-radius</i> property. You can set a single radius
+        to make circular corners, or two radii to make elliptical corners. The radius applies to the whole background,
+        even if the element has no border. Examples:</p>
+      <div class="radiusBoxes">
+        <div class="boxRadius1">
+          <p>
+            Radius is set for all 4 sides
+          </p>
+          <p>border-radius: 10%;</p>
+        </div>
+        <div class="boxRadius2">
+          <p>
+            top-left-and-bottom-right | top-right-and-bottom-left
+          </p>
+          <p>border-radius: 25% 5%;</p>
+        </div>
+        <div class="boxRadius3">
+          <p>
+            top-left | top-right | bottom-right | bottom_left
+          </p>
+          <p>border-radius: 10% 20% 30% 50%;</p>
+        </div>
+        <div class="boxRadius4">
+          <p>
+            Horizontal all 4 corners / Vertical all 4 corners
+          </p>
+          <p>border-radius: 10% / 50%;</p>
+        </div>
+        <div class="boxRadius5">
+          <p>
+            top-left-and-bottom-right | top-right-and-bottom-left / all 4 corners
+          </p>
+          <p>border-radius: 5% 15% / 35%;</p>
+        </div>
+        <div class="boxRadius6">
+          <p>
+            top-left-and-bottom-right | top-right-and-bottom-left / top-left-and-bottom-right |
+            top-right-and-bottom-left
+          </p>
+          <p>border-radius: 50% 20% / 10% 40%;</p>
+        </div>
+      </div>
+      <h3>Box Shadow</h3>
+      <p>The <i>box-shadow</i> property adds shadow effects around an element's frame. You can set multiple effects
+        separated by commas. A box shadow is described by X and Y offsets relative to the element, blur and spread
+        radius, and color.</p>
+      <p>The <i>box-shadow</i> property enables you to cast a drop shadow from the frame of almost any element. If a
+        <i>border-radius</i> is specified on the element with a box shadow, the box shadow takes on the same rounded
+        corners.
+      </p>
+      <h4>Values</h4>
+      <details>
+        <summary><b>inset</b></summary>
+        If not specified (default), the shadow is assumed to be a drop shadow (as if the box were raised above the
+        content). The presence of the <i>inset</i> keyword changes the shadow to one inside the frame (as if the
+        content
+        was depressed inside the box). Inset shadows are drawn inside the border (even transparent ones), above the
+        background, but below content.
+      </details>
+      <details>
+        <summary><b>&lt;offset-x&gt; &lt;offset-y&gt;</b></summary>
+        These are two &lt;length&gt; values to set the shadow offset. &lt;offset-x&gt; specifies the horizontal
+        distance. Negative values place the shadow to the left of the element. &lt;offset-y&gt; specifies the vertical
+        distance. Negative values place the shadow above the element. If both values values are 0, the shadow is
+        placed
+        behind the element (and may generate a blur effect if &lt;blur-radius&gt; and/or &lt;spread-radius&gt; is
+        set).
+      </details>
+      <details>
+        <summary><b>&lt;blur-radius&gt;</b></summary>
+        This is a third &lt;length&gt; value. The larger this value, the bigger the blur, so the shadow becomes bigger
+        and lighter. Negative values are not allowed. If not specified, it will be 0 (the shadow's edge is sharp).
+      </details>
+      <details>
+        <summary><b>&lt;spread-radius&gt;</b></summary>
+        This is a fourth &lt;length&gt; value. Positive values will cause the shadow to expand and grow bigger,
+        negative
+        values will cause the shadow to shrink. If not specified, it will be 0 (the shadow will be the same size as
+        the
+        element).
+      </details>
+      <p>Examples:</p>
+      <div class="shadowBoxes">
+        <div class="boxShadow1">
+          <p>box-shadow: 3em -1.5em rgba(94, 48, 138, 1);</p>
+        </div>
+        <div class="boxShadow2">
+          <p>box-shadow: 1.5em 1em 0.7em rgba(94, 48, 138, 0.9);</p>
+        </div>
+        <div class="boxShadow3">
+          <p>box-shadow: 1.5em 0.7em 0.3em 0.6em rgba(94, 48, 138, 0.9);</p>
+        </div>
+        <div class="boxShadow4">
+          <p>box-shadow: inset 5em 1em rgba(94, 48, 138, 1);</p>
+        </div>
+        <div class="boxShadow5">
+          <p> box-shadow: 0 0.75em 0 -0.375em #fff, 0 -0.75em 0 -0.375em #fff, 0.75em 0 0 -0.375em #fff, -0.75em 0 0
+            -0.375em #fff, 0 0 0 0.375em rgba(94, 48, 138, 1);</p>
+        </div>
+        <div class="boxShadow6">
+          <p>box-shadow: inset 0 0 0 1em #350561, inset 0 0 0 1.5em #4024dd, inset 0 0 0 2em #77b2da;</p>
+        </div>
+      </div>
+    </article>
 
-      <article id="css">
-        <h2>CSS</h2>
-        <p>CSS is a style sheet language used for describing the presentation of a document written in a markup language
-          such as HTML. CSS is a cornerstone technology of the World Wide Web, alongside HTML and JavaScript.</p>
-        <p>CSS is designed to enable the separation of presentation and content, including layout, colors, and fonts.
-          This separation can improve content accessibility, provide more flexibility and control in the specification
-          of presentation characteristics, enable multiple web pages to share formatting by specifying the relecant CSS
-          in a separate .css file which reduces complexity and repetition in the structural content as well as enabling
-          the .css file to be cached to improve the page load speed between the pages that share the file.</p>
-        <p>The name cascading comes from the specified priority scheme to determine which style rule applies if more
-          than one rule matches a particular element. This cascading priority scheme is predictable.</p>
-        <p>The CSS specifications are maintained by the World Wide Web Consortium (W3C).</p>
-        <h3>Selectors</h3>
-        <details>
-          <summary>Basic selectors</summary>
-          <ul>
-            <li>Universal selector: *</li>
-            <li>Type selector: <i>elementname</i></li>
-            <li>Class selector: <i>.classname</i></li>
-            <li>ID selector: <i>#idname</i></li>
-            <li>Attribute selector: [<i>attr=value</i>]</li>
-          </ul>
-        </details>
-        <h4>Grouping selectors</h4>
-        <details>
-          <summary>Selector list <b>A, B</b></summary>
-          Specifies that both <i>A</i> and <i>B</i> elements are selected.
-        </details>
-        <details>
-          <summary>Adjacent sibling combinator <b>A + B</b></summary>
-          Specifies that the elements selected by both <i>A</i> and <i>B</i> have the same parent and that the element
-          selected by <i>B</i> immediately follows the element selected by <i>A</i> horizontally.
-        </details>
-        <details>
-          <summary>General sibling combinator <b>A ~ B</b></summary>
-          Specifies that the elements selected by both <i>A</i> and <i>B</i> share the same parent and that the element
-          selected by <i>A</i> comes before⎼but not necessarily immediately before⎼the element selected by <i>B</i>.
-        </details>
-        <details>
-          <summary>Child combinator <b>A > B</b></summary>
-          Specifies that the element selected by <i>B</i> is the direct child of the element selected by <i>A</i>.
-        </details>
-        <details>
-          <summary>Descendant combinator <b>A B</b></summary>
-          Specifies that the element selected by <i>B</i> is a descendant of the element selected by <i>A</i>, but is
-          not
-          necessarily a direct child.
-        </details>
-        <details>
-          <summary>Pseudo classes <b>:</b></summary>
-          Specifies a special state of the selected element(s).
-        </details>
-        <details>
-          <summary>Pseudo elements <b>::</b></summary>
-          Represents entities that are not included in HTML.
-        </details>
-        <h3 id="precedence">Style Precedence</h3>
-        <p>Cascading Style Sheets uses a mechanism called the <i>cascade</i> to resolve any conflicts between styles
-          and arrive at a final set of styles to be applied to the document. Two key components of the cascade are
-          specificity and inheritance.</p>
-        <h4>Specificity</h4>
-        <p><i>Specificity</i> describes the weight of a selector and any declarations associated with it.</p>
-        <table>
-          <caption>Selector type specificity</caption>
-          <thead>
-            <tr>
-              <th>Selector type</th>
-              <th>Example</th>
-              <th>Specificity</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td>Universal selector</td>
-              <td>*</td>
-              <td rowspan="2">0,0,0,0</td>
-            </tr>
-            <tr>
-              <td>Combinator</td>
-              <td>+</td>
-              <td></td>
-            </tr>
-            <tr>
-              <td>Element identifier</td>
-              <td>div</td>
-              <td rowspan="2">0,0,0,1</td>
-            </tr>
-            <tr>
-              <td>Pseudo-element identifier</td>
-              <td>::first-line</td>
-              <td></td>
-            </tr>
-            <tr>
-              <td>Class identifier</td>
-              <td>.warning</td>
-              <td rowspan="3">0,0,1,0</td>
-            </tr>
-            <tr>
-              <td>Pseudo-class identifier</td>
-              <td>:hover</td>
-              <td></td>
-            </tr>
-            <tr>
-              <td>Attribute identifier</td>
-              <td>[type="checkbox"]</td>
-              <td></td>
-            </tr>
-            <tr>
-              <td>ID identifier</td>
-              <td>#content</td>
-              <td>0,1,0,0</td>
-            </tr>
-          </tbody>
-          <tfoot>
-            <tr>
-              <td>Inline <em>style</em> attribute</td>
-              <td>style="color: red;"</td>
-              <td>1,0,0,0</td>
-            </tr>
-          </tfoot>
-        </table>
-        <h4>Inheritance</h4>
-        <p>CSS uses the document tree for the mechanism of <i>inheritance</i>, in which a style applied to an element is
-          inherited by its descendants. Inheritance is interrupted only by a conflicting style rule that applies
-          directly
-          to an element. Inherited values have no specificity at all (which is <i>not</i> the same as having zero
-          specificity).</p>
-        <h3 id="boxModel">The Box Model</h3>
-        <p>In CSS there are broadly two types of boxes— <b>block boxes</b> and <b>inline boxes</b>. The CSS box model as
-          a
-          whole applies to block boxes. Inline boxes use just some of the behavior defined in the box model. The model
-          defines how the different parts of a box—margin, border, padding, and content— work together to create a box
-          that you can see on a page.</p>
-        <h4>Standard CSS box model</h4>
-        <p>In the standard box model, if you give a box a <i>width</i> and a <i>height</i> attribute, this defines the
-          width and height of the <i>content box</i>. Any padding and border is then added to that width and height to
-          get
-          the total size taken up by the box. <b>Example:</b></p>
-        <div class="standardBox">
-          <p>Standard CSS Box Model</p>
-        </div>
-        <p>The <i>actual space</i> taken up by the box will be 350px wide (300px + 20px + 20px + 5px + 5px) and 80px
-          high
-          (30px + 20px + 20px + 5px + 5px).</p>
-        <h4>Alternativve CSS box model</h4>
-        <p>In this model, any width is the width of the visible box on the page, therefore the content area width is
-          that
-          width minus the width for the padding and border. <b>Example using same width and height than previous
-            case:</b>
-        </p>
-        <div class="alternateBox">
-          <p>Alternative CSS Box Model</p>
-        </div>
-        <p>By default, browsers use the standard box model. If you want to turn on the alternative model for an element,
-          you do so by setting <i>box-sizing: border-box;</i> on it.</p>
-        <h3>Backgrounds</h3>
-        <p>The <i>background-color</i> property defines the background color of any element in CSS. The property accepts
-          any valid &lt;color&gt;. A <i>background-color</i> extends underneath the content and padding box of the
-          element. <b>Example:</b></p>
-        <div class="containerBackgroundColor">
-          <div id="backgroundColorBox">
-            <h4>Background Colors</h4>
-          </div>
-        </div>
-        <p>The <i>background-image</i> property enables the display of an image in the background of an element. Also,
-          if
-          you specify a background color in addition to a background image then the image displays on top of the color.
-          Example:</p>
-        <div class="containerBackgroundImage">
-          <div id="backgroundImageBox">
-          </div>
-        </div>
-        <h3>Rounded Corners</h3>
-        <p>Rounding corners on a box is achieved by using the <i>border-radius</i> property. You can set a single radius
-          to make circular corners, or two radii to make elliptical corners. The radius applies to the whole background,
-          even if the element has no border. Examples:</p>
-        <div class="radiusBoxes">
-          <div class="boxRadius1">
-            <p>
-              Radius is set for all 4 sides
-            </p>
-            <p>border-radius: 10%;</p>
-          </div>
-          <div class="boxRadius2">
-            <p>
-              top-left-and-bottom-right | top-right-and-bottom-left
-            </p>
-            <p>border-radius: 25% 5%;</p>
-          </div>
-          <div class="boxRadius3">
-            <p>
-              top-left | top-right | bottom-right | bottom_left
-            </p>
-            <p>border-radius: 10% 20% 30% 50%;</p>
-          </div>
-          <div class="boxRadius4">
-            <p>
-              Horizontal all 4 corners / Vertical all 4 corners
-            </p>
-            <p>border-radius: 10% / 50%;</p>
-          </div>
-          <div class="boxRadius5">
-            <p>
-              top-left-and-bottom-right | top-right-and-bottom-left / all 4 corners
-            </p>
-            <p>border-radius: 5% 15% / 35%;</p>
-          </div>
-          <div class="boxRadius6">
-            <p>
-              top-left-and-bottom-right | top-right-and-bottom-left / top-left-and-bottom-right |
-              top-right-and-bottom-left
-            </p>
-            <p>border-radius: 50% 20% / 10% 40%;</p>
-          </div>
-        </div>
-        <h3>Box Shadow</h3>
-        <p>The <i>box-shadow</i> property adds shadow effects around an element's frame. You can set multiple effects
-          separated by commas. A box shadow is described by X and Y offsets relative to the element, blur and spread
-          radius, and color.</p>
-        <p>The <i>box-shadow</i> property enables you to cast a drop shadow from the frame of almost any element. If a
-          <i>border-radius</i> is specified on the element with a box shadow, the box shadow takes on the same rounded
-          corners.
-        </p>
-        <h4>Values</h4>
-        <details>
-          <summary><b>inset</b></summary>
-          If not specified (default), the shadow is assumed to be a drop shadow (as if the box were raised above the
-          content). The presence of the <i>inset</i> keyword changes the shadow to one inside the frame (as if the
-          content
-          was depressed inside the box). Inset shadows are drawn inside the border (even transparent ones), above the
-          background, but below content.
-        </details>
-        <details>
-          <summary><b>&lt;offset-x&gt; &lt;offset-y&gt;</b></summary>
-          These are two &lt;length&gt; values to set the shadow offset. &lt;offset-x&gt; specifies the horizontal
-          distance. Negative values place the shadow to the left of the element. &lt;offset-y&gt; specifies the vertical
-          distance. Negative values place the shadow above the element. If both values values are 0, the shadow is
-          placed
-          behind the element (and may generate a blur effect if &lt;blur-radius&gt; and/or &lt;spread-radius&gt; is
-          set).
-        </details>
-        <details>
-          <summary><b>&lt;blur-radius&gt;</b></summary>
-          This is a third &lt;length&gt; value. The larger this value, the bigger the blur, so the shadow becomes bigger
-          and lighter. Negative values are not allowed. If not specified, it will be 0 (the shadow's edge is sharp).
-        </details>
-        <details>
-          <summary><b>&lt;spread-radius&gt;</b></summary>
-          This is a fourth &lt;length&gt; value. Positive values will cause the shadow to expand and grow bigger,
-          negative
-          values will cause the shadow to shrink. If not specified, it will be 0 (the shadow will be the same size as
-          the
-          element).
-        </details>
-        <p>Examples:</p>
-        <div class="shadowBoxes">
-          <div class="boxShadow1">
-            <p>box-shadow: 3em -1.5em rgba(94, 48, 138, 1);</p>
-          </div>
-          <div class="boxShadow2">
-            <p>box-shadow: 1.5em 1em 0.7em rgba(94, 48, 138, 0.9);</p>
-          </div>
-          <div class="boxShadow3">
-            <p>box-shadow: 1.5em 0.7em 0.3em 0.6em rgba(94, 48, 138, 0.9);</p>
-          </div>
-          <div class="boxShadow4">
-            <p>box-shadow: inset 5em 1em rgba(94, 48, 138, 1);</p>
-          </div>
-          <div class="boxShadow5">
-            <p> box-shadow: 0 0.75em 0 -0.375em #fff, 0 -0.75em 0 -0.375em #fff, 0.75em 0 0 -0.375em #fff, -0.75em 0 0
-              -0.375em #fff, 0 0 0 0.375em rgba(94, 48, 138, 1);</p>
-          </div>
-          <div class="boxShadow6">
-            <p>box-shadow: inset 0 0 0 1em #350561, inset 0 0 0 1.5em #4024dd, inset 0 0 0 2em #77b2da;</p>
-          </div>
-        </div>
-      </article>
-
-      <article id="js">
-        <h2>JavaScript</h2>
-      </article>
-    </div>
+    <article id="js">
+      <h2>JavaScript</h2>
+    </article>
   </main>
   <footer>
-    <div class="footer">
-      <p>&copy;By Zhadox |•_•|</p>
-    </div>
+    <p>&copy;By Zhadox |•_•|</p>
   </footer>
 </body>
 
