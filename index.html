@@ -121,7 +121,7 @@
         specificity and inheritance.</p>
       <h4>Specificity</h4>
       <p><i>Specificity</i> describes the weight of a selector and any declarations associated with it.</p>
-      <table>
+      <table id="specificityTable">
         <caption>Selector type specificity</caption>
         <thead>
           <tr>
@@ -133,50 +133,50 @@
         <tbody>
           <tr>
             <td>Universal selector</td>
-            <td>*</td>
-            <td rowspan="2">0,0,0,0</td>
+            <td style="text-align: center;">*</td>
+            <td rowspan="2" style="text-align: right;">0,0,0,0</td>
           </tr>
           <tr>
             <td>Combinator</td>
-            <td>+</td>
+            <td style="text-align: center;">+</td>
             <td></td>
           </tr>
           <tr>
             <td>Element identifier</td>
-            <td>div</td>
-            <td rowspan="2">0,0,0,1</td>
+            <td style="text-align: center;">div</td>
+            <td rowspan="2" style="text-align: right;">0,0,0,1</td>
           </tr>
           <tr>
             <td>Pseudo-element identifier</td>
-            <td>::first-line</td>
+            <td style="text-align: center;">::first-line</td>
             <td></td>
           </tr>
           <tr>
             <td>Class identifier</td>
-            <td>.warning</td>
-            <td rowspan="3">0,0,1,0</td>
+            <td style="text-align: center;">.warning</td>
+            <td rowspan="3" style="text-align: right;">0,0,1,0</td>
           </tr>
           <tr>
             <td>Pseudo-class identifier</td>
-            <td>:hover</td>
+            <td style="text-align: center;">:hover</td>
             <td></td>
           </tr>
           <tr>
             <td>Attribute identifier</td>
-            <td>[type="checkbox"]</td>
+            <td style="text-align: center;">[type="checkbox"]</td>
             <td></td>
           </tr>
           <tr>
             <td>ID identifier</td>
-            <td>#content</td>
-            <td>0,1,0,0</td>
+            <td style="text-align: center;">#content</td>
+            <td style="text-align: right;">0,1,0,0</td>
           </tr>
         </tbody>
         <tfoot>
           <tr>
             <td>Inline <em>style</em> attribute</td>
-            <td>style="color: red;"</td>
-            <td>1,0,0,0</td>
+            <td style="text-align: center;">style="color: red;"</td>
+            <td style="text-align: right;">1,0,0,0</td>
           </tr>
         </tfoot>
       </table>

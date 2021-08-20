@@ -27,3 +27,12 @@ footer {
   grid-area: footer;
   justify-items: center;
 }
+#hmtl {
+  grid-area: html;
+}
+#css {
+  grid-area: css;
+}
+#js {
+  grid-area: js;
+}
