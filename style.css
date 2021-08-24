@@ -326,10 +326,11 @@ tfoot tr:hover {
   align-content: center;
   justify-content: center;
   background-color: rgb(63, 0, 122);
-  cursor: pointer;
+  cursor: wait;
   border: 3px solid rgb(0, 217, 255);
   border-radius: 30% 0;
   color: #fff;
+  transition: 2s;
 }
 .boxTransformed2,
 .boxTransformed4,
@@ -342,8 +343,9 @@ tfoot tr:hover {
   align-content: center;
   justify-content: center;
   transform-style: preserve-3d;
-  cursor: pointer;
+  cursor: wait;
   transform: rotate3d(1, 1, 1, 25deg);
+  transition: 2s;
 }
 .face {
   display: flex;
@@ -433,7 +435,7 @@ tfoot tr:hover {
   align-content: center;
   background-color: rgb(63, 0, 122);
   border: 3px solid rgb(0, 217, 255);
-  cursor: progress;
+  cursor: wait;
   color: #ddd;
   font-weight: bold;
 }
@@ -472,6 +474,82 @@ tfoot tr:hover {
   transition-delay: 0s, 0s, 1s, 1s, 1.5s, 2s;
   transition-timing-function: ease-in, ease-in-out, ease-out, linear, ease-in,
     ease-out;
+}
+.animatedBoxSpace {
+  display: grid;
+  align-content: end;
+  justify-content: left;
+  width: 100%;
+  height: 200px;
+}
+.animatedBox {
+  display: flex;
+  width: 150px;
+  height: 150px;
+  display: flex;
+  align-content: center;
+  justify-content: center;
+  cursor: pointer;
+  border-radius: 50%;
+}
+.animation1,
+.animation2,
+.animation3 {
+  display: flex;
+  align-self: center;
+  justify-content: center;
+  position: absolute;
+  width: 100px;
+  height: 100px;
+}
+.animation1 {
+  background-color: rgba(184, 0, 0, 0.829);
+  transform: rotate(27.5deg);
+  border-radius: 0 30%;
+}
+.animation2 {
+  background-color: rgba(0, 102, 5, 0.733);
+  border-radius: 30% 0;
+  transform: rotate(67.5deg);
+}
+.animation3 {
+  background-color: rgba(197, 194, 0, 0.664);
+  border-radius: 30% 0;
+}
+.animation4 {
+  display: flex;
+  align-self: center;
+  justify-content: center;
+  position: absolute;
+  width: 25px;
+  height: 25px;
+  background-color: rgba(97, 0, 223, 0.897);
+  border-radius: 50%;
+}
+.animatedBox.run {
+  animation-name: spin, slide;
+  animation-duration: 6s, 3s;
+  animation-delay: 0s, 3s;
+  animation-direction: alternate;
+  animation-timing-function: ease-in-out, ease-out;
+  animation-iteration-count: 2;
+}
+@keyframes spin {
+  from {
+    transform: rotate(0turn);
+  }
+  to {
+    transform: rotate(12turn);
+  }
+}
+
+@keyframes slide {
+  from {
+    transform: translate(0, 0) rotate(0turn);
+  }
+  to {
+    transform: translate(60vw, -8vh) rotate(6turn);
+  }
 }
 /* JavaScript rules */
 #js:hover {
