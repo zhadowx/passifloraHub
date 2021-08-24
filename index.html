@@ -410,6 +410,53 @@
           <div class="face bottom">6</div>
         </div>
       </div>
+      <h3>Transitioning Between States</h3>
+      <p>The <i>transition</i> CSS property is a shorthand property for <i>transition-property</i>,
+        <i>transition-duration</i>,
+        <i>transition-timing-function</i> and <i>transition-delay</i>.
+      </p>
+      <p>Transitions enable you to define the transition between two states of an element. Different states may be
+        defined using <i>pseudo-classes</i> like <i>:hover</i> or <i>:active</i> or dynamically set using JavaScript.
+      </p>
+      <h4>Constituent Properties</h4>
+      <ul>
+        <li><i>transition-delay</i>: specifies the duration to wait starting a property's transition effect when its
+          value changes. The delay may be zero, positive or negative:
+          <ul>
+            <li>A value of 0s will begin the transition immediately.</li>
+            <li>A positive value will delay the start of the transition effect for the given length of time.</li>
+            <li>A negative value will begin the transition effect immediately, and partway through the effect. In other
+              words, the effect will be animated as if it had already been running for the given length of time.</li>
+          </ul>
+        </li>
+        <li><i>transition-duration</i>: sets the length of time a transition animation should take to complete. By
+          default, the value is 0s, meaning that no animation will occur.</li>
+        <li><i>transition-property</i>: sets the CSS properties to which a transition effect should be applied.</li>
+        <li><i>transition-timing-function</i>: sets how intermediate values are calculated for CSS properties being
+          affected by a transition effect. This, in essence, lets you establish an acceleration curve so that the speed
+          of the transition can vary over its duration. This acceleration curve is defined using one
+          &lt;easing-function&gt; for each property to be transitioned.</li>
+      </ul>
+      <div class="containerTransitions">
+        <div class="boxTransitioned1">
+          <p></p>
+        </div>
+        <div class="boxTransitioned2">
+          <p></p>
+        </div>
+        <div class="boxTransitioned3">
+          <p></p>
+        </div>
+        <div class="boxTransitioned4">
+          <p></p>
+        </div>
+        <div class="boxTransitioned5">
+          <p></p>
+        </div>
+        <div class="boxTransitioned6">
+          <p></p>
+        </div>
+      </div>
     </article>
 
     <article id="js">
