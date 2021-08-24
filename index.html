@@ -457,6 +457,35 @@
           longhand properties
         </div>
       </div>
+      <h3>Animations</h3>
+      <p><b style="font-weight: bold;">CSS Animations</b> make it possible to animate transitions from one CSS style
+        configuration to another.
+        Animations consists of two components, a style describing the CSS animation and a set of keyframes that indicate
+        the start (sometimes intermediate waypoints) and end states of the animation's style.</p>
+      <p>To create a CSS animation sequence, you style the element you want to animate with the <i>animation</i>
+        property or its sub-properties. This lets you configure the timing, duration, and other details of how the
+        animation sequence should progress. This does <b style="font-weight: bold;">not</b> configure the actual
+        appearance of the animation, which
+        is done using <i>@keyframes</i> at-rule.</p>
+      <p>The sub-properties of the animation property are:</p>
+      <ul>
+        <li><i>animation-name</i>: specifies the name of the @keyframes at-rule describing the animation's keyframes.
+        </li>
+        <li><i>animation-duration</i>: configures the length of time an animation should take to complete one cycle.
+        </li>
+        <li><i>animation-timing-function</i>: configures the timing of the animation; that is, how the animation
+          transitions through keyframes, by establishing acceleration curves.</li>
+        <li><i>animation-delay</i>: configures the delay between the time the element is loaded and the beginning of the
+          animation sequence.</li>
+        <li><i>animation-iteration-count</i>: configures the number of times the animation should repeat; you can
+          specify infinite to repeat the animation indefinitely.</li>
+        <li><i>animation-direction</i>: configures whether or not the animation should alternate direction on each run
+          through the sequence or reset to the start point and repeat itself.</li>
+        <li><i>animation-fill-mode</i>: configures what values are applied by the animation before and after executing.
+        </li>
+        <li><i>animation-play-state</i>: lets you pause and resume the animation sequence.</li>
+      </ul>
+      <div class="animatedBox"></div>
     </article>
 
     <article id="js">
