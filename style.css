@@ -67,16 +67,21 @@ nav > ul > li > a {
   color: #000;
   font-weight: bold;
 }
-nav > ul > li:nth-child(1) {
-  background: linear-gradient(90deg, rgba(241, 101, 41, 1) 30%, #ddd 90%);
+nav > ul > li:hover {
+  font-size: larger;
+  transition-property: box-shadow, font-size;
+  transition-duration: 1s, 0.5s;
+  transition-delay: 0s, 0.3s;
+  transition-timing-function: ease-in, ease-in;
 }
-nav > ul > li:nth-child(2) {
-  color: #000;
-  background: linear-gradient(90deg, rgba(1, 101, 241, 1) 30%, #ddd 90%);
+nav > ul > li:nth-child(1):hover {
+  box-shadow: inset 5em 0 rgb(241, 101, 41);
 }
-nav > ul > li:nth-child(3) {
-  color: #000;
-  background: linear-gradient(90deg, rgba(247, 223, 30, 1) 30%, #ddd 90%);
+nav > ul > li:nth-child(2):hover {
+  box-shadow: inset 4em 0 rgb(1, 101, 241);
+}
+nav > ul > li:nth-child(3):hover {
+  box-shadow: inset 10em 0 rgb(247, 223, 30);
 }
 /* HTML rules */
 #html,
@@ -182,7 +187,7 @@ tfoot tr:hover {
   justify-content: center;
 }
 #backgroundColorBox {
-  background-color: rgb(38, 77, 228);
+  background-color: rgb(63, 0, 122);
   width: 300px;
   height: 80px;
   margin: 10px;
@@ -211,7 +216,7 @@ tfoot tr:hover {
         rgba(51, 56, 57, 1) 98%
       )
       center center / 200px 200px no-repeat,
-    url(images/mandala.svg) center no-repeat, rgb(1, 101, 241);
+    url(images/mandala.svg) center no-repeat, rgb(63, 0, 122);
 }
 /* Border Radius */
 .radiusBoxes {
@@ -231,7 +236,7 @@ tfoot tr:hover {
   height: 150px;
   display: grid;
   align-content: center;
-  background-color: rgba(4, 43, 98, 0.9);
+  background-color: rgba(63, 0, 122, 0.9);
   color: #fff;
   border: 3px solid #000;
 }
@@ -272,21 +277,21 @@ tfoot tr:hover {
   height: 100px;
   display: grid;
   align-content: center;
-  background-color: rgba(48, 75, 138, 0.7);
+  background-color: rgba(63, 0, 122, 0.8);
   color: #fff;
   font-weight: bold;
 }
 .boxShadow1 {
-  box-shadow: 3em -1.5em rgb(54, 48, 138);
+  box-shadow: 3em -1.5em rgb(0, 217, 255);
 }
 .boxShadow2 {
-  box-shadow: 1.5em 1em 0.7em rgba(54, 48, 138, 0.9);
+  box-shadow: 1.5em 1em 0.7em rgba(0, 217, 255, 0.9);
 }
 .boxShadow3 {
-  box-shadow: 1.5em 0.7em 0.3em 0.6em rgba(54, 48, 138, 0.9);
+  box-shadow: 1.5em 0.7em 0.3em 0.6em rgba(0, 217, 255, 0.9);
 }
 .boxShadow4 {
-  box-shadow: inset 5em 1em rgba(54, 48, 138, 1);
+  box-shadow: inset 5em 1em rgba(60, 217, 255, 1);
 }
 .boxShadow5 {
   width: 200px;
@@ -404,6 +409,69 @@ tfoot tr:hover {
 }
 .boxTransformed10:hover {
   transform: rotate3d(1, 1, 1, 25deg) perspective(6cm);
+}
+/* Transition between states */
+.containerTransitions {
+  display: grid;
+  gap: 1em;
+  grid-template-columns: 1fr;
+  justify-items: center;
+  align-items: center;
+  margin-bottom: 3em;
+}
+
+.boxTransitioned1,
+.boxTransitioned2,
+.boxTransitioned3,
+.boxTransitioned4,
+.boxTransitioned5,
+.boxTransitioned6 {
+  width: 160px;
+  height: 160px;
+  display: grid;
+  justify-content: center;
+  align-content: center;
+  background-color: rgb(63, 0, 122);
+  border: 3px solid rgb(0, 217, 255);
+  cursor: progress;
+  color: #ddd;
+  font-weight: bold;
+}
+.boxTransitioned1:hover {
+  border-radius: 50%;
+  transition: border-radius 3s;
+}
+.boxTransitioned2:hover {
+  border-radius: 50%;
+  transition: border-radius 3s 1.5s;
+}
+.boxTransitioned3:hover {
+  border-radius: 50%;
+  transition: border-radius 3s cubic-bezier(0.6, 1.2, 1, -0.8);
+}
+.boxTransitioned4:hover {
+  border-radius: 50%;
+  transition: border-radius 3s ease-in-out 1.5s;
+}
+.boxTransitioned5:hover {
+  transition: border-radius 3s, transform 2s 1.5s, box-shadow 1.5s 1s ease-in;
+  border-radius: 50%;
+  transform: translateX(5em);
+  box-shadow: -2em 0 3em rgb(0, 217, 255);
+}
+.boxTransitioned6:hover {
+  border: none;
+  border-radius: 30% 0;
+  background-color: rgb(0, 217, 255);
+  color: #000;
+  transform: skew(20deg, 15deg) translateX(5em);
+  box-shadow: -2.3em 0 3em rgba(63, 0, 122, 0.7);
+  transition-property: background-color, color, border-radius, border, transform,
+    box-shadow;
+  transition-duration: 1s, 1s, 1s, 0.5s, 3s, 2s;
+  transition-delay: 0s, 0s, 1s, 1s, 1.5s, 2s;
+  transition-timing-function: ease-in, ease-in-out, ease-out, linear, ease-in,
+    ease-out;
 }
 /* JavaScript rules */
 #js:hover {
