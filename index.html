@@ -35,6 +35,7 @@
   <main>
     <article id="html">
       <h2>HTML</h2>
+      <h3>What is HTML?</h3>
       <p>The HyperText Markup Language is the most basic building block of the Web. It defines the meaning and
         structure of web content.</p>
       <p>Web browsers receive HTML documents from a web server or from local storage and render the documents into
@@ -53,15 +54,18 @@
         <li><b>Inline-Level:</b> element box is generated within a line of text and does not break up the flow of
           that line. Example: &lt;a&gt; and &lt;span&gt;.</li>
       </ul>
-      <h3>History of HTML</h3>
-      <div class="containerTimeline">
-        <div id="htmlTimeline">
+      <div class="timeline">
+        <h3>History of HTML</h3>
+        <div class="containerTimeline">
+          <div id="htmlTimeline">
+          </div>
         </div>
       </div>
     </article>
 
     <article id="css">
       <h2>CSS</h2>
+      <h3>What is CSS?</h3>
       <p>CSS is a style sheet language used for describing the presentation of a document written in a markup language
         such as HTML. CSS is a cornerstone technology of the World Wide Web, alongside HTML and JavaScript.</p>
       <p>CSS is designed to enable the separation of presentation and content, including layout, colors, and fonts.
@@ -283,7 +287,7 @@
         <i>border-radius</i> is specified on the element with a box shadow, the box shadow takes on the same rounded
         corners.
       </p>
-      <h4>Values</h4>
+      <p>Values:</p>
       <details>
         <summary><b>inset</b></summary>
         If not specified (default), the shadow is assumed to be a drop shadow (as if the box were raised above the
@@ -458,13 +462,13 @@
         </div>
       </div>
       <h3>Animations</h3>
-      <p><b style="font-weight: bold;">CSS Animations</b> make it possible to animate transitions from one CSS style
+      <p><b>CSS Animations</b> make it possible to animate transitions from one CSS style
         configuration to another.
         Animations consists of two components, a style describing the CSS animation and a set of keyframes that indicate
         the start (sometimes intermediate waypoints) and end states of the animation's style.</p>
       <p>To create a CSS animation sequence, you style the element you want to animate with the <i>animation</i>
         property or its sub-properties. This lets you configure the timing, duration, and other details of how the
-        animation sequence should progress. This does <b style="font-weight: bold;">not</b> configure the actual
+        animation sequence should progress. This does <b>not</b> configure the actual
         appearance of the animation, which
         is done using <i>@keyframes</i> at-rule.</p>
       <p>The sub-properties of the animation property are:</p>
@@ -498,6 +502,149 @@
 
     <article id="js">
       <h2>JavaScript</h2>
+      <h3>What is JavaScript?</h3>
+      <p>JavaScript was introduced in 1995 as a way to add programs to web pages in the Netscape Navigator browser. The
+        language has since been adopted by all other major graphical web browsers. It has made modern web applications
+        possible—applications with which you can interact directly without doing a page reload for every action.
+        JavaScript is also used in more traditional websites to provide various forms of interactivity and cleverness.
+      </p>
+      <p>JavaScript(JS) is a lightweight, interpreted, or just-in-time compiled programming language with
+        first-class-functions. JavaScript is a prototype-based, multi-paradigm, single-threaded, dynamic language,
+        supporting object-oriented, imperative, and declarative (e.g. functional programming) styles.</p>
+      <h3>Grammar, Values and Types</h3>
+      <p>JavaScript is <b>case-sensitive</b> and uses the Unicode character set.</p>
+      <p>In JavaScript, instructions are called statements and are separated by semicolons(;).</p>
+      <p>The source code text of JavaScript get scanned from left to right, and is converted into sequence of input
+        elements which are <i>tokens</i>, <i>control characters</i>, <i>line-terminators</i>, <i>comments</i>, or
+        whitespace.</p>
+      <p>In JavaScript values are chunks of information that represent pieces of information. Every value has a type
+        that determines its role. There are eight data types, 7 primitive data types and objects.</p>
+      <h4>The 7 primitive data types:</h4>
+      <ol>
+        <li><b>Number: </b>Floating point numbers. Used for decimals and integers.</li>
+        <li><b>String: </b> Sequence of characters. Used for text.</li>
+        <li><b>Boolean: </b>Logical type that can only be <i>true</i> or <i>false</i>. Used for taking decisions.</li>
+        <li><b>Undefined: </b>Value taken by a variable that is not yet defined ('empty value').</li>
+        <li><b>Null: </b>Also means 'empty value'.</li>
+        <li><b>Symbol(ES2015): </b>Value that is unique and cannot be changed.</li>
+        <li><b>BigInt(ES2020): </b>Larger integers than the Number type can hold.</li>
+      </ol>
+      <h4>Data type conversion</h4>
+      <p>JavaScript is a <i>dynamically typed</i> language. This means you don't have to specify the data type of a
+        variable when you declare it. It also means that data types are automatically converted as-needed during script
+        execution.</p>
+      <h4>Declarations</h4>
+      <p>JavaScript has three kinds of variable declarations.</p>
+      <ul>
+        <li>var: declares a variable, optionally initializing it to a value.</li>
+        <li>let: declares a block-scoped, local variable, optionally initializing it to a value.</li>
+        <li>const: declares a block-scoped, read-only named constant.</li>
+      </ul>
+      <p>Variables are used as symbolic names for values in the programs. The names of variables, called identifiers,
+        conform to certain rules.</p>
+      <h5>Variable Scope</h5>
+      <p>When you declare a variable outside of any function, it is called a <i>global</i> variable, because it is
+        available to any other code in the current document. When you declare a variable within a function, it is called
+        a local variable, because it is available only within that function.</p>
+      <h5>Variable hoisting</h5>
+      <p>You can refer to a variable declared later, without getting an exception. This concept is knows as
+        <b>hoisting</b>. Variables in JavaScript are "hoisted" (or "lifted") to the top of the function or statement.
+        However, variables that are hoisted return a value of <i>undefined</i>.
+      </p>
+      <h4>Literals</h4>
+      <p><i>Literals</i> represent values in JavaScript. These are fixed values—not variables—that you <i>literally</i>
+        provide in your script. There are:</p>
+      <ul>
+        <li>Array literals: a list of zero or more expressions, each of which represents an array element, enclosed in
+          square brackets ([]).</li>
+        <li>Boolean literals: <b>true</b> and <b>false</b>.</li>
+        <li>Floating-point literals: can have an unsigned decimal integer, a decimal point (.), a fraction or an
+          exponent(e).</li>
+        <li>Numeric literals: include integer literals in different bases as well as floating-point literals in base-10.
+        </li>
+        <li>Object literals: is a list of zero or more pairs of property names and associated values of an object,
+          enclosed in curly braces ({}).</li>
+        <li>RegExp literals: is a pattern enclosed between slashes (/ /).</li>
+        <li>String literals: is zero or more characters enclosed in double(") or single (') quotation marks. A string
+          must be delimited by quotations marks of the same type. Also there are <i>template literals</i> which are
+          enclosed by the back-tick (`) character instead of double or single quotes and provide syntactic sugar for
+          constructing strings.</li>
+      </ul>
+      <h3>Operators</h3>
+      <p>JavaScript has the following types of operators:</p>
+      <ul>
+        <li>Assignment: assigns a value to its left operand based of its rights operand. The simple assignmet operator
+          is equal <b>(=)</b>.</li>
+        <li>Comparison: compares its operands and returns a logical value based on whether the comparison is true. The
+          operands can be numerical, string, logical, or object values.
+          <ul>
+            <li>Equal <b>(==)</b></li>
+            <li>Not equal <b>(!=)</b></li>
+            <li>Strict equal <b>(===)</b></li>
+            <li>Strict not equal <b>(!==)</b></li>
+            <li>Greater than <b>(&gt;)</b></li>
+            <li>Greater than or equal <b>(&gt;=)</b></li>
+            <li>Less than <b>(&lt;)</b> </li>
+            <li>Less than or equal <b>(&lt;=)</b> </li>
+          </ul>
+        </li>
+        <li>Arithmetic: takes numerical values (either literals or variables) as their operands and returns a single
+          numerical value. The standard arithmetic operators are addition <b>(+)</b> , subtraction <b>(-)</b> ,
+          multiplication <b>(*)</b>, and
+          division <b>(/)</b>. In addition there are also:
+          <ul>
+            <li>Remainder <b>(%)</b> : binary operator that returns the integer remainder of dividing the two operands.
+            </li>
+            <li>Increment <b>(++)</b> : unary operator that adds one to its operand.</li>
+            <li>Decrement <b>(--)</b> : unary operator that subtracts one from its operand.</li>
+            <li>Unary negation <b>(-)</b> : unary operator that returns the negation of its operand.</li>
+            <li>Unary plus <b>(+)</b> : unary operator that attempts to convert operand to a number, if it is not
+              already.</li>
+            <li>Exponentiation operator <b>(**)</b> : calculates the base to the exponent power, that is, base^exponent.
+            </li>
+          </ul>
+        </li>
+        <li>Bitwise: treat their operands as a set of 32 bits (zeros and ones), rather than as decimal, hexadecimal, or
+          octal numbers. Bitwise operators perform their operations on such <b>binary representations</b>, but they
+          return standard JavaScript numerical values.</li>
+        <li>Logical: are typically used with Boolean (logical) values; when they are, they return a Boolean value.
+          However, the <b>&&</b> and <b>||</b> operators actually return the value of one of the specified operands, so
+          if these operators are used with non-Boolean values, they may return a non-Boolean value.
+          <ul>
+            <li>Logical AND <b>(&&)</b>: Returns left-hand operand if it can be converted to false; otherwise returns
+              right-hand operand. Thus, when used with Boolean values, returns <i>true</i> if both operands are true;
+              otherwise, returns <i>false</i>.</li>
+            <li>Logical OR <b>(||)</b>: Returns left-hand operand if it can be converted to true; otherwise, returns
+              right-hand operand. Thus, when used with Boolean values, returns <i>true</i> if either operand is true; if
+              both are false returns <i>false</i>.</li>
+            <li>Logical NOT <b>(!)</b>: Returns <i>false</i> if its single operand can be converted to true; otherwise,
+              returns <i>true</i>.</li>
+          </ul>
+        </li>
+        <li>String: in addition to the comparison operators, which can be used on string values, the concatenation
+          operator <b>(+)</b> concatenates two string values together, returning another string that is the union of the
+          two operand strings.</li>
+        <li>Conditional (ternary): is the only JavaScript operator that takes three operands and the syntax is
+          <b>(condition ? val1 : val2)</b>; meaning that if condition is true, the operator returns val1, otherwise it
+          returns val2.
+        </li>
+        <li>Comma <b>(,)</b>: evaluates both of its operands and returns the value of the last operand. This operator is
+          primarily used inside a <i>for</i> loop, to allow multiple variables to be updated each time through the loop.
+        </li>
+        <li>Unary: operate with a single operand.
+          <ul>
+            <li><b>delete</b>: deletes an object's property.</li>
+            <li><b>typeof</b>: returns a string indicating the type of the unevaluated operand.</li>
+            <li><b>void</b>: specifies an expression to be evaluated without returning a value.</li>
+          </ul>
+        </li>
+        <li>Relational: compares its operands and returns a Boolean value based on whether the comparison is true.
+          <ul>
+            <li><b>in</b>: returns true if the specified property is in the specified object.</li>
+            <li><b>instanceof</b>: returns true if the specified object is of the specified object type.</li>
+          </ul>
+        </li>
+      </ul>
     </article>
   </main>
   <footer>

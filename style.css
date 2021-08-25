@@ -42,6 +42,25 @@ h2 {
 h3 {
   border-bottom: 2px solid #000;
   text-align: end;
+  padding-right: 0.7em;
+}
+b {
+  font-weight: bold;
+}
+
+p,
+h4,
+h5,
+details {
+  padding: 0 0.7em;
+}
+summary {
+  /* border-bottom: 1px dotted #000; */
+  box-shadow: 0 0.5px 1px #000;
+  font-size: large;
+  font-variant: normal;
+  list-style: none;
+  background-color: rgb(212, 212, 212);
 }
 /* Header rules */
 header {
@@ -49,7 +68,9 @@ header {
 }
 
 /* Main rules */
-
+main li {
+  padding-right: 0.7em;
+}
 /* Footer rules */
 footer {
   font-style: italic;
@@ -96,11 +117,6 @@ nav > ul > li:nth-child(3):hover {
   border-color: rgba(228, 77, 38, 1);
   box-shadow: inset 0 0.2em 0.25em rgba(241, 101, 41, 0.6);
 }
-#html p,
-#html h3,
-#html ul > li {
-  padding-left: 0.4em;
-}
 #html > h2 {
   margin-top: 0;
   background: linear-gradient(
@@ -112,11 +128,10 @@ nav > ul > li:nth-child(3):hover {
   border-radius: 1px 1px 0 0;
 }
 
-#html h3 {
+.timeline {
   display: none;
 }
 #htmlTimeline {
-  display: none;
   width: 100%;
   height: 25vh;
   background-image: url(/images/html_timeline.svg);
