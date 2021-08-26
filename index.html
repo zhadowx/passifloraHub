@@ -513,8 +513,14 @@
         supporting object-oriented, imperative, and declarative (e.g. functional programming) styles.</p>
       <h3>Grammar, Values and Types</h3>
       <p>JavaScript is <b>case-sensitive</b> and uses the Unicode character set.</p>
-      <p>In JavaScript, instructions are called statements and are separated by semicolons(;).</p>
-      <p>The source code text of JavaScript get scanned from left to right, and is converted into sequence of input
+      <p>An <i>expression</i> in JavaScript is any valid unit of code that resolves to a value. Every syntactically
+        valid expression resolves to some value but conceptually, there are two types of expressions: with side
+        effects(those that assign value to a variable) and those that in some sense evaluate and therefore resolve to a
+        value.</p>
+      <p>In JavaScript, instructions are called statements and are separated by semicolons <b>(;)</b>. Which means that
+        any
+        JavaScript expression ending with a semicolon is also a statement.</p>
+      <p>The source code text of JavaScript gets scanned from left to right, and is converted into a sequence of input
         elements which are <i>tokens</i>, <i>control characters</i>, <i>line-terminators</i>, <i>comments</i>, or
         whitespace.</p>
       <p>In JavaScript values are chunks of information that represent pieces of information. Every value has a type
@@ -536,9 +542,9 @@
       <h4>Declarations</h4>
       <p>JavaScript has three kinds of variable declarations.</p>
       <ul>
-        <li>var: declares a variable, optionally initializing it to a value.</li>
-        <li>let: declares a block-scoped, local variable, optionally initializing it to a value.</li>
-        <li>const: declares a block-scoped, read-only named constant.</li>
+        <li><b>var</b>: declares a variable, optionally initializing it to a value.</li>
+        <li><b>let</b>: declares a block-scoped, local variable, optionally initializing it to a value.</li>
+        <li><b>const</b>: declares a block-scoped, read-only named constant.</li>
       </ul>
       <p>Variables are used as symbolic names for values in the programs. The names of variables, called identifiers,
         conform to certain rules.</p>
@@ -555,17 +561,17 @@
       <p><i>Literals</i> represent values in JavaScript. These are fixed values—not variables—that you <i>literally</i>
         provide in your script. There are:</p>
       <ul>
-        <li>Array literals: a list of zero or more expressions, each of which represents an array element, enclosed in
+        <li>Array literal: a list of zero or more expressions, each of which represents an array element, enclosed in
           square brackets ([]).</li>
-        <li>Boolean literals: <b>true</b> and <b>false</b>.</li>
-        <li>Floating-point literals: can have an unsigned decimal integer, a decimal point (.), a fraction or an
+        <li>Boolean literal: <b>true</b> and <b>false</b>.</li>
+        <li>Floating-point literals: can have an unsigned decimal integer, a decimal point (.), a fraction, or an
           exponent(e).</li>
-        <li>Numeric literals: include integer literals in different bases as well as floating-point literals in base-10.
+        <li>Numeric literal: include integer literals in different bases as well as floating-point literals in base-10.
         </li>
-        <li>Object literals: is a list of zero or more pairs of property names and associated values of an object,
+        <li>Object literal: is a list of zero or more pairs of property names and associated values of an object,
           enclosed in curly braces ({}).</li>
-        <li>RegExp literals: is a pattern enclosed between slashes (/ /).</li>
-        <li>String literals: is zero or more characters enclosed in double(") or single (') quotation marks. A string
+        <li>RegExp literal: is a pattern enclosed between slashes (/ /).</li>
+        <li>String literal: is zero or more characters enclosed in double(") or single (') quotation marks. A string
           must be delimited by quotations marks of the same type. Also there are <i>template literals</i> which are
           enclosed by the back-tick (`) character instead of double or single quotes and provide syntactic sugar for
           constructing strings.</li>
@@ -573,7 +579,8 @@
       <h3>Operators</h3>
       <p>JavaScript has the following types of operators:</p>
       <ul>
-        <li>Assignment: assigns a value to its left operand based of its rights operand. The simple assignmet operator
+        <li>Assignment: assigns a value to its left operand based on the value of its right operand. The simple
+          assignmet operator
           is equal <b>(=)</b>.</li>
         <li>Comparison: compares its operands and returns a logical value based on whether the comparison is true. The
           operands can be numerical, string, logical, or object values.
@@ -604,10 +611,12 @@
             </li>
           </ul>
         </li>
-        <li>Bitwise: treat their operands as a set of 32 bits (zeros and ones), rather than as decimal, hexadecimal, or
+        <li>Bitwise operator: treats their operands as a set of 32 bits (zeros and ones), rather than as decimal,
+          hexadecimal, or
           octal numbers. Bitwise operators perform their operations on such <b>binary representations</b>, but they
           return standard JavaScript numerical values.</li>
-        <li>Logical: are typically used with Boolean (logical) values; when they are, they return a Boolean value.
+        <li>Logical operators: are typically used with Boolean (logical) values; when they are, they return a Boolean
+          value.
           However, the <b>&&</b> and <b>||</b> operators actually return the value of one of the specified operands, so
           if these operators are used with non-Boolean values, they may return a non-Boolean value.
           <ul>
@@ -619,6 +628,8 @@
               both are false returns <i>false</i>.</li>
             <li>Logical NOT <b>(!)</b>: Returns <i>false</i> if its single operand can be converted to true; otherwise,
               returns <i>true</i>.</li>
+            <li>Nullish coalescing operator <b>(??)</b>: returns its right-hand side operand when its left-hand side
+              operand is <i>null</i> or <i>undefined</i>, and otherwise returns its left-hand side operand.</li>
           </ul>
         </li>
         <li>String: in addition to the comparison operators, which can be used on string values, the concatenation
@@ -628,6 +639,10 @@
           <b>(condition ? val1 : val2)</b>; meaning that if condition is true, the operator returns val1, otherwise it
           returns val2.
         </li>
+        <li>Optional Chaining operator <b>(?.)</b>: enables you to read the value of a property located deep within a
+          chain of connected objects without having to check that each reference in the chain is valid. Basically is
+          like the chaining operator <b>(.)</b>, except that instead of causing an error if a reference is <i>nullish
+            (null or undefined)</i>, the expression shot-circuits with a return value of <i>undefined</i>.</li>
         <li>Comma <b>(,)</b>: evaluates both of its operands and returns the value of the last operand. This operator is
           primarily used inside a <i>for</i> loop, to allow multiple variables to be updated each time through the loop.
         </li>
@@ -644,6 +659,92 @@
             <li><b>instanceof</b>: returns true if the specified object is of the specified object type.</li>
           </ul>
         </li>
+      </ul>
+      <h3>Control Flow</h3>
+      <p>Statements in JavaScript are executed from top to bottom. </p>
+      <h4>Block statement</h4>
+      <p>The block is defined by a pair of curly brackets <b>({})</b>, and is used to group statements.</p>
+      <h4>Conditional statements</h4>
+      <p>A conditional statement is a set of commands that executes if a specified condition is true. JavaScript
+        supports two conditional statements: <b>if...else...</b> and <b>switch</b>.</p>
+      <h4>Falsy values</h4>
+      <p>A <i>falsy</i> value is a value that is considered false when encountered in a Boolean context.</p>
+      <ul>
+        <li>undefined</li>
+        <li>null</li>
+        <li>0</li>
+        <li>NaN</li>
+        <li>empty string ("")</li>
+      </ul>
+      <h3>Loops and Iteration</h3>
+      <p>Looping control flow allows us to go back to some point in the program where we were before and repeat it with
+        our current program state.</p>
+      <h4>while loop</h4>
+      <p>A statement starting with the keyword <i>while</i> creates a loop. The word <i>while</i> is followed by an
+        expression in parentheses and then a statement. The loop keeps entering that stement as long as the expression
+        produces a value that gives <i>true</i> when converted to Boolean. This is usually accompanied by a binding
+        within the body of the loop to keep track of the progress of a program.</p>
+      <h4>for loop</h4>
+      <p>A <i>for</i> loop repeats until a specified condition evaluates to <i>false</i>. The main difference between
+        the <i>while</i> loop and the <i>for</i> loop is that the latter provides a slightly shorter and more
+        comprehensive form.</p>
+      <p>The parentheses after a <i>for</i> keyword must contain two semicolons. The part before the first semicolon
+        <i>initializes</i> the loop, usually by defining a binding. The second part is the expression that <i>checks</i>
+        whether the loop must continue. The final part <i>updates</i> the state of the loop after every iteration.
+      </p>
+      <h4>for... in</h4>
+      <p>Iterates a specified variable over all the enumerable properties of an object. For each distinct property. In
+        other words, iterates over property names.</p>
+      <h4>for...of</h4>
+      <p>Creates a loop iterating over iterable objects (including Array, Map, Set, arguments object and so on),
+        invoking a custom iteration hook with statements to be executed for the value of each distinct property. In
+        other words, iterates over property values.</p>
+      <h3>Functions</h3>
+      <p>A function in JavaScript is similar to a procedure—a set of statements that performs a task or calculates a
+        value, but for a procedure to qualify as a function, it should take some input and return an output where there
+        is some obvious relationship between the input and the output. In simpler words, a function is a piece of
+        program wrapped in a value.</p>
+      <p>There are fundamentally three ways in which you can create a function:</p>
+      <ul>
+        <li>Function declaration: is a function that can be used before it's declared.</li>
+        <li>Function expression: essentially is a function value stored in a variable.</li>
+        <li>Arrow functions: great for quick one-line functions.</li>
+      </ul>
+      <p>Executing a function is called <i>invoking</i>, <i>calling</i>, or <i>applying</i> it.</p>
+      <h4>Structure of a function</h4>
+      <ul>
+        <li>Function name: the name of the binding that holds the function.</li>
+        <li>Parameters: placeholders to receive input values. Like local variables of a function.</li>
+        <li>Function body: block of code that we want to reuse. Processes the function's input data.</li>
+        <li>return statement: to output a value from the function and terminate execution.</li>
+        <li>Arguments: actual values of function parameters, to input data.</li>
+      </ul>
+      <h4>Scope</h4>
+      <p>Variables defined inside a function cannot be accessed from anywhere outside the function, because the variable
+        is defined only in the scope of the function. However, a function can access all variables and functions defined
+        inside the scope in which it is defined.</p>
+      <p>A function can refer to and call itself. A function that calls itself is called a <i>recursive function</i>,
+        which is, in some ways, analogous to a loop, in that both execute the same code multiple times.</p>
+      <h4>Nesting and closures</h4>
+      <p>You can nest a function within another function. The inner function is private to its outer function. Also, it
+        forms a <i>closure</i>.</p>
+      <p><b>Closure</b> is the <i>variable environment</i> (VE) attached to the function, exactly as it was at the time
+        and place the function was created. In other words, a <i>closure</i> gives a function access to all the
+        variables of its parent function, even after that parent function has returned. The function keeps a reference
+        to its outer scope, which preserves the scope chain throughout time.</p>
+      <h4>First-Class vs. Higher-Order Functions</h4>
+      <p><b>First-Class Functions</b></p>
+      <ul>
+        <li>JavaScript treats functions as first-class citizens.</li>
+        <li>This means that functions are simply values.</li>
+        <li>Functions are just another "type" of object.</li>
+      </ul>
+      <p><b>Higher-Order Functions</b></p>
+      <ul>
+        <li>A function that <b>receives</b> another function (<b>callback function</b>) as an argument, that
+          <b>returns</b> a new function, or <b>both</b>.
+        </li>
+        <li>This is only possible because of first-class functions.</li>
       </ul>
     </article>
   </main>
