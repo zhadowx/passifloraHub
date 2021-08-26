@@ -121,14 +121,14 @@ nav > ul > li:nth-child(3):hover {
 #html,
 #css,
 #js {
-  border: 0.4em solid #fff;
+  /* border: 0.7em solid rgba(44, 44, 44, 0.945); */
   /* border-top: 0.2em solid #ddd;
   border-left: 0.2em solid #ddd; */
-  border-radius: 5px 5px 0 0;
+  /* border-radius: 30px; */
 }
-#html:hover {
-  border-color: rgba(228, 77, 38, 1);
-  box-shadow: inset 0 0.2em 0.25em rgba(241, 101, 41, 0.6);
+#html {
+  /* border-color: rgba(228, 77, 38, 1); */
+  box-shadow: inset 0 0 1.5em rgba(241, 101, 41, 0.6);
 }
 #html > h2 {
   margin-top: 0;
@@ -153,9 +153,9 @@ nav > ul > li:nth-child(3):hover {
   box-shadow: 0 15px 15px 2px rgba(83, 80, 80, 0.33);
 }
 /* CSS rules */
-#css:hover {
-  border-color: rgba(38, 77, 228, 1);
-  box-shadow: inset 0.2em 0.2em 0.25em rgba(41, 101, 241, 0.6);
+#css {
+  /* border-color: rgba(38, 77, 228, 1); */
+  box-shadow: inset 0 0 1.5em rgba(41, 101, 241, 0.6);
 }
 #css > h2 {
   margin-top: 0;
@@ -583,9 +583,9 @@ tfoot tr:hover {
   }
 }
 /* JavaScript rules */
-#js:hover {
-  border-color: rgb(247, 223, 30);
-  box-shadow: inset 0.2em 0.2em 0.25em rgba(247, 223, 30, 0.6);
+#js {
+  /* border-color: rgb(247, 223, 30); */
+  box-shadow: inset 0 0 1.5em rgba(247, 223, 30, 0.6);
 }
 #js > h2 {
   margin-top: 0;
