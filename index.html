@@ -573,16 +573,20 @@
         <li>RegExp literal: is a pattern enclosed between slashes (/ /).</li>
         <li>String literal: is zero or more characters enclosed in double(") or single (') quotation marks. A string
           must be delimited by quotations marks of the same type. Also there are <i>template literals</i> which are
-          enclosed by the back-tick (`) character instead of double or single quotes and provide syntactic sugar for
+          enclosed by the back-tick <b>(` ` )</b> characters instead of double or single quotes and provide syntactic
+          sugar
+          for
           constructing strings.</li>
       </ul>
       <h3>Operators</h3>
       <p>JavaScript has the following types of operators:</p>
       <ul>
-        <li>Assignment: assigns a value to its left operand based on the value of its right operand. The simple
+        <li> <span>Assignment</span>: assigns a value to its left operand based on the value of its right operand. The
+          simple
           assignmet operator
           is equal <b>(=)</b>.</li>
-        <li>Comparison: compares its operands and returns a logical value based on whether the comparison is true. The
+        <li><span>Comparison</span>: compares its operands and returns a logical value based on whether the comparison
+          is true. The
           operands can be numerical, string, logical, or object values.
           <ul>
             <li>Equal <b>(==)</b></li>
@@ -595,7 +599,8 @@
             <li>Less than or equal <b>(&lt;=)</b> </li>
           </ul>
         </li>
-        <li>Arithmetic: takes numerical values (either literals or variables) as their operands and returns a single
+        <li><span>Arithmetic</span>: takes numerical values (either literals or variables) as their operands and returns
+          a single
           numerical value. The standard arithmetic operators are addition <b>(+)</b> , subtraction <b>(-)</b> ,
           multiplication <b>(*)</b>, and
           division <b>(/)</b>. In addition there are also:
@@ -611,11 +616,13 @@
             </li>
           </ul>
         </li>
-        <li>Bitwise operator: treats their operands as a set of 32 bits (zeros and ones), rather than as decimal,
+        <li><span>Bitwise operator</span>: treats their operands as a set of 32 bits (zeros and ones), rather than as
+          decimal,
           hexadecimal, or
           octal numbers. Bitwise operators perform their operations on such <b>binary representations</b>, but they
           return standard JavaScript numerical values.</li>
-        <li>Logical operators: are typically used with Boolean (logical) values; when they are, they return a Boolean
+        <li><span>Logical operators</span>: are typically used with Boolean (logical) values; when they are, they return
+          a Boolean
           value.
           However, the <b>&&</b> and <b>||</b> operators actually return the value of one of the specified operands, so
           if these operators are used with non-Boolean values, they may return a non-Boolean value.
@@ -632,28 +639,33 @@
               operand is <i>null</i> or <i>undefined</i>, and otherwise returns its left-hand side operand.</li>
           </ul>
         </li>
-        <li>String: in addition to the comparison operators, which can be used on string values, the concatenation
+        <li><span>String</span>: in addition to the comparison operators, which can be used on string values, the
+          concatenation
           operator <b>(+)</b> concatenates two string values together, returning another string that is the union of the
           two operand strings.</li>
-        <li>Conditional (ternary): is the only JavaScript operator that takes three operands and the syntax is
+        <li><span>Conditional or ternary operator</span> <b>(?:)</b>: is the only JavaScript operator that takes three
+          operands and the syntax is
           <b>(condition ? val1 : val2)</b>; meaning that if condition is true, the operator returns val1, otherwise it
           returns val2.
         </li>
-        <li>Optional Chaining operator <b>(?.)</b>: enables you to read the value of a property located deep within a
+        <li><span>Optional Chaining operator</span> <b>(?.)</b>: enables you to read the value of a property located
+          deep within a
           chain of connected objects without having to check that each reference in the chain is valid. Basically is
           like the chaining operator <b>(.)</b>, except that instead of causing an error if a reference is <i>nullish
             (null or undefined)</i>, the expression shot-circuits with a return value of <i>undefined</i>.</li>
-        <li>Comma <b>(,)</b>: evaluates both of its operands and returns the value of the last operand. This operator is
+        <li><span>Comma</span> <b>(,)</b>: evaluates both of its operands and returns the value of the last operand.
+          This operator is
           primarily used inside a <i>for</i> loop, to allow multiple variables to be updated each time through the loop.
         </li>
-        <li>Unary: operate with a single operand.
+        <li><span>Unary</span>: operate with a single operand.
           <ul>
             <li><b>delete</b>: deletes an object's property.</li>
             <li><b>typeof</b>: returns a string indicating the type of the unevaluated operand.</li>
             <li><b>void</b>: specifies an expression to be evaluated without returning a value.</li>
           </ul>
         </li>
-        <li>Relational: compares its operands and returns a Boolean value based on whether the comparison is true.
+        <li><span>Relational</span>: compares its operands and returns a Boolean value based on whether the comparison
+          is true.
           <ul>
             <li><b>in</b>: returns true if the specified property is in the specified object.</li>
             <li><b>instanceof</b>: returns true if the specified object is of the specified object type.</li>

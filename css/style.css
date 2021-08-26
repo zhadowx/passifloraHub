@@ -39,11 +39,22 @@ body {
 h2 {
   text-align: center;
 }
+
 h3 {
   border-bottom: 2px solid #000;
   text-align: end;
   padding-right: 0.7em;
 }
+
+h4 {
+  font-size: large;
+  border-bottom: 1px dotted;
+}
+
+h5 {
+  font-size: medium;
+}
+
 b {
   font-weight: bold;
 }
@@ -72,6 +83,7 @@ header {
 main li {
   padding: 0 0.7em 0.3em 0;
 }
+
 /* Footer rules */
 footer {
   font-style: italic;
@@ -576,4 +588,8 @@ tfoot tr:hover {
   margin-top: 0;
   background: rgb(247, 223, 30);
   border-radius: 1px 1px 0 0;
+}
+
+#js span {
+  border-bottom: 2px solid rgb(247, 223, 30);
 }
