@@ -167,6 +167,9 @@ nav > ul > li:nth-child(3):hover {
   color: #fff;
   border-radius: 1px 1px 0 0;
 }
+#css span {
+  border-bottom: 2px solid rgb(38, 77, 228);
+}
 table {
   margin-left: auto;
   margin-right: auto;
