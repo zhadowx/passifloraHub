@@ -760,6 +760,131 @@
         </li>
         <li>This is only possible because of first-class functions.</li>
       </ul>
+      <h3>Strings</h3>
+      <p>JavaScript's string type is used to represent textual data. It is a set of "elements" of 16-bit unsigned
+        integer values (UTF-16 code units). Each element in the String occupies a position in the String. The first
+        element is at index 0, the next at index 1, etc. You can create strings using <i>string literals</i> or
+        <i>string objects</i>.
+      </p>
+      <ul>
+        <li><span>String literals</span>: are created by enclosing characters in single or double quotes.</li>
+        <li><span>String objects</span>: is a wrapper around the string primitive data type.</li>
+        <li><span>Multi-line template literals</span>: are string literals allowing embedded expressions. You can use
+          multi-line strings and string interpolation features with them. Created by enclosing characters with
+          back-ticks <b>( ` ` )</b>, which can contain placeholders (indicated with Dollar sign and curly braces
+          <b>${expression}</b>).
+        </li>
+      </ul>
+      <p>Values of type string, number, and Boolean are not objects, and though the language doesn't complain if you try
+        to set new properties on them, it doesn't actually store those properties, because such values are immutable and
+        cannot be changed.</p>
+      <p>However you can call methods on a string literal value. So, what happens is that JavaScript automatically
+        converts the string literal to a temporary String object, calls the method, then discards the temporary String
+        object.</p>
+      <h3>Arrays</h3>
+      <p>Arrays are a reference data type for storing sequences of values. The easiest or preferred way of creating an
+        array is by enclosing elements in square brackets <b>([])</b> and separating them with a comma <b>(,)</b>, this
+        is called an array literal or bracket syntax.</p>
+      <p>The notation for getting at the elements inside an array also uses square brackets. A pair of square brackets
+        immediately after an expression, with another expression inside of them, will look up the element in the
+        left-hand expression that corresponds to the <i>index</i> given by the expression in brackets.</p>
+      <p>Just like Strings the first index of an array is zero, not one.</p>
+      <h4>Accessing Properties</h4>
+      <p>The two main ways to access properties in JavaScript are with a dot <b>(.)</b> and with square brackets
+        <b>([])</b>. Both <b>value.x</b> and <b>value[x]</b> access a property on value—but not necessarily the same
+        property. The difference is in how <i>x</i> is interpreted. When using a dot, the word after the dot is the
+        literal name of the property. When using square brackets, the expression between the brackets is
+        <i>evaluated</i> to get the property name. In other words, whereas <b>value.x</b> fetches the property of value
+        named <i>x</i>, <b>value[x]</b> tries to evaluate the expression <i>x</i> and uses the result, converted to a
+        string, as the property name.
+      </p>
+      <p>The elements in an array are stored as the arrays's properties, using numbers as property names. You can't use
+        the dot notation with numbers, this is the reason why you have to use the bracket notation to get at them.</p>
+      <h3>Objects</h3>
+      <p>An object is a collection of properties, and a property is an association between a name <i>(or key)</i> and a
+        value. A property's value can be a function, in which case the property is known as a method.</p>
+      <h4>Creating new objects</h4>
+      <ul>
+        <li><span>Object initializers</span> <b>({property1: value1, property2: value2})</b>: referred to as creating
+          objects with literal notation.</li>
+        <li><span>Constructor function</span>:
+          <ol>
+            <li>Create a function for the object type that specifies its name (capital initial letter), properties, and
+              methods.</li>
+            <li>Create an instance of the object with <b>new</b>.</li>
+          </ol>
+        </li>
+        <li><span>Object.create() method</span>: this method allows you to choose the prototype object for the object
+          you want to create, wihtout having to define a constructor function.</li>
+      </ul>
+      <h4>this keyword</h4>
+      <p>The <b>this keyword/variable</b> is a special variable that is created for every execution context (every
+        function) that takes the value of (points to) the "owner" of the function in which the <i>this</i> keyword is
+        used.</p>
+      <p><i>this</i> is NOT static. It depends on how the function is called, and its value is only assigned when the
+        function is actually called.</p>
+      <ul>
+        <li><b>Method</b>: <i>this</i> points to the Object that is calling the method.</li>
+        <li><b>alone</b>: <i>this</i> points to the Global object.</li>
+        <li><b>Simple function call</b>: <i>this</i> points to undefined (when in strict mode, otherwise the Global
+          object, e.g., <i>window object</i> in the browser).</li>
+        <li><b>Arrow functions</b>: <i>this</i> points to the <i>this</i> of the surrounding function (lexical
+          <i>this</i>).
+        </li>
+        <li><b>Event listener</b>: <i>this</i> points to the DOM element that the handler is attached to.</li>
+        <li><b>new, call, apply, bind</b>: can refer <i>this</i> to point to any object</li>
+      </ul>
+      <h3>Object-Oriented Programming (OOP)</h3>
+      <p>Object-oriented programming is a programming paradigm based on the concept of objects. Objects are used to
+        describe real-world or abstract features. Objects are building blocks of applications, and interact with one
+        another. Interactions happen through a public interface (API): methods that the code outside of the object can
+        access and use to communicate with the object.</p>
+      <h4>Abstraction</h4>
+      <p>Ignoring or hiding details that don't matter, allowing us to get an overview perspective of the thing we are
+        implementing, instead of messing with details that don't really matter to our implementation.</p>
+      <h4>Encapsulation</h4>
+      <p>Keeping properties and methods private inside the class, so they are not accessible from outside the class.
+        Some methods can be exposed as a public interface (API).</p>
+      <h4>Inheritance</h4>
+      <p>Making all properties and methods of a certain class available to a child class, forming a hierarchical
+        relationship between classes. This allows us to reuse common logic and to model real-world relationships.</p>
+      <h4>Polymorphism</h4>
+      <p>A child class can overwrite a method it inherited from a parent class.</p>
+
+      <h3>Inheritance and the Prototype Chain</h3>
+      <p>Each object has a private property which holds a link to another object called its <b>prototype</b>. That
+        prototype object has a prototype of its own, and so on until an object is reached with a <i>null</i> as its
+        prototype, which has no prototype, and acts as the final link in the <b>prototype chain</b>.</p>
+      <p>The prototype relations of JavaScript objects form a tree-shaped structure, and at the root of this structure
+        sits <b>Object.prototype</b>.</p>
+      <h4>Classes</h4>
+      <p>JavaScript's prototype system can be interpreted as a somewhat informal take on an object-oriented concept
+        called <i>classes</i>. A class defines the shape of a type of object—what methods and properties it has. Such an
+        object is called an instance of the class.</p>
+      <p>Prototypes are useful for defining properties for which all instances of a class share the same value, such as
+        methods. Properties that differ per instance, need to be stored directly in the objects themselves.</p>
+      <h4>Ways to implement prototypal inheritance</h4>
+      <ul>
+        <li><span>Constructor Functions</span>
+          <ul>
+            <li>Just a function that happens to be called with the <i>new</i> operator.</li>
+            <li>Technique to create objects from a function.</li>
+            <li>This is how built-in objects like Arrays, Maps or Sets are actually implemented.</li>
+          </ul>
+        </li>
+        <li><span>ES6 Classes</span>
+          <ul>
+            <li>Modern alternativeto constructor function syntax.</li>
+            <li>"Syntactic sugar"; behind the scenes, ES6 classes work exactly like constructor functions.</li>
+            <li>ES6 classes do NOT behave like classes in "classical OOP".</li>
+          </ul>
+        </li>
+        <li><span>Object.create()</span>
+          <ul>
+            <li>The easiest and most straightforward way of linking an object to a prototype object.</li>
+          </ul>
+        </li>
+      </ul>
     </article>
   </main>
   <footer>
