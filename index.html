@@ -7,7 +7,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,700;1,500&display=swap" rel="stylesheet">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Kaisei+HarunoUmi&family=Lora:ital,wght@0,400;0,700;1,400;1,700&display=swap"
+    rel="stylesheet">
   <link rel="stylesheet" href="css/normalize.css">
   <link rel="stylesheet" href="css/grid.css">
   <link rel="stylesheet" href="css/style.css">
@@ -28,6 +30,7 @@
       <li><a href="#js"><img src="images/js_logo.svg" alt="javascript logo" width="30" height="30"> JavaScript</a>
       </li>
       <!-- color info: #f7df1e rgb(247, 223, 30) -->
+      <li><a href="#react"><img src="/images/react_logo.svg" alt="react logo" width="27" height="27">React</a></li>
     </ul>
   </nav>
   <div class="hero">
@@ -825,7 +828,7 @@
         function is actually called.</p>
       <ul>
         <li><b>Method</b>: <i>this</i> points to the Object that is calling the method.</li>
-        <li><b>alone</b>: <i>this</i> points to the Global object.</li>
+        <li><b>Alone</b>: <i>this</i> points to the Global object.</li>
         <li><b>Simple function call</b>: <i>this</i> points to undefined (when in strict mode, otherwise the Global
           object, e.g., <i>window object</i> in the browser).</li>
         <li><b>Arrow functions</b>: <i>this</i> points to the <i>this</i> of the surrounding function (lexical
@@ -956,22 +959,44 @@
         <li>We no longer need to rely on events and callbacks passed into asynchronous functions to handle asynchronous
           results.</li>
         <li>Instead of nesting callbacks, we can <b>chain promises</b> for a sequence of asynchronous operations: thus
-          escaping <b>callback hell👹</b></li>
+          escaping <b>callback hell <span id="devil">👹</span></b></li>
       </ul>
       <p>Promise Lifecycle</p>
       <ul>
         <li><b>Pending</b>: Before the future value is available.</li>
         <li><b>Settled</b>: Asynchronous task has finished.
           <ul>
-            <li><b>Fullfilled</b>: Success, the value is now available.</li>
+            <li><b>Fulfilled</b>: Success, the value is now available.</li>
             <li><b>Rejected</b>: An error, value not available.</li>
           </ul>
         </li>
       </ul>
+      <h4>Async/Await</h4>
+      <p>JavaScript allows you to write pseudo-synchronous code to describe asynchronous computation. An <b>async</b>
+        function is a function that implicitly returns a promise and that can, in its body, <b>await</b> other promises
+        in a way that <i>looks</i> synchronous.</p>
+      <p>The <b>async</b> functions and <b>await</b> keyword were added in ECMAScript 2017. These features basically act
+        as syntactic sugar on top of promises, making asynchronous code easier to write and to read afterwards.</p>
+      <ul>
+        <li><span><code>async</code> keyword</span>: is put in front of a function declaration to turn it into an async
+          function.
+        </li>
+        <li><span><code>await</code></span> keyword</span>: await can be put in front of any async promise-based
+          function
+          to pause your code
+          on that line until the promise fulfills, then return the resulting value.</li>
+      </ul>
+      <p>Instead of needing to chain an <code>.then()</code> on the end of each promised-based method, you just need to
+        add an <code>await</code> keyword before the method call, and then assign the result to a variable.</p>
+      <p>Also, <b>async/await</b> is built on top of <b>promises</b>, so it's compatible with all the features offered
+        by promises.</p>
+    </article>
+    <article id="react">
+      <h2>React</h2>
     </article>
   </main>
   <footer>
-    <p>&copy;By Zhadox |•_•|</p>
+    <p>&copy;By Zhadox |'•'_'•'|</p>
   </footer>
 </body>
 

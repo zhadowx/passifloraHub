@@ -17,7 +17,7 @@ body {
 body {
   font-family: "Lora", serif;
   font-size: 16px;
-  font-weight: 300;
+  font-weight: 400;
   background-color: #ddd;
 }
 /* .hero {
@@ -38,6 +38,7 @@ body {
 } */
 h2 {
   text-align: center;
+  font-size: x-large;
 }
 
 h3 {
@@ -52,11 +53,15 @@ h4 {
 }
 
 h5 {
-  font-size: medium;
+  font-size: large;
 }
 
 b {
   font-weight: bold;
+}
+p,
+details {
+  font-family: "Kaisei HarunoUmi", sans-serif;
 }
 
 p,
@@ -68,8 +73,7 @@ details {
 summary {
   /* border-bottom: 1px dotted #000; */
   box-shadow: 0 0.5px 1px #000;
-  font-size: large;
-  font-variant: normal;
+  font-size: medium;
   list-style: none;
   background-color: rgb(212, 212, 212);
 }
@@ -86,20 +90,23 @@ main li {
 
 /* Footer rules */
 footer {
-  font-style: italic;
+  font-size: large;
 }
 
 /* Nav rules */
 nav > ul {
   list-style-type: none;
+  display: flex;
+  justify-content: center;
+  transition: 1.5s;
 }
 nav > ul > li {
-  display: inline-block;
+  font-family: "Kaisei HarunoUmi", sans-serif;
 }
 nav > ul > li > a {
   text-decoration: none;
   color: #000;
-  font-weight: bold;
+  font-weight: bolder;
 }
 nav > ul > li:hover {
   font-size: larger;
@@ -109,27 +116,20 @@ nav > ul > li:hover {
   transition-timing-function: ease-in, ease-in;
 }
 nav > ul > li:nth-child(1):hover {
-  box-shadow: inset 5em 0 rgb(241, 101, 41);
+  box-shadow: inset 3.2em 0 rgba(241, 101, 41, 0.9);
 }
 nav > ul > li:nth-child(2):hover {
-  box-shadow: inset 4em 0 rgb(1, 101, 241);
+  box-shadow: inset 2.1em 0 rgba(1, 101, 241, 0.8);
 }
 nav > ul > li:nth-child(3):hover {
-  box-shadow: inset 10em 0 rgb(247, 223, 30);
+  box-shadow: inset 5.3em 0 rgb(247, 223, 30);
 }
+nav > ul > li:nth-child(4):hover {
+  box-shadow: inset 3em 0 rgba(97, 218, 251, 0.3);
+}
+
 /* HTML rules */
-#html,
-#css,
-#js {
-  /* border: 0.7em solid rgba(44, 44, 44, 0.945); */
-  /* border-top: 0.2em solid #ddd;
-  border-left: 0.2em solid #ddd; */
-  /* border-radius: 30px; */
-}
-#html {
-  /* border-color: rgba(228, 77, 38, 1); */
-  box-shadow: inset 0 0 1.5em rgba(241, 101, 41, 0.6);
-}
+
 #html > h2 {
   margin-top: 0;
   background: linear-gradient(
@@ -153,10 +153,7 @@ nav > ul > li:nth-child(3):hover {
   box-shadow: 0 15px 15px 2px rgba(83, 80, 80, 0.33);
 }
 /* CSS rules */
-#css {
-  /* border-color: rgba(38, 77, 228, 1); */
-  box-shadow: inset 0 0 1.5em rgba(41, 101, 241, 0.6);
-}
+
 #css > h2 {
   margin-top: 0;
   background: linear-gradient(
@@ -583,10 +580,7 @@ tfoot tr:hover {
   }
 }
 /* JavaScript rules */
-#js {
-  /* border-color: rgb(247, 223, 30); */
-  box-shadow: inset 0 0 1.5em rgba(247, 223, 30, 0.6);
-}
+
 #js > h2 {
   margin-top: 0;
   background: rgb(247, 223, 30);
@@ -595,4 +589,14 @@ tfoot tr:hover {
 
 #js span {
   border-bottom: 2px solid rgb(247, 223, 30);
+}
+#devil {
+  font-size: 1.5em;
+  border: none !important;
+}
+
+/* React rules */
+#react > h2 {
+  margin-top: 0;
+  background: rgb(97, 218, 251);
 }
