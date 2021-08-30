@@ -885,6 +885,89 @@
           </ul>
         </li>
       </ul>
+      <h3>The Document Object Model (DOM)</h3>
+      <p>The DOM connects web pages to scripts or programming languages by representing the structure of a document—such
+        as the HTML representing a web page—in memory. The Document Object Model is an architecture that describes the
+        structure of a document; each document is represented by an instance of the interface Document. A document, in
+        turn, consists of a hierarchical tree of <b>nodes</b>, in which a node is a fundamental record representing a
+        single object wihtin the document.</p>
+      <p>Nodes may be strictly organizational ,providing a means for grouping other nodes together or for providing a
+        point at which a hierarchy can be constructed; other nodes may represent visible components of a document.</p>
+      <p>Nodes don't have any concept of including the content that is actually displayed in the document. They're empty
+        vessels. Some of the features added to the Document by the HTML standard are:</p>
+      <ul>
+        <li>Support for accessing various information provided by the HTTP headers when loading the page, such as the
+          location from which the document was loaded, cookies, modification date, etc.</li>
+        <li>Access to list elements in the document.</li>
+        <li>Support for interacting with the user.</li>
+        <li>Event handlers for document events defined by the HTML standard to allow access to mouse and keyboard
+          events, drag and drop, etc.</li>
+        <li>Event handlers for events that can be delivered to both elements and documents; presently only copy, cut and
+          paste actions.</li>
+      </ul>
+      <p>Also, an element inherits the properties and methods of all its ancestors. Each level defines a key aspect of
+        the utility of the element. From Node, the element inherits concepts surrounding the ability for the element to
+        be contained by another element, and to contain other elements itself. Of special importance is what is gained
+        by inheriting from EventTarget, which is the ability to receive and handle events such as mouse clicks, play and
+        pause events, and so forth.</p>
+      <h4>Propagation</h4>
+      <p>For most event types, handlers registered on nodes with children will aso receive events that happen in the
+        children. If a button inside a paragraph is clicked, event hanlders on the paragraph will also see the click
+        event.</p>
+      <p>Events are said to propagate outward, from the node where it happened to that node's parent node and on the the
+        root of the document.Finally, after all handlers registered on a specific node have had their turn, handlers
+        registered on the whole window got a chance to respond to the event.</p>
+      <p>Most event objects have a <i>target</i> property that refers to the node where they originated. You can use
+        this property to ensure that you're not accidentally handling something that propagated up from a node you do
+        not want to handle. It is also possible to use the <i>target</i> property to cast a wide net for a specific type
+        of event.</p>
+      <h3>Asynchronicity</h3>
+      <p>JavaScript is traditionally <b>single-threaded</b>. Even with multiple cores, you could only get it to run
+        tasks on a single thread, called the main thread. After some time, JavaScript gained some tools to help with
+        such problems. <b>Web workders</b> allow you to send some of the JavaScript processing off to a separate thread,
+        called a worker so that you can run multiple chunks simultaneously.</p>
+      <p>Web workers are pretty useful, but they do have their limitations. A major one is they are not able to access
+        the DOM. Another problem is that although code run in a worker is not blocking(refers to code that executes
+        without returning control to the browser), it is still basically synchronous.</p>
+      <ul>
+        <li>An <i>asynchronous</i> model allows multiple things to happen at the same time.</li>
+        <li>Asynchronous code is executed after a task that runs in the "background" finishes.</li>
+        <li>Asynchronous code is non-blocking.</li>
+        <li>Execution doesn't wait for an asynchronous task to finish it's work.</li>
+        <li>Callback functions alone do NOT make code asynchronous.</li>
+      </ul>
+      <h4>AJAX</h4>
+      <p><b>A</b>synchronous <b>J</b>avaScrypt <b>A</b>nd <b>X</b>ML. Allows us to communicate with remote web servers
+        in an asynchronous way. With AJAX calls, we can request data from web servers dynamically using a technology
+        known as XMLHttpRequest.</p>
+      <p>XMLHttpRequest (XHR) objects are used to interact with servers. You can retreive data from a URL without having
+        to do a full page refresh. Despite its name, XHR can be used to retrieve any type of data, not just XML.</p>
+      <p>There have been a number of developments in the techonologies used in AJAX application, and in the definition
+        of the term AJAX itself. XML is no longer required for data interchange and, therefore, XSLT is no longer
+        required for the manipulation of data. JavaScript Object Notation (JSON) is often used as an alternative format
+        for data interchange, although other formats such as preformatted HTML or plain text can also be used.</p>
+      <h4>Promises</h4>
+      <p>Promises are the new style of async code that you'll see used in modern Web APIs. A good example is the
+        <b>fetch()</b> API, which is basically like a modern, more efficient version of XMLHttpRequest.
+      </p>
+      <ul>
+        <li>A promise is an object that is used as a placeholder for the future result of an asynchronous operation.
+        </li>
+        <li>We no longer need to rely on events and callbacks passed into asynchronous functions to handle asynchronous
+          results.</li>
+        <li>Instead of nesting callbacks, we can <b>chain promises</b> for a sequence of asynchronous operations: thus
+          escaping <b>callback hell👹</b></li>
+      </ul>
+      <p>Promise Lifecycle</p>
+      <ul>
+        <li><b>Pending</b>: Before the future value is available.</li>
+        <li><b>Settled</b>: Asynchronous task has finished.
+          <ul>
+            <li><b>Fullfilled</b>: Success, the value is now available.</li>
+            <li><b>Rejected</b>: An error, value not available.</li>
+          </ul>
+        </li>
+      </ul>
     </article>
   </main>
   <footer>
