@@ -993,6 +993,219 @@
     </article>
     <article id="react">
       <h2>React</h2>
+      <h3>JSX</h3>
+      <p>JSX(JavaScript Syntax Extension) is an extension to the JavaScript language syntax, which provides a way to
+        structure
+        component rendering.</p>
+      <p>Instead of artificially separating <i>techonologies</i> by putting markup and logic in separate files, React
+        separates <i>concerns</i> with loosely coupled units called "components" that contain both.</p>
+      <p>React doesn't require using JSX, but most people find it helpful as a visual aid when working with UI inside
+        the
+        JavaScript code.</p>
+      <ul>
+        <li>You can put any valid JavaScript expression inside the curly braces in JSX.</li>
+        <li>JSX is an expression too, which means that you can use JSX inside of <code>if</code> statements and
+          <code>for</code> loops, assign it to variables, accept it as arguments, and return it from functions.
+        </li>
+        <li>Since JSX is closer to JavaScript than to HTML, ReactDOM uses camelCase property naming convention instead
+          of HTML
+          attribute names.</li>
+      </ul>
+
+      <h3>Rendering Elements</h3>
+      <p>Elements are the smallest building blocks of React apps. Unlike browser DOM elements, React elements are plain
+        objects, and are cheap to create. React DOM takes care of updating the DOM to match the React elements.</p>
+      <p>Somewhere inside the HTML file there is a "root" DOM node because everything inside it will be managed by React
+        DOM.
+        Applications built with React usually have a single root DOM node.</p>
+      <p>To render a React element into a root DOM node, pass both to <code>ReactDOM.render()</code>.</p>
+      <p>React elements are <b>immutable</b>.</p>
+
+      <h3>Components and Props</h3>
+      <p>Components let you split the UI into independent, reusable pieces, and think about each piece in isolation.
+        Conceptually, components are like JavaScript functions. They accept arbitrary inputs(called "props") and return
+        React
+        elements describing what should appear on the screen.</p>
+      <h4>Function and Class Components</h4>
+      <ul>
+        <li>A function is a valid React component if it accepts "props" object argument with adata and returns a React
+          element. We call such compoenents "function components".</li>
+        <li>You can also use an ES6 class to define a component.</li>
+      </ul>
+      <h4>Rendering a Component</h4>
+      <p>React treats components starting with lowercase letters as DOM tags, so by convention <b>component names are
+          written
+          starting with a capital letter</b>.</p>
+      <h4>Composing Components</h4>
+      <p>Components can refer to other components in their output. This lets us use the same component abstraction for
+        any
+        level of detail.</p>
+      <h4>Prop System</h4>
+      <p>A system for passing data from a parent component to a <b>child</b> or <b>nested</b> component. The general
+        goal is
+        to customize child components in order for them to react to user's input.</p>
+      <h4>Class Based Component</h4>
+      <ul>
+        <li>Easier code organization.</li>
+        <li>Can use react 'state' system, which makes it easier to handle user input.</li>
+        <li>Can use lifecycle methods, which makes it easier to do things when the app first starts.</li>
+      </ul>
+      <h5>State Rules</h5>
+      <ul>
+        <li>Only usable with class components.</li>
+        <li>'State' is a JS object that contains data relevant to a component.</li>
+        <li>Updating state on a component causes the component to render.</li>
+        <li>State must be initialized when a component is created.</li>
+        <li>State can only be updated using the function 'setState'.</li>
+      </ul>
+
+      <h3>Lifecycle Methods</h3>
+      <p></p>
+      <ul>
+        <li><span><b><code>constructor()</code></b></span>: Initializing local state by assigning an object to
+          <code>this.state</code>. Or for binding event handler methods to an instance.
+        </li>
+        <li><span><b><code>render()</code></b></span>: It is the only <b>required</b> method in a class component. It
+          should
+          <code>return</code> JSX.
+        </li>
+        <li><span><b><code>componentDidMount()</code></b></span>: Is invoked immediately after a component is
+          mounted(inserted
+          into the tree). Initialization that require DOM nodes should go here. Also, if you need to load data from a
+          remote
+          endpoint, this is a good place to instantiate the network request.</li>
+        <li><span><b><code>componentDidUpdate()</code></b></span>: Is invoked immediately after updating occurs. This
+          method
+          is not called for the initial render. Use this as an opportunity to operate on the DOM when component has been
+          updated. This is also a good place to do network requests as long as you compare the current props to previous
+          props.</li>
+        <li><span><b><code>componentWillUnmount()</code></b></span>: Is invoked immediately before a component is
+          unmounted
+          and destroyed. Perdorm any necessary cleanup in this method, such as invalidating timers, canceling network
+          requests, or cleaning up any subscriptions that were created in <code>componentDidMount()</code>.</li>
+      </ul>
+
+      <h3>Forms</h3>
+      <p>HTML form elements work a bit differently from other DOM elements in React, because form elements naturally
+        keep some
+        internal state.
+      </p>
+      <h4>Controlled Components</h4>
+      <p>In HTML, form elements such as <code>&lt;input&gt;</code>, <code>&lt;textarea&gt;</code>, and
+        <code>&lt;select&gt;</code> typically maintain their own state and update it based on user input. In React,
+        mutable
+        state is typically kept in the state property of components and only updated with <code>setState()</code>.
+      </p>
+      <p>We can combine the two by making the React state be the "single source of truth". Then the React component that
+        renders a form also controls what happens in that form on subsequent user input. An input form element whose
+        value is
+        controlled by React in this way is called a "controlled component".
+      </p>
+      <table>
+        <caption>Form Element's props</caption>
+        <thead>
+          <tr>
+            <th>Element</th>
+            <th>Value Property</th>
+            <th>Change Callback</th>
+            <th>New Value in the Callback</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><code>&lt;input type="text"/&gt;</code></td>
+            <td><code>value="string"</code></td>
+            <td><code>onChange</code></td>
+            <td><code>event.target.value</code></td>
+          </tr>
+          <tr>
+            <td><code>&lt;input type="checkbox"/&gt;</code></td>
+            <td><code>checked={boolean}</code></td>
+            <td><code>onChange</code></td>
+            <td><code>event.target.checked</code></td>
+          </tr>
+          <tr>
+            <td><code>&lt;input type="radio"/&gt;</code></td>
+            <td><code>checked={boolean}</code></td>
+            <td><code>onChange</code></td>
+            <td><code>event.target.checked</code></td>
+          </tr>
+          <tr>
+            <td><code>&lt;textarea/&gt;</code></td>
+            <td><code>value="string"</code></td>
+            <td><code>onChange</code></td>
+            <td><code>event.target.value</code></td>
+          </tr>
+        </tbody>
+        <tfoot>
+          <tr>
+            <td><code>&lt;select/&gt;</code></td>
+            <td><code>value="option value"</code></td>
+            <td><code>onChange</code></td>
+            <td><code>event.target.value</code></td>
+          </tr>
+        </tfoot>
+      </table>
+      <h4>Uncontrolled Components</h4>
+      <p>In the uncontrolled components the form data id handled by the DOM itself. To write an uncontrolled component,
+        instead of writing an event handler for every state update, you can use a <code>ref</code> to get form values
+        from the
+        DOM.</p>
+      <p>Since an uncontrolled component keeps the source of truth in the DOM, it is sometimes easier to integrate React
+        and
+        non-React code when using uncontrolled components. It can also be slightly less code if you want to be quick and
+        "dirty". Otherwise, it is recommended to use controlled components.</p>
+
+      <h5>Comparison</h5>
+      <table>
+        <caption>Uncontrolled vs Controlled Components</caption>
+        <thead>
+          <tr>
+            <th>Feature</th>
+            <th>Uncontrolled</th>
+            <th>Controlled</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>One-time value retreival (e.g., onSubmit)</td>
+            <td>✅</td>
+            <td>✅</td>
+          </tr>
+          <tr>
+            <td>Validating on submit</td>
+            <td>✅</td>
+            <td>✅</td>
+          </tr>
+          <tr>
+            <td>Instant field validation</td>
+            <td>❌</td>
+            <td>✅</td>
+          </tr>
+          <tr>
+            <td>Conditionally disabling submit button</td>
+            <td>❌</td>
+            <td>✅</td>
+          </tr>
+          <tr>
+            <td>Enforcing input format</td>
+            <td>❌</td>
+            <td>✅</td>
+          </tr>
+          <tr>
+            <td>Several inputs for one piece of data</td>
+            <td>❌</td>
+            <td>✅</td>
+          </tr>
+        </tbody>
+        <tfoot>
+          <tr>
+            <td>Dynamic inputs</td>
+            <td>❌</td>
+            <td>✅</td>
+          </tr>
+        </tfoot>
+      </table>
     </article>
   </main>
   <footer>
