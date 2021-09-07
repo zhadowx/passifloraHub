@@ -7,27 +7,28 @@ body {
     "hero"
     "main"
     "footer";
+  margin: 1em;
 }
 header {
   grid-area: header;
 }
 nav {
   grid-area: nav;
-  display: grid;
 }
 main {
-  display: grid;
   grid-area: main;
+  display: grid;
+  grid: auto-flow min-content / 1fr;
   grid-template-areas:
     "html"
     "css"
-    "js";
-  gap: 0.5em;
+    "js"
+    "react";
 }
 footer {
+  grid-area: footer;
   display: flex;
   justify-content: center;
-  grid-area: footer;
   justify-items: center;
 }
 .hero {
@@ -41,4 +42,7 @@ footer {
 }
 #js {
   grid-area: js;
+}
+#react {
+  grid-area: react;
 }

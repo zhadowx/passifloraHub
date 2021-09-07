@@ -22,14 +22,15 @@
     <h1>Web Development Synthesis</h1>
   </header>
   <nav>
-    <ul>
+    <button class="hamburger-icon">
+      <span>&nbsp;</span>
+      <span>&nbsp;</span>
+      <span>&nbsp;</span>
+    </button>
+    <ul class="primary-nav">
       <li><a href="#html"><img src="images/html_logo.svg" alt="html logo" width="30" height="30">HTML</a></li>
-      <!-- color info: #e44d26 rgb(228, 77, 38) and #f16529 (241, 101, 41) -->
       <li><a href="#css"><img src="images/css_logo.svg" alt="css logo" width="30" height="30">CSS</a></li>
-      <!-- color info: #264de4 rgb(38, 77, 228) and #2965f1 (41, 101, 241)-->
-      <li><a href="#js"><img src="images/js_logo.svg" alt="javascript logo" width="30" height="30"> JavaScript</a>
-      </li>
-      <!-- color info: #f7df1e rgb(247, 223, 30) -->
+      <li><a href="#js"><img src="images/js_logo.svg" alt="javascript logo" width="30" height="30">JavaScript</a></li>
       <li><a href="#react"><img src="/images/react_logo.svg" alt="react logo" width="27" height="27">React</a></li>
     </ul>
   </nav>
@@ -501,6 +502,7 @@
           <div class="animation2"></div>
           <div class="animation3"></div>
           <div class="animation4"></div>
+          <div class="animation5"></div>
         </div>
       </div>
     </article>
@@ -991,6 +993,7 @@
       <p>Also, <b>async/await</b> is built on top of <b>promises</b>, so it's compatible with all the features offered
         by promises.</p>
     </article>
+
     <article id="react">
       <h2>React</h2>
       <h3>JSX</h3>
@@ -1101,51 +1104,55 @@
         value is
         controlled by React in this way is called a "controlled component".
       </p>
-      <table>
-        <caption>Form Element's props</caption>
-        <thead>
-          <tr>
-            <th>Element</th>
-            <th>Value Property</th>
-            <th>Change Callback</th>
-            <th>New Value in the Callback</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td><code>&lt;input type="text"/&gt;</code></td>
-            <td><code>value="string"</code></td>
-            <td><code>onChange</code></td>
-            <td><code>event.target.value</code></td>
-          </tr>
-          <tr>
-            <td><code>&lt;input type="checkbox"/&gt;</code></td>
-            <td><code>checked={boolean}</code></td>
-            <td><code>onChange</code></td>
-            <td><code>event.target.checked</code></td>
-          </tr>
-          <tr>
-            <td><code>&lt;input type="radio"/&gt;</code></td>
-            <td><code>checked={boolean}</code></td>
-            <td><code>onChange</code></td>
-            <td><code>event.target.checked</code></td>
-          </tr>
-          <tr>
-            <td><code>&lt;textarea/&gt;</code></td>
-            <td><code>value="string"</code></td>
-            <td><code>onChange</code></td>
-            <td><code>event.target.value</code></td>
-          </tr>
-        </tbody>
-        <tfoot>
-          <tr>
-            <td><code>&lt;select/&gt;</code></td>
-            <td><code>value="option value"</code></td>
-            <td><code>onChange</code></td>
-            <td><code>event.target.value</code></td>
-          </tr>
-        </tfoot>
-      </table>
+      <details>
+        <summary>
+          <caption>Form Element's props Table</caption>
+        </summary>
+        <table class="formEleTable">
+          <thead>
+            <tr>
+              <th>Element</th>
+              <th>Value Property</th>
+              <th>Change Callback</th>
+              <th>New Value in the Callback</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><code>&lt;input type="text"/&gt;</code></td>
+              <td><code>value="string"</code></td>
+              <td><code>onChange</code></td>
+              <td><code>event.target.value</code></td>
+            </tr>
+            <tr>
+              <td><code>&lt;input type="checkbox"/&gt;</code></td>
+              <td><code>checked={boolean}</code></td>
+              <td><code>onChange</code></td>
+              <td><code>event.target.checked</code></td>
+            </tr>
+            <tr>
+              <td><code>&lt;input type="radio"/&gt;</code></td>
+              <td><code>checked={boolean}</code></td>
+              <td><code>onChange</code></td>
+              <td><code>event.target.checked</code></td>
+            </tr>
+            <tr>
+              <td><code>&lt;textarea/&gt;</code></td>
+              <td><code>value="string"</code></td>
+              <td><code>onChange</code></td>
+              <td><code>event.target.value</code></td>
+            </tr>
+          </tbody>
+          <tfoot>
+            <tr>
+              <td><code>&lt;select/&gt;</code></td>
+              <td><code>value="option value"</code></td>
+              <td><code>onChange</code></td>
+              <td><code>event.target.value</code></td>
+            </tr>
+          </tfoot>
+        </table>
+      </details>
       <h4>Uncontrolled Components</h4>
       <p>In the uncontrolled components the form data id handled by the DOM itself. To write an uncontrolled component,
         instead of writing an event handler for every state update, you can use a <code>ref</code> to get form values
@@ -1157,8 +1164,8 @@
         "dirty". Otherwise, it is recommended to use controlled components.</p>
 
       <h5>Comparison</h5>
-      <table>
-        <caption>Uncontrolled vs Controlled Components</caption>
+      <table class="uVScTable">
+        <caption>Uncontrolled vs Controlled Components Table</caption>
         <thead>
           <tr>
             <th>Feature</th>
