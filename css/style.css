@@ -57,7 +57,7 @@ h2 {
 h3 {
   border-bottom: 2px solid var(--charcoal);
   text-align: end;
-  padding-right: 0.7em;
+  padding-right: 1.5em;
 }
 
 h4 {
@@ -81,7 +81,7 @@ p,
 h4,
 h5,
 details {
-  padding: 0 0.7em;
+  padding: 0 1em;
 }
 summary {
   box-shadow: 0 0.5px 1px var(--charcoal);
@@ -95,6 +95,7 @@ span {
 /*Table rules*/
 
 table {
+  padding: 0 1em;
   margin-left: auto;
   margin-right: auto;
 }
@@ -216,19 +217,23 @@ nav > ul > li:hover {
   transition-timing-function: ease-in;
 }
 nav > ul > li:nth-child(1) {
+  padding-left: 42vw;
   justify-content: start;
   margin-bottom: 2px;
 }
 nav > ul > li:nth-child(2) {
-  justify-content: center;
+  padding-left: 42vw;
+  justify-content: start;
   margin-bottom: 2px;
 }
 nav > ul > li:nth-child(3) {
+  padding-left: 42vw;
   justify-content: start;
   margin-bottom: 2px;
 }
 nav > ul > li:nth-child(4) {
-  justify-content: center;
+  padding-left: 42vw;
+  justify-content: start;
 }
 /* HTML rules */
 .timeline {
