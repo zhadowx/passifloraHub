@@ -29,6 +29,7 @@ body {
   background-color: var(--oycrayola);
   color: var(--charcoal);
 }
+
 /* .hero {
   position: relative;
   width: 100vw;
@@ -119,6 +120,11 @@ tfoot tr:hover {
 .uVScTable td:nth-child(3) {
   text-align: center;
 }
+.uVScTable caption,
+#specificityTable caption {
+  margin: 0 1em;
+}
+
 /* Header rules */
 header {
   text-align: center;
@@ -141,7 +147,6 @@ footer {
 
 /* Nav rules */
 nav {
-  margin: 0;
   background-color: var(--sbrown);
 }
 button {
@@ -188,53 +193,76 @@ button {
 .primary-nav {
   display: none;
 }
-.primary-nav.open {
-  display: flex;
-  margin-left: 0;
-  padding-left: 0;
-  flex-direction: column;
-  list-style-type: none;
+
+.primary-nav p,
+.primary-nav img {
+  display: inline;
+  margin: 0;
+  padding: 0;
+}
+.secondary-nav {
+  display: none;
 }
 
+.primary-nav.open {
+  display: grid;
+  grid-template-rows: repeat(4, min-content);
+  grid-template-columns: auto;
+  margin-left: 0;
+  padding-left: 0;
+  list-style-type: none;
+}
+a {
+  text-decoration: none;
+  color: var(--charcoal);
+}
+.secondary-nav li:hover {
+  background-color: var(--oycrayola);
+  transition-duration: 0.1s;
+  transition-timing-function: ease-in;
+}
+.secondary-nav.open {
+  list-style-type: none;
+  justify-self: left;
+  margin-left: 0;
+  padding-left: 0;
+  width: 100%;
+}
 nav > ul > li {
-  display: flex;
+  display: grid;
+  grid-template-rows: repeat(2, min-content);
+  grid-template-columns: auto;
+  align-items: center;
+  justify-items: center;
   background-color: #e9c56a71;
   font-family: "Kaisei HarunoUmi", sans-serif;
   width: 100%;
   padding: 5px;
   cursor: pointer;
-}
-nav > ul > li > a {
-  text-decoration: none;
   color: var(--charcoal);
   font-weight: bolder;
+  border: none;
 }
-nav > ul > li:hover {
-  background-color: var(--oycrayola);
-  font-size: larger;
-  transition-property: font-size;
-  transition-duration: 0.1s;
-  transition-timing-function: ease-in;
-}
+
 nav > ul > li:nth-child(1) {
-  padding-left: 42vw;
-  justify-content: start;
-  margin-bottom: 2px;
+  box-shadow: 0 -15px var(--pgreen);
+  margin-bottom: 7px;
 }
 nav > ul > li:nth-child(2) {
-  padding-left: 42vw;
-  justify-content: start;
-  margin-bottom: 2px;
+  /* box-shadow: 0 -5px var(--pgreen); */
+  margin-bottom: 7px;
 }
 nav > ul > li:nth-child(3) {
-  padding-left: 42vw;
-  justify-content: start;
-  margin-bottom: 2px;
+  /* box-shadow: 0 -5px var(--pgreen); */
+  margin-bottom: 7px;
 }
 nav > ul > li:nth-child(4) {
-  padding-left: 42vw;
-  justify-content: start;
+  /* box-shadow: 0 5px var(--pgreen); */
 }
+.nav .nav.sticky {
+  position: fixed;
+}
+
 /* HTML rules */
 .timeline {
   display: none;
@@ -392,8 +420,8 @@ nav > ul > li:nth-child(4) {
     -0.75em 0 0 -0.375em var(--oycrayola), 0 0 0 0.375em var(--charcoal);
 }
 .boxShadow6 {
-  box-shadow: inset 0 0 0 1em var(--charcoal), inset 0 0 0 1.5em var(--sbrown),
-    inset 0 0 0 2em var(--bsienna);
+  box-shadow: inset 0 0 0 1em var(--pgreen), inset 0 0 0 2em var(--sbrown),
+    inset 0 0 0 3em var(--bsienna);
 }
 /* Transformations */
 .containerTransformations {

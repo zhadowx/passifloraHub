@@ -18,20 +18,200 @@
 </head>
 
 <body>
-  <header>
+  <header class="header">
     <h1>Web Development Synthesis</h1>
   </header>
-  <nav>
+  <nav class="nav">
     <button class="hamburger-icon">
       <span>&nbsp;</span>
       <span>&nbsp;</span>
       <span>&nbsp;</span>
     </button>
     <ul class="primary-nav">
-      <li><a href="#html"><img src="images/html_logo.svg" alt="html logo" width="30" height="30">HTML</a></li>
-      <li><a href="#css"><img src="images/css_logo.svg" alt="css logo" width="30" height="30">CSS</a></li>
-      <li><a href="#js"><img src="images/js_logo.svg" alt="javascript logo" width="30" height="30">JavaScript</a></li>
-      <li><a href="#react"><img src="/images/react_logo.svg" alt="react logo" width="27" height="27">React</a></li>
+      <li class="html-nav">
+        <img src="images/html_logo.svg" alt="html logo" width="30" height="30">
+        <p>HTML</p>
+        <ol class="secondary-nav">
+          <a href="#html-1">
+            <li>
+              What is HTML?
+            </li>
+          </a>
+          <a href="#html-2">
+            <li>
+              Element Display Roles
+            </li>
+          </a>
+          <a href="#html-3">
+            <li>
+              History of HTML
+            </li>
+          </a>
+        </ol>
+      </li>
+      <li class="css-nav">
+        <img src="images/css_logo.svg" alt="css logo" width="30" height="30">
+        <p>CSS</p>
+        <ol class="secondary-nav">
+          <a href="#css-1">
+            <li>
+              What is CSS?
+            </li>
+          </a>
+          <a href="#css-2">
+            <li>
+              Selectors
+            </li>
+          </a>
+          <a href="#css-3">
+            <li>
+              Style Precedence
+            </li>
+          </a>
+          <a href="#css-4">
+            <li>
+              The Box Model
+            </li>
+          </a>
+          <a href="#css-5">
+            <li>
+              Backgrounds
+            </li>
+          </a>
+          <a href="#css-6">
+            <li>
+              Rounded Corners
+            </li>
+          </a>
+          <a href="#css-7">
+            <li>
+              Box Shadow
+            </li>
+          </a>
+          <a href="#css-8">
+            <li>
+              Transforming Elements
+            </li>
+          </a>
+          <a href="#css-9">
+            <li>
+              Transitioning Between States
+            </li>
+          </a>
+          <a href="#css-10">
+            <li>
+              Animations
+            </li>
+          </a>
+        </ol>
+      </li>
+      <li class="js-nav">
+        <img src="images/js_logo.svg" alt="javascript logo" width="30" height="30">
+        <p>JavaScript</p>
+        <ol class="secondary-nav">
+          <a href="#js-1">
+            <li>
+              What is JavaScript?
+            </li>
+          </a>
+          <a href="#js-2">
+            <li>
+              Grammar, Values and Types
+            </li>
+          </a>
+          <a href="#js-3">
+            <li>
+              Operators
+            </li>
+          </a>
+          <a href="#js-4">
+            <li>
+              Control Flow
+            </li>
+          </a>
+          <a href="#js-5">
+            <li>
+              Loops and Iteration
+            </li>
+          </a>
+          <a href="#js-6">
+            <li>
+              Functions
+            </li>
+          </a>
+          <a href="#js-7">
+            <li>
+              Strings
+            </li>
+          </a>
+          <a href="#js-8">
+            <li>
+              Arrays
+            </li>
+          </a>
+          <a href="#js-9">
+            <li>
+              Objects
+            </li>
+          </a>
+          <a href="#js-10">
+            <li>
+              Object-Oriented Programming (OOP)
+            </li>
+          </a>
+          <a href="#js-11">
+            <li>
+              Inheritance and the Prototype Chain
+            </li>
+          </a>
+          <a href="#js-12">
+            <li>
+              The Document Object Model (DOM)
+            </li>
+          </a>
+          <a href="#js-13">
+            <li>
+              Asynchronicity
+            </li>
+          </a>
+        </ol>
+      </li>
+      <li class="react-nav">
+        <img src="/images/react_logo.svg" alt="react logo" width="27" height="27">
+        <p>React</p>
+        <ol class="secondary-nav">
+          <a href="#react-1">
+            <li>
+              What is React?
+            </li>
+          </a>
+          <a href="#react-2">
+            <li>
+              JSX
+            </li>
+          </a>
+          <a href="#react-3">
+            <li>
+              Rendering Elements
+            </li>
+          </a>
+          <a href="#react-4">
+            <li>
+              Components and Props
+            </li>
+          </a>
+          <a href="#react-5">
+            <li>
+              Lifecycle Methods
+            </li>
+          </a>
+          <a href="#react-6">
+            <li>
+              Forms
+            </li>
+          </a>
+        </ol>
+      </li>
     </ul>
   </nav>
   <div class="hero">
@@ -39,7 +219,7 @@
   <main>
     <article id="html">
       <h2>HTML</h2>
-      <h3>What is HTML?</h3>
+      <h3 id="html-1">What is HTML?</h3>
       <p>The HyperText Markup Language is the most basic building block of the Web. It defines the meaning and
         structure of web content.</p>
       <p>Web browsers receive HTML documents from a web server or from local storage and render the documents into
@@ -51,7 +231,7 @@
         /&gt; directly introduce content into the page. Other tags such as &lt;p&gt; surround and provide information
         about document text and may include other tags as sub-elements. Browsers do not display the HTML tags, but use
         them to interpret the content of the page.</p>
-      <h3>Element Display Roles</h3>
+      <h3 id="html-2">Element Display Roles</h3>
       <ul>
         <li><b>Block-Level:</b> element box fills its parent element's content area width and cannot have other
           elements to its sides. Example: &lt;p&gt; and &lt;div&gt;.</li>
@@ -59,7 +239,7 @@
           that line. Example: &lt;a&gt; and &lt;span&gt;.</li>
       </ul>
       <div class="timeline">
-        <h3>History of HTML</h3>
+        <h3 id="html-3">History of HTML</h3>
         <div class="containerTimeline">
           <div id="htmlTimeline">
           </div>
@@ -69,7 +249,7 @@
 
     <article id="css">
       <h2>CSS</h2>
-      <h3>What is CSS?</h3>
+      <h3 id="css-1">What is CSS?</h3>
       <p>CSS is a style sheet language used for describing the presentation of a document written in a markup language
         such as HTML. CSS is a cornerstone technology of the World Wide Web, alongside HTML and JavaScript.</p>
       <p>CSS is designed to enable the separation of presentation and content, including layout, colors, and fonts.
@@ -80,7 +260,7 @@
       <p>The name cascading comes from the specified priority scheme to determine which style rule applies if more
         than one rule matches a particular element. This cascading priority scheme is predictable.</p>
       <p>The CSS specifications are maintained by the World Wide Web Consortium (W3C).</p>
-      <h3>Selectors</h3>
+      <h3 id="css-2">Selectors</h3>
       <details>
         <summary>Basic selectors</summary>
         <ul>
@@ -124,7 +304,7 @@
         <summary>Pseudo elements <b>::</b></summary>
         Represents entities that are not included in HTML.
       </details>
-      <h3 id="precedence">Style Precedence</h3>
+      <h3 id="css-3">Style Precedence</h3>
       <p>Cascading Style Sheets uses a mechanism called the <i>cascade</i> to resolve any conflicts between styles
         and arrive at a final set of styles to be applied to the document. Two key components of the cascade are
         specificity and inheritance.</p>
@@ -195,7 +375,7 @@
         directly
         to an element. Inherited values have no specificity at all (which is <i>not</i> the same as having zero
         specificity).</p>
-      <h3 id="boxModel">The Box Model</h3>
+      <h3 id="css-4">The Box Model</h3>
       <p>In CSS there are broadly two types of boxes— <b>block boxes</b> and <b>inline boxes</b>. The CSS box model as
         a
         whole applies to block boxes. Inline boxes use just some of the behavior defined in the box model. The model
@@ -223,7 +403,7 @@
       </div>
       <p>By default, browsers use the standard box model. If you want to turn on the alternative model for an element,
         you do so by setting <i>box-sizing: border-box;</i> on it.</p>
-      <h3>Backgrounds</h3>
+      <h3 id="css-5">Backgrounds</h3>
       <p>The <i>background-color</i> property defines the background color of any element in CSS. The property accepts
         any valid &lt;color&gt;. A <i>background-color</i> extends underneath the content and padding box of the
         element. Example:</p>
@@ -240,7 +420,7 @@
         <div id="backgroundImageBox">
         </div>
       </div>
-      <h3>Rounded Corners</h3>
+      <h3 id="css-6">Rounded Corners</h3>
       <p>Rounding corners on a box is achieved by using the <i>border-radius</i> property. You can set a single radius
         to make circular corners, or two radii to make elliptical corners. The radius applies to the whole background,
         even if the element has no border. Examples:</p>
@@ -283,7 +463,7 @@
           <p>border-radius: 50% 20% / 10% 40%;</p>
         </div>
       </div>
-      <h3>Box Shadow</h3>
+      <h3 id="css-7">Box Shadow</h3>
       <p>The <i>box-shadow</i> property adds shadow effects around an element's frame. You can set multiple effects
         separated by commas. A box shadow is described by X and Y offsets relative to the element, blur and spread
         radius, and color.</p>
@@ -344,7 +524,7 @@
           <p>box-shadow: inset 0 0 0 1em #350561, inset 0 0 0 1.5em #4024dd, inset 0 0 0 2em #77b2da;</p>
         </div>
       </div>
-      <h3>Transforming Elements</h3>
+      <h3 id="css-8">Transforming Elements</h3>
       <p>The <i>transform</i> property lets you rotate, scale, skew, or translate an element. It modifies coordinate
         space of the CSS visual formatting model.</p>
       <ul>
@@ -420,7 +600,7 @@
           <div class="face bottom">6</div>
         </div>
       </div>
-      <h3>Transitioning Between States</h3>
+      <h3 id="css-9">Transitioning Between States</h3>
       <p>The <i>transition</i> CSS property is a shorthand property for <i>transition-property</i>,
         <i>transition-duration</i>,
         <i>transition-timing-function</i> and <i>transition-delay</i>.
@@ -467,7 +647,7 @@
           longhand properties
         </div>
       </div>
-      <h3>Animations</h3>
+      <h3 id="css-10">Animations</h3>
       <p><b>CSS Animations</b> make it possible to animate transitions from one CSS style
         configuration to another.
         Animations consists of two components, a style describing the CSS animation and a set of keyframes that indicate
@@ -509,7 +689,7 @@
 
     <article id="js">
       <h2>JavaScript</h2>
-      <h3>What is JavaScript?</h3>
+      <h3 id="js-1">What is JavaScript?</h3>
       <p>JavaScript was introduced in 1995 as a way to add programs to web pages in the Netscape Navigator browser. The
         language has since been adopted by all other major graphical web browsers. It has made modern web applications
         possible—applications with which you can interact directly without doing a page reload for every action.
@@ -518,7 +698,7 @@
       <p>JavaScript(JS) is a lightweight, interpreted, or just-in-time compiled programming language with
         first-class-functions. JavaScript is a prototype-based, multi-paradigm, single-threaded, dynamic language,
         supporting object-oriented, imperative, and declarative (e.g. functional programming) styles.</p>
-      <h3>Grammar, Values and Types</h3>
+      <h3 id="js-2">Grammar, Values and Types</h3>
       <p>JavaScript is <b>case-sensitive</b> and uses the Unicode character set.</p>
       <p>An <i>expression</i> in JavaScript is any valid unit of code that resolves to a value. Every syntactically
         valid expression resolves to some value but conceptually, there are two types of expressions: with side
@@ -585,7 +765,7 @@
           for
           constructing strings.</li>
       </ul>
-      <h3>Operators</h3>
+      <h3 id="js-3">Operators</h3>
       <p>JavaScript has the following types of operators:</p>
       <ul>
         <li> <span>Assignment</span>: assigns a value to its left operand based on the value of its right operand. The
@@ -679,7 +859,7 @@
           </ul>
         </li>
       </ul>
-      <h3>Control Flow</h3>
+      <h3 id="js-4">Control Flow</h3>
       <p>Statements in JavaScript are executed from top to bottom. </p>
       <h4>Block statement</h4>
       <p>The block is defined by a pair of curly brackets <b>({})</b>, and is used to group statements.</p>
@@ -695,7 +875,7 @@
         <li>NaN</li>
         <li>empty string ("")</li>
       </ul>
-      <h3>Loops and Iteration</h3>
+      <h3 id="js-5">Loops and Iteration</h3>
       <p>Looping control flow allows us to go back to some point in the program where we were before and repeat it with
         our current program state.</p>
       <h4>while loop</h4>
@@ -718,7 +898,7 @@
       <p>Creates a loop iterating over iterable objects (including Array, Map, Set, arguments object and so on),
         invoking a custom iteration hook with statements to be executed for the value of each distinct property. In
         other words, iterates over property values.</p>
-      <h3>Functions</h3>
+      <h3 id="js-6">Functions</h3>
       <p>A function in JavaScript is similar to a procedure—a set of statements that performs a task or calculates a
         value, but for a procedure to qualify as a function, it should take some input and return an output where there
         is some obvious relationship between the input and the output. In simpler words, a function is a piece of
@@ -765,7 +945,7 @@
         </li>
         <li>This is only possible because of first-class functions.</li>
       </ul>
-      <h3>Strings</h3>
+      <h3 id="js-7">Strings</h3>
       <p>JavaScript's string type is used to represent textual data. It is a set of "elements" of 16-bit unsigned
         integer values (UTF-16 code units). Each element in the String occupies a position in the String. The first
         element is at index 0, the next at index 1, etc. You can create strings using <i>string literals</i> or
@@ -786,7 +966,7 @@
       <p>However you can call methods on a string literal value. So, what happens is that JavaScript automatically
         converts the string literal to a temporary String object, calls the method, then discards the temporary String
         object.</p>
-      <h3>Arrays</h3>
+      <h3 id="js-8">Arrays</h3>
       <p>Arrays are a reference data type for storing sequences of values. The easiest or preferred way of creating an
         array is by enclosing elements in square brackets <b>([])</b> and separating them with a comma <b>(,)</b>, this
         is called an array literal or bracket syntax.</p>
@@ -805,7 +985,7 @@
       </p>
       <p>The elements in an array are stored as the arrays's properties, using numbers as property names. You can't use
         the dot notation with numbers, this is the reason why you have to use the bracket notation to get at them.</p>
-      <h3>Objects</h3>
+      <h3 id="js-9">Objects</h3>
       <p>An object is a collection of properties, and a property is an association between a name <i>(or key)</i> and a
         value. A property's value can be a function, in which case the property is known as a method.</p>
       <h4>Creating new objects</h4>
@@ -839,7 +1019,7 @@
         <li><b>Event listener</b>: <i>this</i> points to the DOM element that the handler is attached to.</li>
         <li><b>new, call, apply, bind</b>: can refer <i>this</i> to point to any object</li>
       </ul>
-      <h3>Object-Oriented Programming (OOP)</h3>
+      <h3 id="js-10">Object-Oriented Programming (OOP)</h3>
       <p>Object-oriented programming is a programming paradigm based on the concept of objects. Objects are used to
         describe real-world or abstract features. Objects are building blocks of applications, and interact with one
         another. Interactions happen through a public interface (API): methods that the code outside of the object can
@@ -856,7 +1036,7 @@
       <h4>Polymorphism</h4>
       <p>A child class can overwrite a method it inherited from a parent class.</p>
 
-      <h3>Inheritance and the Prototype Chain</h3>
+      <h3 id="js-11">Inheritance and the Prototype Chain</h3>
       <p>Each object has a private property which holds a link to another object called its <b>prototype</b>. That
         prototype object has a prototype of its own, and so on until an object is reached with a <i>null</i> as its
         prototype, which has no prototype, and acts as the final link in the <b>prototype chain</b>.</p>
@@ -890,7 +1070,7 @@
           </ul>
         </li>
       </ul>
-      <h3>The Document Object Model (DOM)</h3>
+      <h3 id="js-12">The Document Object Model (DOM)</h3>
       <p>The DOM connects web pages to scripts or programming languages by representing the structure of a document—such
         as the HTML representing a web page—in memory. The Document Object Model is an architecture that describes the
         structure of a document; each document is represented by an instance of the interface Document. A document, in
@@ -926,10 +1106,10 @@
         this property to ensure that you're not accidentally handling something that propagated up from a node you do
         not want to handle. It is also possible to use the <i>target</i> property to cast a wide net for a specific type
         of event.</p>
-      <h3>Asynchronicity</h3>
+      <h3 id="js-13">Asynchronicity</h3>
       <p>JavaScript is traditionally <b>single-threaded</b>. Even with multiple cores, you could only get it to run
         tasks on a single thread, called the main thread. After some time, JavaScript gained some tools to help with
-        such problems. <b>Web workders</b> allow you to send some of the JavaScript processing off to a separate thread,
+        such problems. <b>Web workers</b> allow you to send some of the JavaScript processing off to a separate thread,
         called a worker so that you can run multiple chunks simultaneously.</p>
       <p>Web workers are pretty useful, but they do have their limitations. A major one is they are not able to access
         the DOM. Another problem is that although code run in a worker is not blocking(refers to code that executes
@@ -996,7 +1176,14 @@
 
     <article id="react">
       <h2>React</h2>
-      <h3>JSX</h3>
+      <h3 id="react-1">What is React?</h3>
+      <p>React (also known as React.js or ReactJS) is a free and open-source front-end JavaScript library for building
+        user interfaces or UI components. It is maintained by Facebook and a comunity of individual developers and
+        companies. It can be used as a base in the development of single-page or mobile applications.</p>
+      <p>React was created by Jordan Walke, a software engineer at Facebook, who released an early prototype of React
+        called "FaxJS". He was influenced by XHP, and HTML component library for PHP. It was first deployed on
+        Facebook's news Feed in 2011 and later on Instagram in 2012, and open-sourced on 2013.</p>
+      <h3 id="react-2">JSX</h3>
       <p>JSX(JavaScript Syntax Extension) is an extension to the JavaScript language syntax, which provides a way to
         structure
         component rendering.</p>
@@ -1015,7 +1202,7 @@
           attribute names.</li>
       </ul>
 
-      <h3>Rendering Elements</h3>
+      <h3 id="react-3">Rendering Elements</h3>
       <p>Elements are the smallest building blocks of React apps. Unlike browser DOM elements, React elements are plain
         objects, and are cheap to create. React DOM takes care of updating the DOM to match the React elements.</p>
       <p>Somewhere inside the HTML file there is a "root" DOM node because everything inside it will be managed by React
@@ -1024,7 +1211,7 @@
       <p>To render a React element into a root DOM node, pass both to <code>ReactDOM.render()</code>.</p>
       <p>React elements are <b>immutable</b>.</p>
 
-      <h3>Components and Props</h3>
+      <h3 id="react-4">Components and Props</h3>
       <p>Components let you split the UI into independent, reusable pieces, and think about each piece in isolation.
         Conceptually, components are like JavaScript functions. They accept arbitrary inputs(called "props") and return
         React
@@ -1062,7 +1249,7 @@
         <li>State can only be updated using the function 'setState'.</li>
       </ul>
 
-      <h3>Lifecycle Methods</h3>
+      <h3 id="react-5">Lifecycle Methods</h3>
       <p></p>
       <ul>
         <li><span><b><code>constructor()</code></b></span>: Initializing local state by assigning an object to
@@ -1088,7 +1275,7 @@
           requests, or cleaning up any subscriptions that were created in <code>componentDidMount()</code>.</li>
       </ul>
 
-      <h3>Forms</h3>
+      <h3 id="react-6">Forms</h3>
       <p>HTML form elements work a bit differently from other DOM elements in React, because form elements naturally
         keep some
         internal state.
