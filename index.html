@@ -28,7 +28,7 @@
       <span>&nbsp;</span>
     </button>
     <ul class="primary-nav">
-      <li class="html-nav">
+      <li class="html-nav pnav">
         <img src="images/html_logo.svg" alt="html logo" width="30" height="30">
         <p>HTML</p>
         <ol class="secondary-nav">
@@ -49,7 +49,7 @@
           </a>
         </ol>
       </li>
-      <li class="css-nav">
+      <li class="css-nav pnav">
         <img src="images/css_logo.svg" alt="css logo" width="30" height="30">
         <p>CSS</p>
         <ol class="secondary-nav">
@@ -105,7 +105,7 @@
           </a>
         </ol>
       </li>
-      <li class="js-nav">
+      <li class="js-nav pnav">
         <img src="images/js_logo.svg" alt="javascript logo" width="30" height="30">
         <p>JavaScript</p>
         <ol class="secondary-nav">
@@ -176,7 +176,7 @@
           </a>
         </ol>
       </li>
-      <li class="react-nav">
+      <li class="react-nav pnav">
         <img src="/images/react_logo.svg" alt="react logo" width="27" height="27">
         <p>React</p>
         <ol class="secondary-nav">
@@ -615,7 +615,8 @@
           <ul>
             <li>A value of 0s will begin the transition immediately.</li>
             <li>A positive value will delay the start of the transition effect for the given length of time.</li>
-            <li>A negative value will begin the transition effect immediately, and partway through the effect. In other
+            <li>A negative value will begin the transition effect immediately, and partway through the effect. In
+              other
               words, the effect will be animated as if it had already been running for the given length of time.</li>
           </ul>
         </li>
@@ -623,7 +624,8 @@
           default, the value is 0s, meaning that no animation will occur.</li>
         <li><i>transition-property</i>: sets the CSS properties to which a transition effect should be applied.</li>
         <li><i>transition-timing-function</i>: sets how intermediate values are calculated for CSS properties being
-          affected by a transition effect. This, in essence, lets you establish an acceleration curve so that the speed
+          affected by a transition effect. This, in essence, lets you establish an acceleration curve so that the
+          speed
           of the transition can vary over its duration. This acceleration curve is defined using one
           &lt;easing-function&gt; for each property to be transitioned.</li>
       </ul>
@@ -650,7 +652,8 @@
       <h3 id="css-10">Animations</h3>
       <p><b>CSS Animations</b> make it possible to animate transitions from one CSS style
         configuration to another.
-        Animations consists of two components, a style describing the CSS animation and a set of keyframes that indicate
+        Animations consists of two components, a style describing the CSS animation and a set of keyframes that
+        indicate
         the start (sometimes intermediate waypoints) and end states of the animation's style.</p>
       <p>To create a CSS animation sequence, you style the element you want to animate with the <i>animation</i>
         property or its sub-properties. This lets you configure the timing, duration, and other details of how the
@@ -665,13 +668,15 @@
         </li>
         <li><i>animation-timing-function</i>: configures the timing of the animation; that is, how the animation
           transitions through keyframes, by establishing acceleration curves.</li>
-        <li><i>animation-delay</i>: configures the delay between the time the element is loaded and the beginning of the
+        <li><i>animation-delay</i>: configures the delay between the time the element is loaded and the beginning of
+          the
           animation sequence.</li>
         <li><i>animation-iteration-count</i>: configures the number of times the animation should repeat; you can
           specify infinite to repeat the animation indefinitely.</li>
         <li><i>animation-direction</i>: configures whether or not the animation should alternate direction on each run
           through the sequence or reset to the start point and repeat itself.</li>
-        <li><i>animation-fill-mode</i>: configures what values are applied by the animation before and after executing.
+        <li><i>animation-fill-mode</i>: configures what values are applied by the animation before and after
+          executing.
         </li>
         <li><i>animation-play-state</i>: lets you pause and resume the animation sequence.</li>
       </ul>
@@ -690,7 +695,8 @@
     <article id="js">
       <h2>JavaScript</h2>
       <h3 id="js-1">What is JavaScript?</h3>
-      <p>JavaScript was introduced in 1995 as a way to add programs to web pages in the Netscape Navigator browser. The
+      <p>JavaScript was introduced in 1995 as a way to add programs to web pages in the Netscape Navigator browser.
+        The
         language has since been adopted by all other major graphical web browsers. It has made modern web applications
         possible—applications with which you can interact directly without doing a page reload for every action.
         JavaScript is also used in more traditional websites to provide various forms of interactivity and cleverness.
@@ -702,9 +708,11 @@
       <p>JavaScript is <b>case-sensitive</b> and uses the Unicode character set.</p>
       <p>An <i>expression</i> in JavaScript is any valid unit of code that resolves to a value. Every syntactically
         valid expression resolves to some value but conceptually, there are two types of expressions: with side
-        effects(those that assign value to a variable) and those that in some sense evaluate and therefore resolve to a
+        effects(those that assign value to a variable) and those that in some sense evaluate and therefore resolve to
+        a
         value.</p>
-      <p>In JavaScript, instructions are called statements and are separated by semicolons <b>(;)</b>. Which means that
+      <p>In JavaScript, instructions are called statements and are separated by semicolons <b>(;)</b>. Which means
+        that
         any
         JavaScript expression ending with a semicolon is also a statement.</p>
       <p>The source code text of JavaScript gets scanned from left to right, and is converted into a sequence of input
@@ -724,7 +732,8 @@
       </ol>
       <h4>Data type conversion</h4>
       <p>JavaScript is a <i>dynamically typed</i> language. This means you don't have to specify the data type of a
-        variable when you declare it. It also means that data types are automatically converted as-needed during script
+        variable when you declare it. It also means that data types are automatically converted as-needed during
+        script
         execution.</p>
       <h4>Declarations</h4>
       <p>JavaScript has three kinds of variable declarations.</p>
@@ -737,7 +746,8 @@
         conform to certain rules.</p>
       <h5>Variable Scope</h5>
       <p>When you declare a variable outside of any function, it is called a <i>global</i> variable, because it is
-        available to any other code in the current document. When you declare a variable within a function, it is called
+        available to any other code in the current document. When you declare a variable within a function, it is
+        called
         a local variable, because it is available only within that function.</p>
       <h5>Variable hoisting</h5>
       <p>You can refer to a variable declared later, without getting an exception. This concept is knows as
@@ -745,15 +755,18 @@
         However, variables that are hoisted return a value of <i>undefined</i>.
       </p>
       <h4>Literals</h4>
-      <p><i>Literals</i> represent values in JavaScript. These are fixed values—not variables—that you <i>literally</i>
-        provide in your script. There are:</p>
+      <p><i>Literals</i> represent values in JavaScript. These are fixed values—not variables—that you
+        <i>literally</i>
+        provide in your script. There are:
+      </p>
       <ul>
         <li>Array literal: a list of zero or more expressions, each of which represents an array element, enclosed in
           square brackets ([]).</li>
         <li>Boolean literal: <b>true</b> and <b>false</b>.</li>
         <li>Floating-point literals: can have an unsigned decimal integer, a decimal point (.), a fraction, or an
           exponent(e).</li>
-        <li>Numeric literal: include integer literals in different bases as well as floating-point literals in base-10.
+        <li>Numeric literal: include integer literals in different bases as well as floating-point literals in
+          base-10.
         </li>
         <li>Object literal: is a list of zero or more pairs of property names and associated values of an object,
           enclosed in curly braces ({}).</li>
@@ -786,20 +799,23 @@
             <li>Less than or equal <b>(&lt;=)</b> </li>
           </ul>
         </li>
-        <li><span>Arithmetic</span>: takes numerical values (either literals or variables) as their operands and returns
+        <li><span>Arithmetic</span>: takes numerical values (either literals or variables) as their operands and
+          returns
           a single
           numerical value. The standard arithmetic operators are addition <b>(+)</b> , subtraction <b>(-)</b> ,
           multiplication <b>(*)</b>, and
           division <b>(/)</b>. In addition there are also:
           <ul>
-            <li>Remainder <b>(%)</b> : binary operator that returns the integer remainder of dividing the two operands.
+            <li>Remainder <b>(%)</b> : binary operator that returns the integer remainder of dividing the two
+              operands.
             </li>
             <li>Increment <b>(++)</b> : unary operator that adds one to its operand.</li>
             <li>Decrement <b>(--)</b> : unary operator that subtracts one from its operand.</li>
             <li>Unary negation <b>(-)</b> : unary operator that returns the negation of its operand.</li>
             <li>Unary plus <b>(+)</b> : unary operator that attempts to convert operand to a number, if it is not
               already.</li>
-            <li>Exponentiation operator <b>(**)</b> : calculates the base to the exponent power, that is, base^exponent.
+            <li>Exponentiation operator <b>(**)</b> : calculates the base to the exponent power, that is,
+              base^exponent.
             </li>
           </ul>
         </li>
@@ -808,19 +824,23 @@
           hexadecimal, or
           octal numbers. Bitwise operators perform their operations on such <b>binary representations</b>, but they
           return standard JavaScript numerical values.</li>
-        <li><span>Logical operators</span>: are typically used with Boolean (logical) values; when they are, they return
+        <li><span>Logical operators</span>: are typically used with Boolean (logical) values; when they are, they
+          return
           a Boolean
           value.
-          However, the <b>&&</b> and <b>||</b> operators actually return the value of one of the specified operands, so
+          However, the <b>&&</b> and <b>||</b> operators actually return the value of one of the specified operands,
+          so
           if these operators are used with non-Boolean values, they may return a non-Boolean value.
           <ul>
             <li>Logical AND <b>(&&)</b>: Returns left-hand operand if it can be converted to false; otherwise returns
               right-hand operand. Thus, when used with Boolean values, returns <i>true</i> if both operands are true;
               otherwise, returns <i>false</i>.</li>
             <li>Logical OR <b>(||)</b>: Returns left-hand operand if it can be converted to true; otherwise, returns
-              right-hand operand. Thus, when used with Boolean values, returns <i>true</i> if either operand is true; if
+              right-hand operand. Thus, when used with Boolean values, returns <i>true</i> if either operand is true;
+              if
               both are false returns <i>false</i>.</li>
-            <li>Logical NOT <b>(!)</b>: Returns <i>false</i> if its single operand can be converted to true; otherwise,
+            <li>Logical NOT <b>(!)</b>: Returns <i>false</i> if its single operand can be converted to true;
+              otherwise,
               returns <i>true</i>.</li>
             <li>Nullish coalescing operator <b>(??)</b>: returns its right-hand side operand when its left-hand side
               operand is <i>null</i> or <i>undefined</i>, and otherwise returns its left-hand side operand.</li>
@@ -828,7 +848,8 @@
         </li>
         <li><span>String</span>: in addition to the comparison operators, which can be used on string values, the
           concatenation
-          operator <b>(+)</b> concatenates two string values together, returning another string that is the union of the
+          operator <b>(+)</b> concatenates two string values together, returning another string that is the union of
+          the
           two operand strings.</li>
         <li><span>Conditional or ternary operator</span> <b>(?:)</b>: is the only JavaScript operator that takes three
           operands and the syntax is
@@ -842,7 +863,8 @@
             (null or undefined)</i>, the expression shot-circuits with a return value of <i>undefined</i>.</li>
         <li><span>Comma</span> <b>(,)</b>: evaluates both of its operands and returns the value of the last operand.
           This operator is
-          primarily used inside a <i>for</i> loop, to allow multiple variables to be updated each time through the loop.
+          primarily used inside a <i>for</i> loop, to allow multiple variables to be updated each time through the
+          loop.
         </li>
         <li><span>Unary</span>: operate with a single operand.
           <ul>
@@ -876,7 +898,8 @@
         <li>empty string ("")</li>
       </ul>
       <h3 id="js-5">Loops and Iteration</h3>
-      <p>Looping control flow allows us to go back to some point in the program where we were before and repeat it with
+      <p>Looping control flow allows us to go back to some point in the program where we were before and repeat it
+        with
         our current program state.</p>
       <h4>while loop</h4>
       <p>A statement starting with the keyword <i>while</i> creates a loop. The word <i>while</i> is followed by an
@@ -888,7 +911,8 @@
         the <i>while</i> loop and the <i>for</i> loop is that the latter provides a slightly shorter and more
         comprehensive form.</p>
       <p>The parentheses after a <i>for</i> keyword must contain two semicolons. The part before the first semicolon
-        <i>initializes</i> the loop, usually by defining a binding. The second part is the expression that <i>checks</i>
+        <i>initializes</i> the loop, usually by defining a binding. The second part is the expression that
+        <i>checks</i>
         whether the loop must continue. The final part <i>updates</i> the state of the loop after every iteration.
       </p>
       <h4>for... in</h4>
@@ -900,7 +924,8 @@
         other words, iterates over property values.</p>
       <h3 id="js-6">Functions</h3>
       <p>A function in JavaScript is similar to a procedure—a set of statements that performs a task or calculates a
-        value, but for a procedure to qualify as a function, it should take some input and return an output where there
+        value, but for a procedure to qualify as a function, it should take some input and return an output where
+        there
         is some obvious relationship between the input and the output. In simpler words, a function is a piece of
         program wrapped in a value.</p>
       <p>There are fundamentally three ways in which you can create a function:</p>
@@ -919,15 +944,19 @@
         <li>Arguments: actual values of function parameters, to input data.</li>
       </ul>
       <h4>Scope</h4>
-      <p>Variables defined inside a function cannot be accessed from anywhere outside the function, because the variable
-        is defined only in the scope of the function. However, a function can access all variables and functions defined
+      <p>Variables defined inside a function cannot be accessed from anywhere outside the function, because the
+        variable
+        is defined only in the scope of the function. However, a function can access all variables and functions
+        defined
         inside the scope in which it is defined.</p>
       <p>A function can refer to and call itself. A function that calls itself is called a <i>recursive function</i>,
         which is, in some ways, analogous to a loop, in that both execute the same code multiple times.</p>
       <h4>Nesting and closures</h4>
-      <p>You can nest a function within another function. The inner function is private to its outer function. Also, it
+      <p>You can nest a function within another function. The inner function is private to its outer function. Also,
+        it
         forms a <i>closure</i>.</p>
-      <p><b>Closure</b> is the <i>variable environment</i> (VE) attached to the function, exactly as it was at the time
+      <p><b>Closure</b> is the <i>variable environment</i> (VE) attached to the function, exactly as it was at the
+        time
         and place the function was created. In other words, a <i>closure</i> gives a function access to all the
         variables of its parent function, even after that parent function has returned. The function keeps a reference
         to its outer scope, which preserves the scope chain throughout time.</p>
@@ -960,15 +989,18 @@
           <b>${expression}</b>).
         </li>
       </ul>
-      <p>Values of type string, number, and Boolean are not objects, and though the language doesn't complain if you try
-        to set new properties on them, it doesn't actually store those properties, because such values are immutable and
+      <p>Values of type string, number, and Boolean are not objects, and though the language doesn't complain if you
+        try
+        to set new properties on them, it doesn't actually store those properties, because such values are immutable
+        and
         cannot be changed.</p>
       <p>However you can call methods on a string literal value. So, what happens is that JavaScript automatically
         converts the string literal to a temporary String object, calls the method, then discards the temporary String
         object.</p>
       <h3 id="js-8">Arrays</h3>
       <p>Arrays are a reference data type for storing sequences of values. The easiest or preferred way of creating an
-        array is by enclosing elements in square brackets <b>([])</b> and separating them with a comma <b>(,)</b>, this
+        array is by enclosing elements in square brackets <b>([])</b> and separating them with a comma <b>(,)</b>,
+        this
         is called an array literal or bracket syntax.</p>
       <p>The notation for getting at the elements inside an array also uses square brackets. A pair of square brackets
         immediately after an expression, with another expression inside of them, will look up the element in the
@@ -979,14 +1011,17 @@
         <b>([])</b>. Both <b>value.x</b> and <b>value[x]</b> access a property on value—but not necessarily the same
         property. The difference is in how <i>x</i> is interpreted. When using a dot, the word after the dot is the
         literal name of the property. When using square brackets, the expression between the brackets is
-        <i>evaluated</i> to get the property name. In other words, whereas <b>value.x</b> fetches the property of value
+        <i>evaluated</i> to get the property name. In other words, whereas <b>value.x</b> fetches the property of
+        value
         named <i>x</i>, <b>value[x]</b> tries to evaluate the expression <i>x</i> and uses the result, converted to a
         string, as the property name.
       </p>
-      <p>The elements in an array are stored as the arrays's properties, using numbers as property names. You can't use
+      <p>The elements in an array are stored as the arrays's properties, using numbers as property names. You can't
+        use
         the dot notation with numbers, this is the reason why you have to use the bracket notation to get at them.</p>
       <h3 id="js-9">Objects</h3>
-      <p>An object is a collection of properties, and a property is an association between a name <i>(or key)</i> and a
+      <p>An object is a collection of properties, and a property is an association between a name <i>(or key)</i> and
+        a
         value. A property's value can be a function, in which case the property is known as a method.</p>
       <h4>Creating new objects</h4>
       <ul>
@@ -994,7 +1029,8 @@
           objects with literal notation.</li>
         <li><span>Constructor function</span>:
           <ol>
-            <li>Create a function for the object type that specifies its name (capital initial letter), properties, and
+            <li>Create a function for the object type that specifies its name (capital initial letter), properties,
+              and
               methods.</li>
             <li>Create an instance of the object with <b>new</b>.</li>
           </ol>
@@ -1044,9 +1080,11 @@
         sits <b>Object.prototype</b>.</p>
       <h4>Classes</h4>
       <p>JavaScript's prototype system can be interpreted as a somewhat informal take on an object-oriented concept
-        called <i>classes</i>. A class defines the shape of a type of object—what methods and properties it has. Such an
+        called <i>classes</i>. A class defines the shape of a type of object—what methods and properties it has. Such
+        an
         object is called an instance of the class.</p>
-      <p>Prototypes are useful for defining properties for which all instances of a class share the same value, such as
+      <p>Prototypes are useful for defining properties for which all instances of a class share the same value, such
+        as
         methods. Properties that differ per instance, need to be stored directly in the objects themselves.</p>
       <h4>Ways to implement prototypal inheritance</h4>
       <ul>
@@ -1071,14 +1109,16 @@
         </li>
       </ul>
       <h3 id="js-12">The Document Object Model (DOM)</h3>
-      <p>The DOM connects web pages to scripts or programming languages by representing the structure of a document—such
+      <p>The DOM connects web pages to scripts or programming languages by representing the structure of a
+        document—such
         as the HTML representing a web page—in memory. The Document Object Model is an architecture that describes the
         structure of a document; each document is represented by an instance of the interface Document. A document, in
         turn, consists of a hierarchical tree of <b>nodes</b>, in which a node is a fundamental record representing a
         single object wihtin the document.</p>
       <p>Nodes may be strictly organizational ,providing a means for grouping other nodes together or for providing a
         point at which a hierarchy can be constructed; other nodes may represent visible components of a document.</p>
-      <p>Nodes don't have any concept of including the content that is actually displayed in the document. They're empty
+      <p>Nodes don't have any concept of including the content that is actually displayed in the document. They're
+        empty
         vessels. Some of the features added to the Document by the HTML standard are:</p>
       <ul>
         <li>Support for accessing various information provided by the HTTP headers when loading the page, such as the
@@ -1087,29 +1127,35 @@
         <li>Support for interacting with the user.</li>
         <li>Event handlers for document events defined by the HTML standard to allow access to mouse and keyboard
           events, drag and drop, etc.</li>
-        <li>Event handlers for events that can be delivered to both elements and documents; presently only copy, cut and
+        <li>Event handlers for events that can be delivered to both elements and documents; presently only copy, cut
+          and
           paste actions.</li>
       </ul>
       <p>Also, an element inherits the properties and methods of all its ancestors. Each level defines a key aspect of
-        the utility of the element. From Node, the element inherits concepts surrounding the ability for the element to
+        the utility of the element. From Node, the element inherits concepts surrounding the ability for the element
+        to
         be contained by another element, and to contain other elements itself. Of special importance is what is gained
-        by inheriting from EventTarget, which is the ability to receive and handle events such as mouse clicks, play and
+        by inheriting from EventTarget, which is the ability to receive and handle events such as mouse clicks, play
+        and
         pause events, and so forth.</p>
       <h4>Propagation</h4>
       <p>For most event types, handlers registered on nodes with children will aso receive events that happen in the
         children. If a button inside a paragraph is clicked, event hanlders on the paragraph will also see the click
         event.</p>
-      <p>Events are said to propagate outward, from the node where it happened to that node's parent node and on the the
+      <p>Events are said to propagate outward, from the node where it happened to that node's parent node and on the
+        the
         root of the document.Finally, after all handlers registered on a specific node have had their turn, handlers
         registered on the whole window got a chance to respond to the event.</p>
       <p>Most event objects have a <i>target</i> property that refers to the node where they originated. You can use
         this property to ensure that you're not accidentally handling something that propagated up from a node you do
-        not want to handle. It is also possible to use the <i>target</i> property to cast a wide net for a specific type
+        not want to handle. It is also possible to use the <i>target</i> property to cast a wide net for a specific
+        type
         of event.</p>
       <h3 id="js-13">Asynchronicity</h3>
       <p>JavaScript is traditionally <b>single-threaded</b>. Even with multiple cores, you could only get it to run
         tasks on a single thread, called the main thread. After some time, JavaScript gained some tools to help with
-        such problems. <b>Web workers</b> allow you to send some of the JavaScript processing off to a separate thread,
+        such problems. <b>Web workers</b> allow you to send some of the JavaScript processing off to a separate
+        thread,
         called a worker so that you can run multiple chunks simultaneously.</p>
       <p>Web workers are pretty useful, but they do have their limitations. A major one is they are not able to access
         the DOM. Another problem is that although code run in a worker is not blocking(refers to code that executes
@@ -1125,11 +1171,13 @@
       <p><b>A</b>synchronous <b>J</b>avaScrypt <b>A</b>nd <b>X</b>ML. Allows us to communicate with remote web servers
         in an asynchronous way. With AJAX calls, we can request data from web servers dynamically using a technology
         known as XMLHttpRequest.</p>
-      <p>XMLHttpRequest (XHR) objects are used to interact with servers. You can retreive data from a URL without having
+      <p>XMLHttpRequest (XHR) objects are used to interact with servers. You can retreive data from a URL without
+        having
         to do a full page refresh. Despite its name, XHR can be used to retrieve any type of data, not just XML.</p>
       <p>There have been a number of developments in the techonologies used in AJAX application, and in the definition
         of the term AJAX itself. XML is no longer required for data interchange and, therefore, XSLT is no longer
-        required for the manipulation of data. JavaScript Object Notation (JSON) is often used as an alternative format
+        required for the manipulation of data. JavaScript Object Notation (JSON) is often used as an alternative
+        format
         for data interchange, although other formats such as preformatted HTML or plain text can also be used.</p>
       <h4>Promises</h4>
       <p>Promises are the new style of async code that you'll see used in modern Web APIs. A good example is the
@@ -1138,7 +1186,8 @@
       <ul>
         <li>A promise is an object that is used as a placeholder for the future result of an asynchronous operation.
         </li>
-        <li>We no longer need to rely on events and callbacks passed into asynchronous functions to handle asynchronous
+        <li>We no longer need to rely on events and callbacks passed into asynchronous functions to handle
+          asynchronous
           results.</li>
         <li>Instead of nesting callbacks, we can <b>chain promises</b> for a sequence of asynchronous operations: thus
           escaping <b>callback hell <span id="devil">👹</span></b></li>
@@ -1155,12 +1204,15 @@
       </ul>
       <h4>Async/Await</h4>
       <p>JavaScript allows you to write pseudo-synchronous code to describe asynchronous computation. An <b>async</b>
-        function is a function that implicitly returns a promise and that can, in its body, <b>await</b> other promises
+        function is a function that implicitly returns a promise and that can, in its body, <b>await</b> other
+        promises
         in a way that <i>looks</i> synchronous.</p>
-      <p>The <b>async</b> functions and <b>await</b> keyword were added in ECMAScript 2017. These features basically act
+      <p>The <b>async</b> functions and <b>await</b> keyword were added in ECMAScript 2017. These features basically
+        act
         as syntactic sugar on top of promises, making asynchronous code easier to write and to read afterwards.</p>
       <ul>
-        <li><span><code>async</code> keyword</span>: is put in front of a function declaration to turn it into an async
+        <li><span><code>async</code> keyword</span>: is put in front of a function declaration to turn it into an
+          async
           function.
         </li>
         <li><span><code>await</code></span> keyword</span>: await can be put in front of any async promise-based
@@ -1168,7 +1220,8 @@
           to pause your code
           on that line until the promise fulfills, then return the resulting value.</li>
       </ul>
-      <p>Instead of needing to chain an <code>.then()</code> on the end of each promised-based method, you just need to
+      <p>Instead of needing to chain an <code>.then()</code> on the end of each promised-based method, you just need
+        to
         add an <code>await</code> keyword before the method call, and then assign the result to a variable.</p>
       <p>Also, <b>async/await</b> is built on top of <b>promises</b>, so it's compatible with all the features offered
         by promises.</p>
@@ -1203,9 +1256,11 @@
       </ul>
 
       <h3 id="react-3">Rendering Elements</h3>
-      <p>Elements are the smallest building blocks of React apps. Unlike browser DOM elements, React elements are plain
+      <p>Elements are the smallest building blocks of React apps. Unlike browser DOM elements, React elements are
+        plain
         objects, and are cheap to create. React DOM takes care of updating the DOM to match the React elements.</p>
-      <p>Somewhere inside the HTML file there is a "root" DOM node because everything inside it will be managed by React
+      <p>Somewhere inside the HTML file there is a "root" DOM node because everything inside it will be managed by
+        React
         DOM.
         Applications built with React usually have a single root DOM node.</p>
       <p>To render a React element into a root DOM node, pass both to <code>ReactDOM.render()</code>.</p>
@@ -1213,7 +1268,8 @@
 
       <h3 id="react-4">Components and Props</h3>
       <p>Components let you split the UI into independent, reusable pieces, and think about each piece in isolation.
-        Conceptually, components are like JavaScript functions. They accept arbitrary inputs(called "props") and return
+        Conceptually, components are like JavaScript functions. They accept arbitrary inputs(called "props") and
+        return
         React
         elements describing what should appear on the screen.</p>
       <h4>Function and Class Components</h4>
@@ -1266,8 +1322,10 @@
           endpoint, this is a good place to instantiate the network request.</li>
         <li><span><b><code>componentDidUpdate()</code></b></span>: Is invoked immediately after updating occurs. This
           method
-          is not called for the initial render. Use this as an opportunity to operate on the DOM when component has been
-          updated. This is also a good place to do network requests as long as you compare the current props to previous
+          is not called for the initial render. Use this as an opportunity to operate on the DOM when component has
+          been
+          updated. This is also a good place to do network requests as long as you compare the current props to
+          previous
           props.</li>
         <li><span><b><code>componentWillUnmount()</code></b></span>: Is invoked immediately before a component is
           unmounted
@@ -1286,7 +1344,8 @@
         mutable
         state is typically kept in the state property of components and only updated with <code>setState()</code>.
       </p>
-      <p>We can combine the two by making the React state be the "single source of truth". Then the React component that
+      <p>We can combine the two by making the React state be the "single source of truth". Then the React component
+        that
         renders a form also controls what happens in that form on subsequent user input. An input form element whose
         value is
         controlled by React in this way is called a "controlled component".
@@ -1341,13 +1400,16 @@
         </table>
       </details>
       <h4>Uncontrolled Components</h4>
-      <p>In the uncontrolled components the form data id handled by the DOM itself. To write an uncontrolled component,
+      <p>In the uncontrolled components the form data id handled by the DOM itself. To write an uncontrolled
+        component,
         instead of writing an event handler for every state update, you can use a <code>ref</code> to get form values
         from the
         DOM.</p>
-      <p>Since an uncontrolled component keeps the source of truth in the DOM, it is sometimes easier to integrate React
+      <p>Since an uncontrolled component keeps the source of truth in the DOM, it is sometimes easier to integrate
+        React
         and
-        non-React code when using uncontrolled components. It can also be slightly less code if you want to be quick and
+        non-React code when using uncontrolled components. It can also be slightly less code if you want to be quick
+        and
         "dirty". Otherwise, it is recommended to use controlled components.</p>
 
       <h5>Comparison</h5>

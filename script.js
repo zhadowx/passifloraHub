@@ -5,12 +5,40 @@ const primaryNav = document.querySelector('.primary-nav');
 const animatedBox = document.querySelector('.animatedBox');
 const nav = document.querySelector('.nav');
 const header = document.querySelector('.header');
+const secondaryNavs = document.querySelectorAll('.secondary-nav');
 
 const toggleMenu = function () {
   hamburgerIcon.classList.toggle('clicked');
   primaryNav.classList.toggle('open');
+  secondaryNavs.forEach(nav => {
+    nav.classList.remove('open')
+    nav.closest('.pnav').classList.remove('clicked');
+  });
+
 };
 hamburgerIcon.onclick = toggleMenu;
+
+const toggleSubMenu = function (e) {
+  const navbar = e.target.closest('.pnav');
+
+  if (navbar.classList.contains('html-nav')) {
+    secondaryNavs[0].classList.toggle('open');
+  }
+  if (navbar.classList.contains('css-nav')) {
+    secondaryNavs[1].classList.toggle('open');
+  }
+  if (navbar.classList.contains('js-nav')) {
+    secondaryNavs[2].classList.toggle('open');
+  }
+  if (navbar.classList.contains('react-nav')) {
+    secondaryNavs[3].classList.toggle('open');
+  }
+
+  navbar.classList.toggle('clicked');
+}
+
+document.querySelectorAll('.pnav').forEach(nav => nav.addEventListener('click', toggleSubMenu));
+
 
 const animate = function () {
   animatedBox.classList.toggle('run');

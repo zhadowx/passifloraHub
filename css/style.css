@@ -28,7 +28,12 @@ body {
   font-weight: 400;
   background-color: var(--oycrayola);
   color: var(--charcoal);
+  overflow: auto;
 }
+#html >p, #html > ul, #css > ul,#css > p, #js > ul,#js > p, #react > ul,#react > ul, main h4, main h5, main details, main summary {
+  padding-left:45px !important;
+}
+
 
 /* .hero {
   position: relative;
@@ -148,6 +153,8 @@ footer {
 /* Nav rules */
 nav {
   background-color: var(--sbrown);
+  position: fixed;
+  top: 15px;
 }
 button {
   background-color: var(--sbrown);
@@ -192,6 +199,7 @@ button {
 
 .primary-nav {
   display: none;
+  position: relative;
 }
 
 .primary-nav p,
@@ -201,7 +209,9 @@ button {
   padding: 0;
 }
 .secondary-nav {
-  display: none;
+  height: 0;
+  visibility: hidden;
+  position: relative;
 }
 
 .primary-nav.open {
@@ -211,6 +221,10 @@ button {
   margin-left: 0;
   padding-left: 0;
   list-style-type: none;
+}
+
+.pnav.clicked {
+  background-color: rgba(0, 0, 0, 0.1);
 }
 a {
   text-decoration: none;
@@ -222,11 +236,14 @@ a {
   transition-timing-function: ease-in;
 }
 .secondary-nav.open {
+  height: 100%;
+  visibility: visible;
   list-style-type: none;
   justify-self: left;
   margin-left: 0;
-  padding-left: 0;
+  padding-left: 10px;
   width: 100%;
+  transition: all 0.5s ease-in;
 }
 nav > ul > li {
   display: grid;
@@ -246,18 +263,15 @@ nav > ul > li {
 
 nav > ul > li:nth-child(1) {
   box-shadow: 0 -15px var(--pgreen);
-  margin-bottom: 7px;
+  margin-bottom: 15px;
 }
 nav > ul > li:nth-child(2) {
   /* box-shadow: 0 -5px var(--pgreen); */
-  margin-bottom: 7px;
+  margin-bottom: 15px;
 }
 nav > ul > li:nth-child(3) {
   /* box-shadow: 0 -5px var(--pgreen); */
-  margin-bottom: 7px;
-}
-nav > ul > li:nth-child(4) {
-  /* box-shadow: 0 5px var(--pgreen); */
+  margin-bottom: 15px;
 }
 .nav .nav.sticky {
   position: fixed;
