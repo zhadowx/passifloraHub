@@ -30,10 +30,20 @@ body {
   color: var(--charcoal);
   overflow: auto;
 }
-#html >p, #html > ul, #css > ul,#css > p, #js > ul,#js > p, #react > ul,#react > ul, main h4, main h5, main details, main summary {
-  padding-left:45px !important;
+#html > p,
+#html > ul,
+#css > ul,
+#css > p,
+#js > ul,
+#js > p,
+#react > ul,
+#react > ul,
+main h4,
+main h5,
+main details,
+main summary {
+  padding-left: 45px !important;
 }
-
 
 /* .hero {
   position: relative;
@@ -92,6 +102,7 @@ details {
 summary {
   box-shadow: 0 0.5px 1px var(--charcoal);
   font-size: medium;
+  color: var(--oycrayola);
   list-style: none;
   background-color: var(--pgreen);
 }
@@ -108,7 +119,7 @@ table {
 caption {
   background-color: var(--pgreen);
   font-weight: bold;
-  color: var(--charcoal);
+  color: var(--oycrayola);
 }
 th,
 td {
@@ -155,6 +166,7 @@ nav {
   background-color: var(--sbrown);
   position: fixed;
   top: 15px;
+  border-radius: 5%;
 }
 button {
   background-color: var(--sbrown);
