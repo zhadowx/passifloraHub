@@ -4,6 +4,7 @@ const hamburgerIcon = document.querySelector('.hamburger-icon');
 const primaryNav = document.querySelector('.primary-nav');
 const animatedBox = document.querySelector('.animatedBox');
 const nav = document.querySelector('.nav');
+const pnav = document.querySelectorAll('.pnav');
 const header = document.querySelector('.header');
 const secondaryNavs = document.querySelectorAll('.secondary-nav');
 
@@ -11,8 +12,8 @@ const toggleMenu = function () {
   hamburgerIcon.classList.toggle('clicked');
   primaryNav.classList.toggle('open');
   secondaryNavs.forEach(nav => {
-    nav.classList.remove('open')
-    nav.closest('.pnav').classList.remove('clicked');
+    nav.classList.remove('open');
+    pnav.forEach(pnav => pnav.classList.remove('clicked'));
   });
 
 };
