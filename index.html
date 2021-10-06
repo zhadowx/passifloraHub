@@ -213,6 +213,11 @@
             Forms
           </li>
         </a>
+        <a href="#react-7">
+          <li>
+            Router
+          </li>
+        </a>
       </ol>
     </ul>
   </nav>
@@ -1464,6 +1469,52 @@
           </tr>
         </tfoot>
       </table>
+      <h3 id="react-7">Router</h3>
+      <p>React Router is a collection of <span>navigational components</span> that compose declaratively with your
+        application. Whether you want to have <span>bookmarkable URLs</span> for your web app or a composable way to
+        navigate in React Native, React Router works wherever React is rendering.</p>
+      <h4>Primary Components</h4>
+      <p>There are three primary categories of components in React Router:</p>
+      <ul>
+        <li>routers, like <code>&lt;BrowserRouter&gt; </code> and <code>&lt;HashRouter&gt;</code></li>
+        <li>route matchers, like <code>&lt;Route&gt; </code> and <code> &lt;Switch&gt;</code></li>
+        <li>and navigation, like <code>&lt;Link&gt;, &lt;NavLink&gt;</code>, and <code> &lt;Redirect&gt;</code></li>
+      </ul>
+      <h5>Routers</h5>
+      <p>At the core of every React Router application should be a router component. For web projects, react-router-dom
+        provides <code>&lt;BrowserRouter&gt;</code> and <code>&lt;HashRouter&gt;</code> routers. The main difference
+        between the two is the way they store the URL and communicate with your web server.</p>
+
+      <p>&gt;A <code>&lt;BrowserRouter&gt;</code> uses regular URL paths. These are
+        generally the best-looking URLs, but
+        they require your server to be configured correctly. Specifically, your web server needs to serve the same
+        page at all URLs that are managed client-side by React Router.</p>
+      <p>&gt;A <code>&lt;HashRouter&gt;</code> stores the current location in the <span>hash portion of the URL</span>,
+        so the URL looks something like <span><i>http://example.com/#/your/page</i></span>. Since the hash is never
+        sent to the server, this means that no special server configuration is needed.</p>
+      <p>*** To use a router, just make sure it is rendered at the root of your element hierarchy.</p>
+      <h5>Route Matchers</h5>
+      <p>There are two route matching components: <code>Switch</code> and <code>Route</code>. When a
+        <code>&lt;Switch&gt;</code> is rendered, it searches through its <code>children</code>
+        <code>&lt;Route&gt;</code> elements to find one whose path matches the current URL. When it finds one, it
+        renders that <code>&lt;Route&gt;</code> and ignores all others. This means that you should put
+        <code>&lt;Route&gt;</code>s with more specific (typically longer) paths <i>before</i> less-specific ones.
+      </p>
+      <p>If no <code>&lt;Route&gt;</code> matches , the <code>&lt;Switch&gt;</code> renders nothing (<code>null</code>).
+      </p>
+      <p>One important thing to note is that a <code>&lt;Route path&gt;</code> matches the <i>beginning</i> of the URL,
+        not the whole thing. So a <code>&lt;Route path='/'&gt;</code> will <i>always</i> match the URL. Because of this,
+        we typically put this <code>&lt;Route&gt;</code> last in our <code>&lt;Switch&gt;</code>. Another possible
+        solution is to use <code>&lt;Route exact path='/'&gt;</code> which does match the entire URL.</p>
+      <h5>Navigation (or Route Changers)</h5>
+      <p>React Router provides a <code>&lt;Link&gt;</code> component to create links in your application. Wherever you
+        render a <code>&lt;Link&gt;</code>, an anchor (<code>&lt;a&gt;</code>) will be rendered in your HTML document.
+      </p>
+      <p>The <code>&lt;NavLink&gt;</code> is a special type of <code>&lt;Link&gt;</code> that can style itself as
+        "active" when its <code>to</code> prop matches the current location.</p>
+      <p>Any time you want to force navigation, you can render a <code>&lt;Redirect&gt;</code>. When a
+        <code>&lt;Redirect&gt;</code> renders, it will navigate using its <code>to</code> prop.
+      </p>
     </article>
   </main>
   <footer>
