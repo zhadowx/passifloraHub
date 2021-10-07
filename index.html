@@ -218,6 +218,11 @@
             Router
           </li>
         </a>
+        <a href="#react-8">
+          <li>
+            Portals
+          </li>
+        </a>
       </ol>
     </ul>
   </nav>
@@ -432,42 +437,42 @@
         to make circular corners, or two radii to make elliptical corners. The radius applies to the whole background,
         even if the element has no border. Examples:</p>
       <div class="radiusBoxes">
+        <p>
+          Radius is set for all 4 sides <br>
+          <code>border-radius: 10%;</code>
+        </p>
         <div class="boxRadius1">
-          <p>
-            Radius is set for all 4 sides
-          </p>
-          <p>border-radius: 10%;</p>
         </div>
+        <p>
+          top-left-and-bottom-right | top-right-and-bottom-left <br>
+          <code>border-radius: 25% 5%;</code>
+        </p>
         <div class="boxRadius2">
-          <p>
-            top-left-and-bottom-right | top-right-and-bottom-left
-          </p>
-          <p>border-radius: 25% 5%;</p>
         </div>
+        <p>
+          top-left | top-right | bottom-right | bottom_left <br>
+          <code>border-radius: 10% 20% 30% 50%;</code>
+        </p>
         <div class="boxRadius3">
-          <p>
-            top-left | top-right | bottom-right | bottom_left
-          </p>
-          <p>border-radius: 10% 20% 30% 50%;</p>
         </div>
+        <p>
+          Horizontal all 4 corners / Vertical all 4 corners <br>
+          <code>border-radius: 10% / 50%;</code>
+        </p>
         <div class="boxRadius4">
-          <p>
-            Horizontal all 4 corners / Vertical all 4 corners
-          </p>
-          <p>border-radius: 10% / 50%;</p>
         </div>
+        <p>
+          top-left-and-bottom-right | top-right-and-bottom-left / all 4 corners <br>
+          <code>border-radius: 5% 15% / 35%;</code>
+        </p>
         <div class="boxRadius5">
-          <p>
-            top-left-and-bottom-right | top-right-and-bottom-left / all 4 corners
-          </p>
-          <p>border-radius: 5% 15% / 35%;</p>
         </div>
+        <p>
+          top-left-and-bottom-right | top-right-and-bottom-left / <br> top-left-and-bottom-right |
+          top-right-and-bottom-left <br>
+          <code>border-radius: 50% 20% / 10% 40%;</code>
+        </p>
         <div class="boxRadius6">
-          <p>
-            top-left-and-bottom-right | top-right-and-bottom-left / top-left-and-bottom-right |
-            top-right-and-bottom-left
-          </p>
-          <p>border-radius: 50% 20% / 10% 40%;</p>
         </div>
       </div>
       <h3 id="css-7">Box Shadow</h3>
@@ -511,24 +516,33 @@
       </details>
       <p>Examples:</p>
       <div class="shadowBoxes">
+        <p><code>box-shadow: 3em -1.5em #f4a261;</code></p>
         <div class="boxShadow1">
-          <p>box-shadow: 3em -1.5em rgba(94, 48, 138, 1);</p>
         </div>
+        <p><code>box-shadow: 1.5em 1em 0.7em #f4a261;</code></p>
         <div class="boxShadow2">
-          <p>box-shadow: 1.5em 1em 0.7em rgba(94, 48, 138, 0.9);</p>
         </div>
+        <p><code>box-shadow: 1.5em 0.7em 0.3em 0.6em #f4a261;</code></p>
         <div class="boxShadow3">
-          <p>box-shadow: 1.5em 0.7em 0.3em 0.6em rgba(94, 48, 138, 0.9);</p>
         </div>
+        <p><code>box-shadow: inset 5em 1em #f4a261;</code></p>
         <div class="boxShadow4">
-          <p>box-shadow: inset 5em 1em rgba(94, 48, 138, 1);</p>
         </div>
+        <p><code>box-shadow: 0 0.75em 0 -0.375em #e9c46a,
+          <br>
+          0 -0.75em 0 -0.375em #e9c46a,
+          <br>
+          0.75em 0 0 -0.375em #e9c46a,
+          <br>
+           -0.75em 0 0 -0.375em #e9c46a, 
+           <br>
+          0 0 0 0.375em #264653);</code></p>
         <div class="boxShadow5">
-          <p> box-shadow: 0 0.75em 0 -0.375em #ddd, 0 -0.75em 0 -0.375em #ddd, 0.75em 0 0 -0.375em #ddd, -0.75em 0 0
-            -0.375em #ddd, 0 0 0 0.375em rgba(94, 48, 138, 1);</p>
         </div>
+        <p><code>box-shadow: inset 0 0 0 1em #2a9d8f, <br>
+          inset 0 0 0 1.5em #f4a261, <br>
+          inset 0 0 0 2em #e76f51;</code></p>
         <div class="boxShadow6">
-          <p>box-shadow: inset 0 0 0 1em #350561, inset 0 0 0 1.5em #4024dd, inset 0 0 0 2em #77b2da;</p>
         </div>
       </div>
       <h3 id="css-8">Transforming Elements</h3>
@@ -1514,6 +1528,29 @@
         "active" when its <code>to</code> prop matches the current location.</p>
       <p>Any time you want to force navigation, you can render a <code>&lt;Redirect&gt;</code>. When a
         <code>&lt;Redirect&gt;</code> renders, it will navigate using its <code>to</code> prop.
+      </p>
+      <h3 id="react-8">Portals</h3>
+      <p>Portals provide a first-class way to render children into a DOM node that exists outside the DOM hierarchy of
+        the parent component.</p>
+      <p><code>ReactDOM.createPortal(child, container)</code></p>
+      <p>The first argument (<code>child</code>) is any <span>renderable React child,</span> such as an element, string,
+        or fragment. The second argument (<code>container</code>) is a DOM element.</p>
+
+      <h4>Usage</h4>
+      <p>Normally, when you return an element from a component's render method, it's mounted into the DOM as a child of
+        the nearest parent node. However, sometimes it's useful to insert a child into a different location in the DOM.
+      </p>
+      <p>A typical use case for portals is when a parent component has an <code>overflow: hidden</code> or
+        <code>z-index</code> style, but you need the child to visually "break out" of it's container. For example,
+        dialogs, hovercards, and tooltips.
+      </p>
+
+      <h4>Event Bubbling Through Portals</h4>
+      <p>Even though a portal can be anywhere in the DOM tree, it behaves like a normal React child in every other way.
+        Features like context work exactly the same regardless of whether the child is a portal as the portal still
+        exists in the <i>React tree</i> regarfless of position in the <i>DOM tree</i>.</p>
+      <p>This includes event bubbling. An event fired from inside a portal will propagate to ancestors in the containing
+        <i>React tree</i>, even if those elements are not ancestors in the <i>DOM tree</i>.
       </p>
     </article>
   </main>

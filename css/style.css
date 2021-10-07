@@ -24,7 +24,7 @@ body {
 /* Body rules */
 body {
   font-family: "Lora", serif;
-  font-size: 16px;
+  font-size: 18px;
   font-weight: 400;
   background-color: var(--oycrayola);
   color: var(--charcoal);
@@ -378,8 +378,8 @@ a {
 .boxRadius4,
 .boxRadius5,
 .boxRadius6 {
-  width: 300px;
-  height: 150px;
+  width: 160px;
+  height: 160px;
   display: grid;
   align-content: center;
   background-color: var(--pgreen);
