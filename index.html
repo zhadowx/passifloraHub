@@ -223,6 +223,11 @@
             Portals
           </li>
         </a>
+        <a href="#react-9">
+          <li>
+            Redux
+          </li>
+        </a>
       </ol>
     </ul>
   </nav>
@@ -1552,6 +1557,54 @@
       <p>This includes event bubbling. An event fired from inside a portal will propagate to ancestors in the containing
         <i>React tree</i>, even if those elements are not ancestors in the <i>DOM tree</i>.
       </p>
+      <h3 id="react-9">Redux</h3>
+      <p>As the requirements for JavaScript single-page applications have become increasingly complicated, our code must
+        manage more state thant ever before. This state can include server responses and cached data, as well as locally
+        created data that has not yet been persisted to the server. UI state is also increasing in complexity, as we
+        need to manage active routes, selected tabs, spinners, pagination controls, and so on.</p>
+      <p>This complexity is difficult to handle as we're mixing two concepts that are very hard for the human mind to
+        reason about: <i>mutation and asynchronicity</i>. Just like Mentos and Coke. Both can be great in separation,
+        but together they create a mess. Libraries like React attempt to solve this problem in the view layer by
+        removing both asynchrony and direct DOM manipulation. However, managing the state of your data is left to up to
+        you. This is where Redux enters.</p>
+      <p>Following the steps of Flux, CQRS, and Event Sourcing, Redux attempts to make state mutations predictable by
+        imposing certain restrictions on how and when updates can happen.</p>
+      <h4>Three Principles</h4>
+      <p>Redux can be described in three fundamental principles:</p>
+      <ul>
+        <li><b>Single source of thruth</b><br>The global state of your application is stored in an object tree within a
+          single store.</li>
+        <li><b>State is read-only</b><br>The only way to change the state is to emit an action, an object describing
+          what happened.</li>
+        <li><b>Changes are made with pure functions</b><br>To specify how the state tree is transformed by actions, you
+          write pure reducers.</li>
+      </ul>
+      <p>Redux itself is a standalone library that can be used with any UI layer or framework, including React, Angular,
+        Vue, Ember, and vanilla JS. Although Redux and React are commonly used together, they are independent of each
+        other.</p>
+      <p>React Redux is the official Redux UI binding library for React. </p>
+      <h4>When to use Redux</h4>
+      <ul>
+        <li>You have large amounts of application state that are needed inmany places in the app</li>
+        <li>The app state is updated frequently</li>
+        <li>The logic to update that state may be complex</li>
+        <li>The app has a medium or large-size codebase, and might be worked on by many people</li>
+        <li>You need to see how that state is being updated over time</li>
+      </ul>
+      <h4>Steps for integration with a UI</h4>
+      <ol>
+        <li>Create a Redux store</li>
+        <li>Subscribe to updates</li>
+        <li>Inside the subscription callback:
+          <ol>
+            <li>Get the current store state</li>
+            <li>Extract the data needed by this piece of UI</li>
+            <li>Update the UI with the data</li>
+          </ol>
+        </li>
+        <li>If necessary, render the UI with initial state</li>
+        <li>Respond to UI inputs by dispatching Redux actions</li>
+      </ol>
     </article>
   </main>
   <footer>

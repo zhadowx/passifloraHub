@@ -712,3 +712,6 @@ a {
 }
 
 /* React rules */
+ol ol > li {
+  list-style: upper-roman;
+}
