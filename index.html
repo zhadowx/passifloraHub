@@ -1605,6 +1605,48 @@
         <li>If necessary, render the UI with initial state</li>
         <li>Respond to UI inputs by dispatching Redux actions</li>
       </ol>
+      <h4>Redux-Thunk</h4>
+      <p>The word "thunk" is a programming term that means "a piece of code that does some delayed work". Rather than
+        execute some logic <i>now</i>, we can write a function body or code that can be used to perform the work
+        <i>later</i>.
+      </p>
+      <p>For Redux specifically, <b>"thunks" are a pattern of writing functions with logic inside that can interact with
+          a Redux store's <code>dispatch</code> and <code>getState</code> methods</b>.</p>
+      <p>Using thunks requires the <code>redux-thunk</code> middleware to be added to the Redux store as part of its
+        configuuration.</p>
+      <h5>Writing Thunks</h5>
+      <p>
+        A <i>thunk function</i> is a function that accepts two arguments: the Redux store <code>dispatch</code> method,
+        and the Redux store <code>getState</code> method.
+        Thunk functions are not directly called by application code. Instead, they are passed to
+        <code>store.dispatch()</code>:
+      </p>
+      <p>A thunk function may contain <i>any</i> arbitrary logic, sync or async, and can call <code>dispatch</code> or
+        <code>getState</code> at any time.
+      </p>
+      <p>In the same way that Redux code normally uses <span>action creators to generate action objeccts for
+          dispatching</span> instead of writing action objects by hand, we normally use <i>thunk action creators</i> to
+        generate the thunk functions that are dispatched. A thunk action creator is a function that may have some
+        arguments, and returns a new thunk function. The thunk typically closes over any arguments passed to the action
+        creator, so they can be used in the logic.</p>
+      <h5>Why use Thunks?</h5>
+      <p>
+        Thunks allow us to write additional Redux-related logic separate from UI layer. This logic can include side
+        efffects, such as async requests or generating random values, as well as logic that requires dispatching
+        multiple actions or access to the Redux store state.
+      </p>
+      <p>
+        Redux reducers <span>must not contain side effects</span>, but real applications require logic that has side
+        effects. Some of that may live inside components, but some may need to tlive outside the UI layer. Thunks (and
+        other Redux middleware) give us a place to put those side effects.
+      </p>
+      <p>It's common to have logic directly in components, such as making an async request in a click handler or a
+        <code>useEffect</code> hook and then processing the results. However, it's often necessary to move as much of
+        that logic as possible outside the UI layer. This may be done to improve testability of the logic, to keep the
+        UI layer as thin and "presentational" as possible, or to improve code reuse and sharing.</p>
+      <p>In a sense, a thunk is a loophole where <b>you can write any code that needs to interact with the Redux store,
+          ahead of time, without needing to know <i>which</i> Redux store will be used</b>. This keeps the logic from
+        being bound to any specific Redux store instance and keeps it reusable.</p>
     </article>
   </main>
   <footer>
