@@ -228,6 +228,11 @@
             Redux
           </li>
         </a>
+        <a href="#react-10">
+          <li>
+            Context
+          </li>
+        </a>
       </ol>
     </ul>
   </nav>
@@ -1643,10 +1648,23 @@
       <p>It's common to have logic directly in components, such as making an async request in a click handler or a
         <code>useEffect</code> hook and then processing the results. However, it's often necessary to move as much of
         that logic as possible outside the UI layer. This may be done to improve testability of the logic, to keep the
-        UI layer as thin and "presentational" as possible, or to improve code reuse and sharing.</p>
+        UI layer as thin and "presentational" as possible, or to improve code reuse and sharing.
+      </p>
       <p>In a sense, a thunk is a loophole where <b>you can write any code that needs to interact with the Redux store,
           ahead of time, without needing to know <i>which</i> Redux store will be used</b>. This keeps the logic from
         being bound to any specific Redux store instance and keeps it reusable.</p>
+      <h3 id="react-10">Context</h3>
+      <p>Context provides a way to pass data through the component tree without having to pass props down manually at
+        every level.</p>
+      <p>In a typical React application, data is passed top-down (parent to child) via props, but such usage can be
+        cumbersome for certain types of props (e.g. locate preference, UI theme) that are required by many components
+        within an application. Context provides a wat to share values between components without having to explicitly
+        pass a prop through every level of the tree.</p>
+      <h5>How it works</h5>
+      <p><code>React.createContext()</code> is all you need. It returns a consumer and a provider. <b>Provider</b> is a
+        component that as it's name suggests provides the state to it's children. It will hold the "store" and be the
+        parent of all the components that might need that store. <b>Consumer</b> as it so happens is a component that
+        consumes and uses the state.</p>
     </article>
   </main>
   <footer>
