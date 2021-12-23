@@ -34,6 +34,12 @@ const toggleSubMenu = function (e) {
   if (navbar.classList.contains('react-nav')) {
     secondaryNavs[3].classList.toggle('open');
   }
+  if (navbar.classList.contains('nodejs-nav')) {
+    secondaryNavs[4].classList.toggle('open');
+  }
+  if (navbar.classList.contains('mongodb-nav')) {
+    secondaryNavs[5].classList.toggle('open');
+  }
 
   navbar.classList.toggle('clicked');
 }
