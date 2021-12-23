@@ -36,8 +36,13 @@ body {
 #css > p,
 #js > ul,
 #js > p,
+#js > ol,
 #react > ul,
 #react > p,
+#react > ol,
+#nodejs > p,
+#mongodb > p,
+#mongodb > ul,
 main h4,
 main h5,
 main details,
@@ -86,7 +91,7 @@ h5 {
 }
 
 b {
-  font-weight: bold;
+  font-weight: 900px;
 }
 p,
 details {
