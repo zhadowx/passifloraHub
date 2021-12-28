@@ -259,6 +259,16 @@
             The Call Stack
           </li>
         </a>
+        <a href="#nodejs-4">
+          <li>
+            Buffers
+          </li>
+        </a>
+        <a href="#nodejs-5">
+          <li>
+            Streams
+          </li>
+        </a>
       </ol>
       <li class="mongodb-nav pnav">
         <img src="/images/Antu_mongodb.svg" alt="mongodb logo" width="27" height="27">
@@ -1806,6 +1816,53 @@
         ES6/ES2015). It's a way to execute the result of an async function as soon as possible, rather than being put at
         the end of the call stack.</p>
       <p>Promises that resolve before the current function ends will be executed right after the current function.</p>
+      <h3 id="nodejs-4">Buffers</h3>
+      <h4>What are Buffers?</h4>
+      <p>The <code>Buffer</code> class in Node.js is designed to hanlde raw data. Each buffer corresponds to some raw
+        memory allocated outside V8. Buffers act somewhat like arrays of integers, but aren't resizable and have a whole
+        bunch of methods specifically for binary data. The integers in a buffer each represent a byte and so are limited
+        to values from 0 to 255 inclusive.</p>
+      <p>In the wild, buffers are usually seen in the context of binary data coming from streams, such as
+        <code>fs.createReadStream</code>.
+      </p>
+      <h4>Why Buffers?</h4>
+      <p>Pure JavaScript, while great with unicode-encoded strings, does not handle straight binary data very well. This
+        is fine on the browser, where most data is in the form of strings. However, Node.js servers have to also deal
+        with TCP streams and reading and writing to the filesystem, both of which make it necessary to deal with purely
+        binary streams of data.</p>
+      <p>One way to handle this problem is to just use strings <i>anyway</i>, which is exactly what Node.js did at
+        first. However, this approach is extremely problematic to work with; It's slow, makes you work with an API
+        designed for strings and not binary data, and has a tendency to break in strange and mysterious ways.</p>
+      <h3 id="nodejs-5">Streams</h3>
+      <h4>What are Streams?</h4>
+      <p>Streams are one of the fundamental concepts that power Node.js applications. They are a way to handle
+        readind/writing files, network communications, or any kind of end-to-end information exchange in an efficient
+        way.</p>
+      <p>Streams are not a concept unique to Node.js. They were introduced in the Unix operating system decades ago, and
+        programs can interact with each other passing streams through the pipe operator (<code>|</code>).</p>
+      <p>For example, in the traditional way, when you tell the program to read a file, the file is read into memory,
+        from start to finish, and then you process it.</p>
+      <p>Using streams you read it piece by piece, processing its contents without keeping it all in memory.</p>
+      <h4>Why Streams?</h4>
+      <p>Streams basically provide two major advantages over using other data handling methods:</p>
+      <ul>
+        <li><b>Memory efficiency</b>: you don't need to lead large amount of data in memory before you are able to
+          process it.</li>
+        <li><b>Time efficiency</b>: it takes way less time to start processing data, since you can start processing as
+          soon as you have it, rather than waiting till the whole data payload is available.</li>
+      </ul>
+      <h4>Types of Streams</h4>
+      <ul>
+        <li><code>Readable</code>: a stream you can pipe from, but not pipe into (you can receive data, but not send
+          data to it). When you push data into a readable srtream, it is buffered, until a consumer starts to read the
+          data.</li>
+        <li><code>Writable</code>: a stream you can pipe into, but not pipe from (you can send data, but not receive
+          from it).</li>
+        <li><code>Duplex</code>: a stream you can both pipe into and pipe from, basically a combination of a Readable
+          and Writable stream.</li>
+        <li><code>Transform</code>: a Transform stream is similar to a Duplex, but the output is a transform of its
+          input.</li>
+      </ul>
     </article>
     <article id="mongodb">
       <h2>MongoDB</h2>
