@@ -280,6 +280,16 @@
             What is MongoDB?
           </li>
         </a>
+        <a href="#mongodb-2">
+          <li>
+            Atlas
+          </li>
+        </a>
+        <a href="#mongodb-3">
+          <li>
+            Import/Export Data
+          </li>
+        </a>
       </ol>
     </ul>
   </nav>
@@ -1867,6 +1877,56 @@
     <article id="mongodb">
       <h2>MongoDB</h2>
       <h3 id="mongodb-1">What is MongoDB?</h3>
+      <p>MongoDB is a document database with scalability and flexibility with querying and indexing. MongoDB stores data
+        in flexible, JSON-like documents, meaning fields can vary from document to document and data structure can be
+        changed over time.</p>
+      <p>The document model maps to the objects in your application code, making data easy to work with.</p>
+      <p>Ad hoc queries, indexing, and real time aggregation provide powerful ways to access and analyze the data.</p>
+      <p>MongoDB is a distributed database at its core, so high availability, horizontal scaling, and geographic
+        distribution are built in and easy to use.</p>
+      <h4>Basic Concepts</h4>
+      <p><span>Document</span>: a way to organize and store data as a set of field-value pairs.</p>
+      <p><span>Field</span>: a unique identifier for a datapoint</p>
+      <p><span>Value</span>: data related to a given identifier.</p>
+      <p><span>Collection</span>: an organized store of documents in MongoDB, usually with common fields between
+        documents. There can be many collections per database and many documents per collection.</p>
+      <h3 id="mongodb-2">Atlas</h3>
+      <p>Atlas is Database as a service, using MongoDB at the core for data storage and retrieval. Atlas users can
+        deploy clusters, which are a group of servers that store data. These servers are configured in a replica set,
+        which are a few connected MongoDB instances that store the same data. An instance is a single machine locally or
+        in the cloud, running a certain software.</p>
+      <h3 id="mongodb-3">Importing, Exporting and Querying Data</h3>
+      <h4>JSON vs BSON</h4>
+      <p>JSON and BSON are close cousins, as their nearly identical names imply. JSON, or JavaScript Object Notation, is
+        the wildly popular standard for data interchange on the web, on which BSON (Binary JSON) is based.</p>
+      <h5>JSON</h5>
+      <p>As JavaScript became the default language of client-side web development, JSON began to take on a life of its
+        own. By virtue of being both human-and machine-readable, and comparatively simple to implement support for in
+        other languages, JSON quickly moved beyond the web page, and into software everywhere.</p>
+      <p>JSON's ubiquity made it the obvious choice for representing data structures in MongoDB's document data model.
+        However, there are several issues that make JSON less than ideal for usage inside of a database:</p>
+      <ul>
+        <li>JSON is a text-based format, and text parsing is very slow.</li>
+        <li>JSON's readable format is far from space-efficient, another database concern.</li>
+        <li>JSON only supports a limited number of basic data types.</li>
+      </ul>
+      <h5>BSON</h5>
+      <p>In order to make MongoDB JSON-first, but still high-performance and general-purpose, BSON was invented to
+        bridge the gap: a binary representation to store data in JSON format, optimized for speed, space, and
+        flexibility. BSON's binary structure encodes type and length information, which allows it to be parsed much more
+        quickly.</p>
+      <p>Since its initial formulation, BSON has been extended to add some optional non-JSON-native data types, like
+        dates and binary data, without which MongoDB would have been missing some valuable support.</p>
+      <p>Not only is it helpful to be able to represent those distinctions in data stored in MongoDB, it also allows for
+        comparisons and calculations to happen directly on data in ways that simplify consuming application code.</p>
+      <h4>Import/Export</h4>
+      <ul>
+        <li><code>mongoimport</code>: imports data in JSON format</li>
+        <li><code>mongoexport</code>: exports data in JSON format</li>
+        <li><code>mongorestore</code>: imports data in BSON format</li>
+        <li><code>mongodump</code>: exports data in BSON format</li>
+      </ul>
+      <h4>Data Explorer</h4>
     </article>
   </main>
   <footer>
