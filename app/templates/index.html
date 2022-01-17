@@ -12,10 +12,10 @@
   <link
     href="https://fonts.googleapis.com/css2?family=Kaisei+HarunoUmi&family=Lora:ital,wght@0,400;0,700;1,400;1,700&display=swap"
     rel="stylesheet">
-  <link rel="stylesheet" href="css/normalize.css">
-  <link rel="stylesheet" href="css/grid.css">
-  <link rel="stylesheet" href="css/style.css">
-  <script defer src="script.js"></script>
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/normalize.css') }}">
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/grid.css') }}">
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+  <script defer src="{{ url_for('static', filename='script.js') }}"></script>
   <title>Web Development Synthesis</title>
 </head>
 
@@ -31,7 +31,7 @@
     </button>
     <ul class="primary-nav">
       <li class="html-nav pnav">
-        <img src="images/html_logo.svg" alt="html logo" width="30" height="30">
+        <img src="{{ url_for('static', filename='images/html_logo.svg') }}" alt="html logo" width="30" height="30">
         <p>HTML</p>
       </li>
       <ol class="secondary-nav">
@@ -52,7 +52,7 @@
         </a>
       </ol>
       <li class="css-nav pnav">
-        <img src="images/css_logo.svg" alt="css logo" width="30" height="30">
+        <img src="{{ url_for('static', filename='images/css_logo.svg') }}" alt="css logo" width="30" height="30">
         <p>CSS</p>
       </li>
       <ol class="secondary-nav">
@@ -108,7 +108,7 @@
         </a>
       </ol>
       <li class="js-nav pnav">
-        <img src="images/js_logo.svg" alt="javascript logo" width="30" height="30">
+        <img src="{{ url_for('static', filename='images/js_logo.svg') }}" alt="javascript logo" width="30" height="30">
         <p>JavaScript</p>
       </li>
       <ol class="secondary-nav">
@@ -179,7 +179,7 @@
         </a>
       </ol>
       <li class="react-nav pnav">
-        <img src="/images/react_logo.svg" alt="react logo" width="27" height="27">
+        <img src="{{ url_for('static', filename='images/react_logo.svg') }}" alt="react logo" width="27" height="27">
         <p>React</p>
       </li>
       <ol class="secondary-nav">
@@ -240,7 +240,7 @@
         </a>
       </ol>
       <li class="nodejs-nav pnav">
-        <img src="/images/node-js.svg" alt="nodejs logo" width="27" height="27">
+        <img src="{{ url_for('static', filename='images/node-js.svg') }}" alt="nodejs logo" width="27" height="27">
         <p>Node.js</p>
       </li>
       <ol class="secondary-nav">
@@ -271,7 +271,7 @@
         </a>
       </ol>
       <li class="mongodb-nav pnav">
-        <img src="/images/Antu_mongodb.svg" alt="mongodb logo" width="27" height="27">
+        <img src="{{ url_for('static', filename='images/Antu_mongodb.svg') }}" alt="mongodb logo" width="27" height="27">
         <p>MongoDB</p>
       </li>
       <ol class="secondary-nav">
