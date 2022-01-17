@@ -153,6 +153,11 @@ footer {
   color: var(--oycrayola);
 }
 
+/* Hero rules */
+.hero {
+  display: none;
+}
+
 /* Nav rules */
 nav {
   background-color: var(--sbrown);
