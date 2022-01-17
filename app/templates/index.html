@@ -45,7 +45,7 @@
             Element Display Roles
           </li>
         </a>
-        <a href="#html-3">
+        <a class="html-3-tag" href="#html-3">
           <li>
             History of HTML
           </li>
@@ -271,7 +271,8 @@
         </a>
       </ol>
       <li class="mongodb-nav pnav">
-        <img src="{{ url_for('static', filename='images/Antu_mongodb.svg') }}" alt="mongodb logo" width="27" height="27">
+        <img src="{{ url_for('static', filename='images/Antu_mongodb.svg') }}" alt="mongodb logo" width="27"
+          height="27">
         <p>MongoDB</p>
       </li>
       <ol class="secondary-nav">
@@ -504,42 +505,54 @@
         to make circular corners, or two radii to make elliptical corners. The radius applies to the whole background,
         even if the element has no border. Examples:</p>
       <div class="radiusBoxes">
-        <p>
-          Radius is set for all 4 sides <br>
-          <code>border-radius: 10%;</code>
-        </p>
-        <div class="boxRadius1">
+        <div class="radiusBoxContainer">
+          <p>
+            Radius is set for all 4 sides <br>
+            <code>border-radius: 10%;</code>
+          </p>
+          <div class="boxRadius1">
+          </div>
         </div>
-        <p>
-          top-left-and-bottom-right | top-right-and-bottom-left <br>
-          <code>border-radius: 25% 5%;</code>
-        </p>
-        <div class="boxRadius2">
+        <div class="radiusBoxContainer">
+          <p>
+            top-left-and-bottom-right | top-right-and-bottom-left <br>
+            <code>border-radius: 25% 5%;</code>
+          </p>
+          <div class="boxRadius2">
+          </div>
         </div>
-        <p>
-          top-left | top-right | bottom-right | bottom_left <br>
-          <code>border-radius: 10% 20% 30% 50%;</code>
-        </p>
-        <div class="boxRadius3">
+        <div class="radiusBoxContainer">
+          <p>
+            top-left | top-right | bottom-right | bottom_left <br>
+            <code>border-radius: 10% 20% 30% 50%;</code>
+          </p>
+          <div class="boxRadius3">
+          </div>
         </div>
-        <p>
-          Horizontal all 4 corners / Vertical all 4 corners <br>
-          <code>border-radius: 10% / 50%;</code>
-        </p>
-        <div class="boxRadius4">
+        <div class="radiusBoxContainer">
+          <p>
+            Horizontal all 4 corners / Vertical all 4 corners <br>
+            <code>border-radius: 10% / 50%;</code>
+          </p>
+          <div class="boxRadius4">
+          </div>
         </div>
-        <p>
-          top-left-and-bottom-right | top-right-and-bottom-left / all 4 corners <br>
-          <code>border-radius: 5% 15% / 35%;</code>
-        </p>
-        <div class="boxRadius5">
+        <div class="radiusBoxContainer">
+          <p>
+            top-left-and-bottom-right | top-right-and-bottom-left / all 4 corners <br>
+            <code>border-radius: 5% 15% / 35%;</code>
+          </p>
+          <div class="boxRadius5">
+          </div>
         </div>
-        <p>
-          top-left-and-bottom-right | top-right-and-bottom-left / <br> top-left-and-bottom-right |
-          top-right-and-bottom-left <br>
-          <code>border-radius: 50% 20% / 10% 40%;</code>
-        </p>
-        <div class="boxRadius6">
+        <div class="radiusBoxContainer">
+          <p>
+            top-left-and-bottom-right | top-right-and-bottom-left / <br> top-left-and-bottom-right |
+            top-right-and-bottom-left <br>
+            <code>border-radius: 50% 20% / 10% 40%;</code>
+          </p>
+          <div class="boxRadius6">
+          </div>
         </div>
       </div>
       <h3 id="css-7">Box Shadow</h3>
@@ -583,33 +596,45 @@
       </details>
       <p>Examples:</p>
       <div class="shadowBoxes">
-        <p><code>box-shadow: 3em -1.5em #f4a261;</code></p>
-        <div class="boxShadow1">
+        <div class="shadowBoxContainer">
+          <p><code>box-shadow: 3em -1.5em #f4a261;</code></p>
+          <div class="boxShadow1">
+          </div>
         </div>
-        <p><code>box-shadow: 1.5em 1em 0.7em #f4a261;</code></p>
-        <div class="boxShadow2">
+        <div class="shadowBoxContainer">
+          <p><code>box-shadow: 1.5em 1em 0.7em #f4a261;</code></p>
+          <div class="boxShadow2">
+          </div>
         </div>
-        <p><code>box-shadow: 1.5em 0.7em 0.3em 0.6em #f4a261;</code></p>
-        <div class="boxShadow3">
+        <div class="shadowBoxContainer">
+          <p><code>box-shadow: 1.5em 0.7em 0.3em 0.6em #f4a261;</code></p>
+          <div class="boxShadow3">
+          </div>
         </div>
-        <p><code>box-shadow: inset 5em 1em #f4a261;</code></p>
-        <div class="boxShadow4">
+        <div class="shadowBoxContainer">
+          <p><code>box-shadow: inset 5em 1em #f4a261;</code></p>
+          <div class="boxShadow4">
+          </div>
         </div>
-        <p><code>box-shadow: 0 0.75em 0 -0.375em #e9c46a,
-          <br>
-          0 -0.75em 0 -0.375em #e9c46a,
-          <br>
-          0.75em 0 0 -0.375em #e9c46a,
-          <br>
-           -0.75em 0 0 -0.375em #e9c46a, 
-           <br>
-          0 0 0 0.375em #264653);</code></p>
-        <div class="boxShadow5">
+        <div class="shadowBoxContainer">
+          <p><code>box-shadow: 0 0.75em 0 -0.375em #e9c46a,
+            <br>
+            0 -0.75em 0 -0.375em #e9c46a,
+            <br>
+            0.75em 0 0 -0.375em #e9c46a,
+            <br>
+             -0.75em 0 0 -0.375em #e9c46a, 
+             <br>
+            0 0 0 0.375em #264653);</code></p>
+          <div class="boxShadow5">
+          </div>
         </div>
-        <p><code>box-shadow: inset 0 0 0 1em #2a9d8f, <br>
-          inset 0 0 0 1.5em #f4a261, <br>
-          inset 0 0 0 2em #e76f51;</code></p>
-        <div class="boxShadow6">
+        <div class="shadowBoxContainer">
+          <p><code>box-shadow: inset 0 0 0 1em #2a9d8f, <br>
+            inset 0 0 0 1.5em #f4a261, <br>
+            inset 0 0 0 2em #e76f51;</code></p>
+          <div class="boxShadow6">
+          </div>
         </div>
       </div>
       <h3 id="css-8">Transforming Elements</h3>
@@ -1926,11 +1951,11 @@
         <li><code>mongorestore</code>: imports data in BSON format</li>
         <li><code>mongodump</code>: exports data in BSON format</li>
       </ul>
-      <h4>Data Explorer</h4>
+      <!-- <h4>Data Explorer</h4> -->
     </article>
   </main>
   <footer>
-    <p>&copy;By Zhadox |'•'_'•'|</p>
+    <p>&copy;By Zhadox |'•'_'•'| & Kura |'-'_'-'|</p>
   </footer>
 </body>
 
